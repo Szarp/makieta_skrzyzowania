@@ -1,5 +1,5 @@
 ﻿Wstep do prezentacji
 
-Ten projekt jest dedykowany ludziom na każdym poziomie znajomości tematu. Przez kolejne rozdziały będziemy uzupełniać podstawowe informacje potrzebne do zbudowania postych układów elektronicznych, aby w kolejnej części zacząć przedstawiać podstawowe schematy i prose programy. Doświadczony w tej dziedzinie czytelnik może je po prostu pominąć(nie wszysy chcą się uczyć programowania schematami blokowymi). 
+Ten projekt jest dedykowany ludziom na każdym poziomie znajomości tematu. Przez kolejne rozdziały będziemy uzupełniać podstawowe informacje potrzebne do zbudowania prostych układów elektronicznych, aby w kolejnej części zacząć przedstawiać podstawowe schematy i proste programy. Doświadczony w tej dziedzinie czytelnik może je po prostu pominąć (nie wszysy chcą się uczyć programowania schematami blokowymi). 
 *Nota dla zaawansowanych czytelników:
-Używamy proscesorów "atmel", a do programowania środowiska Arduino. Cały kod używany w prezentacji będzie udostępniony na GitHub'ie.
+Używamy procesorów "atmel", a do programowania środowiska Arduino. Cały kod używany w prezentacji będzie udostępniony na GitHub'ie.
