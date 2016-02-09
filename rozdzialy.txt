@@ -15,7 +15,5 @@
 	-kod
 	-budowa
 *Zastosowanie elektroniki w życiu codziennym 
-*Elektronika - dlaczego warto 
+*Elektronika - dlaczego warto się nią interesować
 *Resztę wymyślimy w miarę tworzenia poszczególnych elementów
-
-*pierwssza proba edytowania na telefonie
