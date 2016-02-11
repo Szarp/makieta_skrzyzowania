@@ -1,0 +1,114 @@
+<table>
+          <tbody>
+
+            <tr>
+              <td>Microcontroller</td>
+              <td><a target="_blank" href="http://www.atmel.com/Images/doc8161.pdf">ATmega328P</a></td>
+            </tr>
+
+            <tr>
+                <td>Operating Voltage</td>
+                <td>5V</td>
+              </tr>
+
+              <tr>
+                <td>Input Voltage (recommended)</td>
+                <td>7-12V</td>
+              </tr>
+
+              <tr>
+                <td>Input Voltage (limit)</td>
+                <td>6-20V</td>
+              </tr>
+
+              <tr>
+                <td>Digital I/O Pins</td>
+                <td>14 (of which 6 provide PWM output)</td>
+              </tr>
+
+              <tr>
+                <td>PWM Digital I/O Pins</td>
+                <td>6</td>
+              </tr>
+
+              <tr>
+                <td>Analog Input Pins</td>
+                <td>6</td>
+              </tr>
+
+              <tr>
+                <td>DC Current per I/O Pin</td>
+                <td>20 mA</td>
+              </tr>
+
+              <tr>
+                <td>DC Current for 3.3V Pin</td>
+                <td>50 mA</td>
+              </tr>
+
+              <tr>
+                <td>Flash Memory</td>
+                <td>32 KB (ATmega328P)<br> of which 0.5 KB used by bootloader</td>
+              </tr>
+
+              <tr>
+                <td>SRAM</td>
+                <td>2 KB (ATmega328P)</td>
+              </tr>
+
+              <tr>
+                <td>EEPROM</td>
+                <td>1 KB (ATmega328P)</td>
+              </tr>
+
+              <tr>
+                <td>Clock Speed</td>
+                <td>16 MHz</td>
+              </tr>
+
+              <tr>
+                <td>Length</td>
+                <td>68.6 mm</td>
+              </tr>
+
+              <tr>
+                <td>Width</td>
+                <td>53.4 mm</td>
+              </tr>
+
+              <tr>
+                <td>Weight</td>
+                <td>25 g</td>
+              </tr>
+
+          </tbody>
+        </table>
+//tabelka specyfikacje
+Arduino wstêp
+
+
+jest to platforma programistyczna oparta na mikrokontrolerów. S¹ t ma³e komputery które najczêœciej maj¹ robiæ jedn¹  rzecz. Mo¿emy ich u¿ywaæ do obs³ugi np termometru
+Mikrokontroler ~ma³y komuterek
+Porównanie komputer vs Arduino nano
+wielkoœæ 	pud³o pude³ko zapa³ek
+pamiêæ		ok 100GB 32kB
+
+
+Programowanie
+Jak wiemy, aby wydaæ polecenie komputerowe, musimy mu je podaæ w specjalnej formule. Jest to tz. jêzyk programowania. Jêzyków programowania jest bardzo du¿o, nie bêdziemy siê w nie zag³êbiaæ. Zaczniemy od podstaw.
+Jak dzia³a jêzyk programowania: zbiór regó³(jak w normalnym jêzyku)np. sk³adnia. Tak na prawdê jest skrceniem zdania: Je¿eli zmienna x jest równa 5, wykonaj algorytm nr 1 -> if(x==5){algorytm1();} po kolei
+if - s³owo kluczowe, które wykona kod miêdzy klamrami { } je¿eli warunek w () jest spe³niony.
+algorytm1(); - jest to funkcja zbiór poleceñ które ma wykonaæ komuter jednoczeœnie. Mo¿na to zrozumieæ jako pude³ko z rzeczami do wykonania
+Stwórzmy prosty czujnik np termometr który bêdzie nam wyœwietla³ temperaturê co 10 s
+Tworzymy pude³ko które wykona kilka rzeczy
+Zmierz temperaturê i zapisz do zmiennej x
+wyœwietl x
+poczekaj 10s
+//tak wygl¹da³by kod napisany na kartce
+Jêzk maszynowy 
+x=ReadTemerature();//jest to funkcja która przlicza nam wartoœæ termometru
+Serial.print(x); //funkcja która wyœwietla paramet
+
+
+
+
