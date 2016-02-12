@@ -108,6 +108,7 @@ poczekaj 10s
 Jêzk maszynowy 
 x=ReadTemerature();//jest to funkcja która przlicza nam wartoœæ termometru
 Serial.print(x); //funkcja która wyœwietla paramet
+delay(10000); //wstrzymanie na 10000ms, czyli 10s;
 
 
 
