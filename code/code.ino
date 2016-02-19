@@ -3,8 +3,8 @@
 #define ziel1 0
 #define czer1 1
 //*dla pieszych
-#define zielp1 5
-#define czerp1 6
+#define zielp1 4
+#define czerp1 5
 //pomarańczowe światło dla wszystkich
 #define pom 7
 //Światła nr 2:
@@ -22,9 +22,16 @@
 #define btn1 2
 //*2
 #define btn2 3
+//Światła przycisków
+#define swiatloBtn1 6
+#define swiatloBtn2 11
 //Definicje czasów
 #define migDelay 500 //Czas świecenia i nieświecenia zielonej diody podczas migania (normaline ok. 0,5s)
-#define zielPrzejscie 1500 //Czas świecenia zielonego na przejsciu. 
+#define zielPrzejscie 15000 //Czas świecenia zielonego na przejsciu. 
+#define pomDelay 2000 //Czas świecenia pomarańczowego.
+#define czerCale 2000 //Czas świecenia czerwonego wszędzie, żeby "rozładować" skrzyżowanie.
+#define piesiDelay1 500 //Czas przez, który piesi jeszcze przejść nie mogą, ale auta już tak.
+#define piesiDelay2 500 //Czas przez, który piesi już przejść nie mogą, ale auta jeszcze tak.
 //Inne definicje:
 #define nMig 5 //liczba mignięć zielonego przed zapaleniem czerwonego światła na przejścu dla pieszych (normalnie 5)
 
@@ -54,6 +61,8 @@ void setup(){
   pinMode(czer2, OUTPUT);
   pinMode(zielp2, OUTPUT);
   pinMode(czerp2, OUTPUT);
+  pinMode(swiatloBtn1, OUTPUT);
+  pinMode(swiatloBtn2, OUTPUT);
   pinMode(btn1, INPUT_PULLUP);
   pinMode(btn2, INPUT_PULLUP);
   attachInterrupt(digitalPinToInterrupt(btn1), przycisk1, RISING);
@@ -63,10 +72,12 @@ void setup(){
 
 void przycisk1(){
   btnState1 = 1;
+  digitalWrite(swiatloBtn1, on);
 }
 
 void przycisk2(){
   btnState2 = 1;
+  digitalWrite(swiatloBtn2, on);
 }
 
 void migaj(int nrPrzejscia){
@@ -91,11 +102,11 @@ void migaj(int nrPrzejscia){
     }
   }
   digitalWrite(b, on);
-  delay(500);
+  delay(piesiDelay2);
 }
 
 void loop(){
-  delay(15000);
+  delay(zielPrzejscie);
   /*for(int x = 0; x < 5; x++){
     digitalWrite(zielp2, off);
     delay(500);
@@ -110,19 +121,20 @@ void loop(){
   migaj(2);
   digitalWrite(ziel1, off);
   digitalWrite(pom, on);
-  delay(2000);
+  delay(pomDelay);
   digitalWrite(pom, off);
   digitalWrite(czer1, on);
-  delay(2000);
+  delay(czerCale);
   digitalWrite(czer2, off);
   digitalWrite(ziel2, on);
-  delay(500);
+  delay(piesiDelay1);
   digitalWrite(czerp1, off);
   if(btnState1 == 1){
+    digitalWrite(swiatloBtn1, off);
     digitalWrite(zielp1, on);
-    btnState = 0;
+    btnState1 = 0;
   }
-  delay(15000);
+  delay(zielPrzejscie);
   /*for(int x = 0; x < 5; x++){
     digitalWrite(zielp1, off);
     delay(500);
@@ -137,15 +149,16 @@ void loop(){
   migaj(1);
   digitalWrite(ziel2, off);
   digitalWrite(pom, on);
-  delay(2000);
+  delay(pomDelay);
   digitalWrite(pom, off);
   digitalWrite(czer2, on);
-  delay(2000);
+  delay(czerCale);
   digitalWrite(czer1, off);
   digitalWrite(ziel1, on);
-  delay(500);
+  delay(piesiDelay1);
   digitalWrite(czerp2, off);
   if(btnState2 == 1){
+    digitalWrite(swiatloBtn2, off);
     digitalWrite(zielp2, on);
     btnState2 = 0;
   }
