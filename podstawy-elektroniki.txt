@@ -1,0 +1,28 @@
+W tym rozdziale chciałbnym czytelnikowi przybliżyć pojęcie "elektronika"
+
+Prawa rządzące elektroniką:
+Na tym poziomie, musimy tylko pamiętać o prawie Ohma
+Powrót do fizyki: jedynm z elementów jakich uczyliśmy się na fizyce było "prawo Ohma". Możemy je teraz zastosować w praktyce. Jednym z ważniejszych założeń przy budowie nowego urządzenia czy chemy aby pracowało na prąd stały lub zmienny (podłączamy do gniazdka lub zasilanie z baterii - prosto tłumacząc).
+Przypominjmy oznaczenia niektórych elementów z elektroniki:
+sym.-dioda świecąca
+sym.-żródło prądu stałego
+sym.-żarówka
+sym.-rezystor
+Możemy wymieniać tego prawie w nieskończoność ale to mają być tylko podstawy. Opiszmy kilkoma słowami każde z nich
+
+    Elementy:
+Żarówka - jest to żródło światła(i ciepła) elektrycznego, poprzez rzażenie się trudno topliwego materiału(często wykorzystywany jest drucik wolfrmaowy przez który płynie duży prąd). Sprawność ok.
+8-10 lumenów/wat. 
+Żródło prądu stałego - jak nazwa wskazuje jest to miejsce, w którym "powstaje prąd" jednostką jest napięcie wolt[V]. W elektronice powrzechnie stosuje się napięcie 3,3V i 5V. Dla porównia w gniazdku jest 220-230V.
+Rezystor - jest wykorzystywany do ograniczenia płynącego prądu w obwodzie. Zamienia energię elektryczą w ciepło. [jak czytać opór na rezystorze - te paski]
+dioda świecąca-element elektryczny który przewodzi prąd tylko w jedną stronę. Stosowane w wyświetlaczach LED jak również w pilotach(na światło podczerwone) Charkateryzuje się dosyć dużą sprawnością 
+26-300 lumenówm/W.
+    Do czego nam symbole:
+Aby zlecić wykonanie jakiegoś elementu, musimy go narysować, Symbole te są znane na całym świecie więc gdy narysujemy (dioda) każdy będzie wiedział, że to dioda. Na początku nie będziemy rysować jakoś bardzo skomplikowanych układów.
+Schem nasz(jeden układ sygnalizatora) i dla porównania schemat (arduino mini- lub czegoś innego)
+
+Jak czytać opór*
+W systemie znakowania paskowym 2 pierwsze paski oznaczają wartość rezystancji którą czytamy jako jedną liczbę, a 3 pasek mnożnik przez który należy pomnożyć te dwie pierwsze liczby.
+Czwarty pasek to dopuszczalna tolerancja. - tolerancja to zakres błędu. Np dla opornika 10[ohm] +- 10% znazcy, że opór będzie nam się wahał od 9-11[ohm].
+Tabela kolorów:(jakiś jpg lub sami narysujemy)
+

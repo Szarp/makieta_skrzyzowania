@@ -1,0 +1,16 @@
+W tym rozdziale dowiesz się co trzeba kupić na samym początku.
+Projekt ten ma zainteresować czytelnika elektroniką. Jest to bardzo proste i nie wymaga zbyt dużej ilości pieniędzy. 
+Poziom 1:
+-któreś arduino
+-płytka stykowa
+-kabelki(damsko-męskie i męsko-męskie)
+czujnik, oporniki(do diód)
+Jak zacząć:
+Gdy kupiliśmy arduino nano wpinamy je jak na zdjęciu(zdj płytka stykowa-arduino nano) teraz możemy bez probelemy wpiąć inne elementy(zdj serva i np naszego sygnalizatora
+Gdy kupimy arduino uno nie potrzebujemy nawet płytki stykowej ponieważ jest ono tak skonstruowane że możemy od razu wpinać użądzenie w płykę
+(znowu zdjęcia ale z uno)
+Kolejną wersją jest budowanie własnych rzeczy
+kupujemy wtedy lutownicę, cynę, topnik oraz płytkę(tą z dziórkami)
+i możemy budować np pilot(arduino nano +nrf ileś(kolejne zdjęcie)
+Załącznik lista zakupów: lv1, lv2, lv3
+
