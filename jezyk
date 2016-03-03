@@ -1,0 +1,8 @@
+Język używany w arduino jest mieszaniną C i C++. Domyślnie są ustawione 2 funkcje
+setup(ustawienia) i loop(pętla). W momencie uruchomieina(podłączenia źródła zasilania) wykonuje się 
+funkcja setup. Są to rzeczy, potrzebne do porawnego funkcjonowania programu. Następnie
+przechodzimy do fukcji loop w której wszystko się "kręci" tz gdy wykonamy już
+ wszystkie instrukcje, przechodzimy do początku. (przykład blink)
+
+Podstawy podstaw - dla tych, co nie mieli styczności z programowaine. Programowanie
+to język rozumiany przez maszyny. Różni się on trochę od 

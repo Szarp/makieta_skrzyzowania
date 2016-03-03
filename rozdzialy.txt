@@ -1,19 +1,15 @@
-
-*Arduino -wstęp
-*Podstawy programowania
-	-Schematy blokowe
-	-język używany
-	-środowisko
-	-ogólne uwagi
-*Podstawy elektroniki
-	-sprzęt mechaniczny
-	-sprzęt elektroniczyny
-	-jak używać
-	-domowy warsztat
-*Pierwszy mikrokontroler
-	-zestaw do kupienia
-	-kod
-	-budowa
-*Zastosowanie elektroniki w życiu codziennym 
-*Elektronika - dlaczego warto się nią interesować
-*Resztę wymyślimy w miarę tworzenia poszczególnych elementów
+W tym rozdziale przedsatwimy jak zbutować pierwszy czujnik.
+ Na samym początku musimy podłączyć nasz czujnik(czy diody jak w tym przypadku)
+ aby działały. Najlepiej będzie abyśmy nic nie lutowali.
+ W tym celu posłużymy się płytką stykową.
+ Jak tego używać: dziurki w poziomie są ze sobą zwarte więc gdy podepniemy 2 lub
+ więcej kabli w tym samym poziomie, połączymy je. Dzięki temu łączymy 
+kabelki bez przymusu lutowania.
+Na arduino mamym oznaczenia wszystkich pinów(miejsc, do których możemy podłączyć 
+czujniki)
+ Co one oznaczają:
+D1-D13 - są to zwykłe piny cyfrowe(możemy ustalić na nich 2 wartości LOW i HIGH)
+A1-A5 - są to piny analogowe(możemy ustalić napięcie jakie ma ten pin)
+Vcc, 5V , 3v3 - są to piny zasilające
+GND - masa
+Innych pinów na tym poziomie nie trzeba omawiać.
