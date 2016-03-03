@@ -8,14 +8,18 @@ Arduino IDE.
   1. Strukturę
   2. Zmienne
   3. Funkcje
-#####2.1.1  Struktura
-  Aby program działał niezbędne są dwie funkcje:
-  *void setup() - wykonywana tylko raz na początku programu
-  *void loop() - wykonywana cały czas po wykonaniu funkcji "setup"
- Wśród struktur możemy wyróżnić także:
-  *Struktury kontrolne
-  *
-  
 
+#####2.1.1  Struktura
+Aby program działał niezbędne są dwie funkcje:
+
+  * void setup() - wykonywana tylko raz na początku programu
+  * void loop() - wykonywana cały czas po wykonaniu funkcji "setup"
+  
+Wśród struktur możemy wyróżnić także:
+
+  * Struktury kontrolne
+  * Dalszą składnię
+  * Operatory arytmetyczne
+  * Operatory 
 
 [https://www.arduino.cc/en/Guide/Introduction, https://www.arduino.cc/en/Reference/HomePage]
