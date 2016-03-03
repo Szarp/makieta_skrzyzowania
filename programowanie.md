@@ -2,6 +2,7 @@
   Arduino aby działać musi zostać zaprogramowane. Programuje się je w języku Arduino, opartym na językach C/C++.
 Program jest kompilowany, czyli przetwarzany na język zrozumiały dla urządzenia, oraz na nie wgrywany za pomocą
 Arduino IDE.
+![Arduino IDE](https://www.arduino.cc/en/pub/skins/arduinoWide/img/ArduinoAPP-01.svg)
 
 ####2.1 Budowa.
   Język Arduino można podzielić na 3 główne części:
