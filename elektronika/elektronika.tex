@@ -1,0 +1,148 @@
+%zamien właściwość na cp1250
+% -*- TeX:PL -*-
+% Oto przykładowy plik polski.
+
+\documentclass[a4paper,10pt]{report}
+\usepackage{polski}
+\usepackage[utf8]{inputenc}
+\usepackage{listings}
+
+
+%opening
+\title{Elektronika}
+\author{Krzysztof Dziembała i Bartek Mazur}
+
+\begin{document}
+
+\maketitle
+
+%\begin{abstract}
+
+%\end{abstract}
+\tableofcontents 
+\chapter{Programowanie Arduino}
+ 
+ \\Arduino aby działać musi zostać zaprogramowane. Programuje się je w języku Arduino, opartym na językach C/C++.
+\\*Program jest kompilowany, czyli przetwarzany na język zrozumiały dla urządzenia, oraz na nie wgrywany za pomocą
+Arduino IDE.
+%![Arduino IDE](https://www.arduino.cc/en/pub/skins/arduinoWide/img/ArduinoAPP-01.svg)
+
+
+\section {Składnia języka używanego w środowisku C++}
+Największą różnicą jest struktura, składnia praktycznie się nie różni
+W tym rozdziale zajmiemy się wytłumaczeniem, jak programować w Arduino.
+  Język Arduino można podzielić na 3 główne części:
+  1. Strukturę
+  2. Zmienne
+  3. Funkcje
+
+\subsection  {Struktura}
+\begin{figure}
+	\centering
+		\includegraphics{../../Users/Madar/Desktop/bartek_pulpit/zdjęcia/bartek.jpg}
+	\label{fig:bartek}
+\end{figure}
+Aby program działał niezbędne są dwie funkcje:
+
+  * void setup() - wykonywana tylko raz na początku programu\\*
+	
+  * void loop() - wykonywana cały czas po wykonaniu funkcji "setup"
+  %przykładowy kod
+Wśród struktur możemy wyróżnić także:
+
+  * Struktury kontrolne:
+
+    * if - wykonuje kod zawary w nawiasach klamrowych, jeśli warunek w zwykłych nawiasach jest spełniony\\*
+		\begin{lstlisting}[language=C++]
+		<html>
+		<div id='jsh'></div>
+		</html>
+		if(wartosc1 o wartosc2){}
+\end{lstlisting}
+%\verb||if(wartosc1 o wartosc2){}
+		\begin{verbatim}
+				if(wartosc1 o wartosc2){}
+		\end{verbatim}
+		\verb||
+		
+		najczęściej stosuje się:
+		> - jest większe
+		< - jest mniejsze
+		== - jest równe
+		!= - jest różne od
+    * else - wykonuje kod zawary w nawiasach klamrowych, jeśli warunek w if nie jest spełniony. **Używany tylko razem z "if".**
+	for - jest to pętla, której zawartość w klamrach zostanie tyle razy wykonana, ile razy spełniony jest warunek na wejściu 
+	for(index, warunek dla którego funkcja ma się wykonywać, co zrobić z indeksem po wykonaniu)
+	%\begin{verbatim} for (int x=0;x<3;x++){} \end {verbatim}
+  * Dalszą składnię
+  
+  * Operatory arytmetyczne
+  * Operatory porównawcze
+  * Operatory logiczne
+  * Operatory wskazujące
+  * Operatory bitowe
+  * Operatory złożone
+
+[https://www.arduino.cc/en/Guide/Introduction, https://www.arduino.cc/en/Reference/HomePage]
+
+	\section {Schematy blokowe}
+	\section{Jezyk używany}
+	\section{Środowisko}
+		Środowisko w którym piszemy nasze progarmy(kompilujemy je i wygrywamy) jest Arduino. Wygląda w ten sposób: screeen z arudino. 
+		
+W tym celu pobieramy je z następującej strony
+	\section{Ogelne uwagi}
+\chapter{Podstawy elektroniki}
+ \section{Fizyka w elektronice}
+	\subsection{Powtórka z gimnazjum}
+	\\Fizyka w elektronice nie różni się od tej poznanej w gimnazjum. Był cały dział "`prąd"'. Ten dział właśnie nam się przyda. Nie zagłębiając się we wszystkie szczegóły, potórzymy prawo Ohma:
+	\[
+	I=\frac{U}{R}
+\]
+
+	gdzie:\\*
+	I - natężenie w [A] \\*
+	U - napięcie w [V] \\*
+	R - rezystancja [\Omega]
+			
+
+Zadanie z tym związane(pojęcia będą wytłumaczone w dalszej części): \\* Mamy diodę oraz źródło zasilania 5V. Jaki rezystor musimy podłączyć aby prąd płynący przez diodę był ok 20mA %do sprawdzenia
+%pracowało na prąd stały lub zmienny (podłączamy do gniazdka lub zasilanie z baterii - prosto tłumacząc).
+	\section{Elementy elektroniczne i ich symbole}
+	\subsection {Symbole}
+	\\Elektronika ma swój własny język.Przypominjmy oznaczenia niektórych elementów z elektroniki:
+\begin{itemize}
+	\item sym.-dioda świecąca
+	\item sym.-żródło prądu stałego
+	\item sym.-żarówka
+	\item sym.-rezystor
+\end{itemize}
+
+   \\Definicje:
+\\* Żarówka - jest to żródło światła(i ciepła) elektrycznego, poprzez żarzenie się trudno topliwego materiału(często wykorzystywany jest drucik wolfrmaowy przez który płynie duży prąd). Sprawność ok.
+8-10 lumenów/wat. 
+\\* Żródło prądu stałego - jak nazwa wskazuje jest to miejsce, w którym "powstaje prąd" jednostką jest napięcie wolt[V]. W elektronice powrzechnie stosuje się napięcie 3,3V i 5V. Dla porównia w gniazdku jest 220-230V.
+\\* Rezystor - jest wykorzystywany do ograniczenia płynącego prądu w obwodzie. Zamienia energię elektryczą w ciepło. (Kolejny rozdział)[jak czytać opór na rezystorze - te paski]
+dioda świecąca-element elektryczny który przewodzi prąd tylko w jedną stronę. Stosowane w wyświetlaczach LED jak również w pilotach(na światło podczerwone) Charkateryzuje się dosyć dużą sprawnością 
+26-300 lumenówm/W.  %oświetlnie na boiskach sportowych
+    \\Zastosowanie symboli:
+Do rysowania schematów używamy tych właśnie symboli. Symbole te są znane na całym świecie więc gdy narysujemy (dioda) każdy będzie wiedział, że to dioda. Na początku nie będziemy rysować jakoś bardzo skomplikowanych układów.
+Schem nasz(jeden układ sygnalizatora) i dla porównania schemat (arduino mini- lub czegoś innego)
+	\section{Jak Czytać opór}
+	W systemie znakowania paskowym 2 pierwsze paski oznaczają wartość rezystancji którą czytamy jako jedną liczbę, a 3 pasek mnożnik przez który należy pomnożyć te dwie pierwsze liczby.
+Czwarty pasek to dopuszczalna tolerancja. - tolerancja to zakres błędu. Np dla opornika 10[ohm] +- 10\% znazcy, że opór będzie nam się wahał od 9-11[ohm].
+Tabela kolorów:(jakiś jpg lub sami narysujemy)
+
+	\section {domowy warsztat}
+\chapter{Pierwszy mikrokontroler}
+	\section{zestaw do kupienia}
+	\section{kod}
+	\section{budowa}
+\chapter {Zastosowanie elektroniki w życiu codziennym }
+\chapter{Elektronika - dlaczego warto się nią interesować}
+\chapter {Więcej}
+\bibliography{abib}
+
+
+\end{document}
+
