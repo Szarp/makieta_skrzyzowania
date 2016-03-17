@@ -29,4 +29,4 @@ Wśród struktur możemy wyróżnić także:
   * Operatory bitowe
   * Operatory złożone
 
-[https://www.arduino.cc/en/Guide/Introduction, Ahttps://www.arduino.cc/en/Reference/HomePage]
+[https://www.arduino.cc/en/Guide/Introduction, https://www.arduino.cc/en/Reference/HomePage]
