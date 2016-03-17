@@ -2,6 +2,7 @@
   Arduino aby działać musi zostać zaprogramowane. Programuje się je w języku Arduino, opartym na językach C/C++.
 Program jest kompilowany, czyli przetwarzany na język zrozumiały dla urządzenia, oraz na nie wgrywany za pomocą
 Arduino IDE.
+![Arduino IDE](https://www.arduino.cc/en/pub/skins/arduinoWide/img/ArduinoAPP-01.svg)
 
 ####2.1 Budowa.
   Język Arduino można podzielić na 3 główne części:
@@ -17,9 +18,15 @@ Aby program działał niezbędne są dwie funkcje:
   
 Wśród struktur możemy wyróżnić także:
 
-  * Struktury kontrolne
+  * Struktury kontrolne:
+    * if - wykonuje kod zawary w nawiasach klamrowych, jeśli warunek w zwykłych nawiasach jest spełniony.
+    * else - wykonuje kod zawary w nawiasach klamrowych, jeśli warunek w if nie jest spełniony. **Używany tylko razem z "if".**
   * Dalszą składnię
   * Operatory arytmetyczne
-  * Operatory 
+  * Operatory porównawcze
+  * Operatory logiczne
+  * Operatory wskazujące
+  * Operatory bitowe
+  * Operatory złożone
 
 [https://www.arduino.cc/en/Guide/Introduction, https://www.arduino.cc/en/Reference/HomePage]
