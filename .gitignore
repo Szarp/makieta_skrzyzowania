@@ -1,2 +1,4 @@
 code/test/test.ino
 *.hex
+*.log
+*.tmp
