@@ -19,8 +19,8 @@ Aby program działał niezbędne są dwie funkcje:
 Wśród struktur możemy wyróżnić także:
 
   * Struktury kontrolne:
-    * if - wykonuje kod zawary w nawiasach klamrowych, jeśli warunek w zwykłych nawiasach jest spełniony
-    * else
+    * if - wykonuje kod zawary w nawiasach klamrowych, jeśli warunek w zwykłych nawiasach jest spełniony.
+    * else - wykonuje kod zawary w nawiasach klamrowych, jeśli warunek w if nie jest spełniony. *Używany tylko razem z "if".*
   * Dalszą składnię
   * Operatory arytmetyczne
   * Operatory porównawcze
