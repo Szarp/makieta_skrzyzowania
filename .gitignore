@@ -10,3 +10,6 @@ code/test/test.ino
 #Pliki gotowe do otwarcia (mogą być nieaktualne)
 *.dvi
 *.pdf
+
+#Plik stanu programu TeXnicCenter (lokalizacja kursora)
+*.tps
