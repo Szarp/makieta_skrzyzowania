@@ -1,12 +1,28 @@
+\begin{thebibliography}{3}
+\bibitem{diller} Antoni Diller, \textit{\LaTeX\ wiersz po wierszu},
+wydawnictwo Helion, Gliwice 2001
+\bibitem{grfguide} D.P. Carlisle, \textit{Packages in the ‘graphics’
+bundle}
+\bibitem{lshort} Tobias Oetiker, \textit{The Not So Short Introduction
+To \LaTeX2e}
+\end{thebibliography}
+
+\label{nazwa}
+\ref {nazwa}
+%świetny kurs lateksa  http://www.fuw.edu.pl/~kostecki/kurs_latexa.pdf
+%http://serwis-tv.com/opornik.html stworzenie tabelki
+%ugfdsjksdafnksdfnsdfklmd
+
 %zamien właściwość na cp1250
 % -*- TeX:PL -*-
 % Oto przykładowy plik polski.
 
-\documentclass[a4paper,10pt]{report}
+\documentclass[a4paper,10pt]{book}
 \usepackage{polski}
 \usepackage[utf8]{inputenc}
 \usepackage{listings}
-
+\usepakage{graphicx}
+\setlength{\parindent}{5mm}
 
 %opening
 \title{Elektronika}
@@ -20,7 +36,7 @@
 
 %\end{abstract}
 \tableofcontents 
-\chapter{Programowanie Arduino}
+\section{Programowanie Arduino}
  
  \\Arduino aby działać musi zostać zaprogramowane. Programuje się je w języku Arduino, opartym na językach C/C++.
 \\*Program jest kompilowany, czyli przetwarzany na język zrozumiały dla urządzenia, oraz na nie wgrywany za pomocą
@@ -28,15 +44,16 @@ Arduino IDE.
 %![Arduino IDE](https://www.arduino.cc/en/pub/skins/arduinoWide/img/ArduinoAPP-01.svg)
 
 
-\section {Składnia języka używanego w środowisku C++}
+\subsection {Składnia języka używanego w środowisku C++}
 Największą różnicą jest struktura, składnia praktycznie się nie różni
 W tym rozdziale zajmiemy się wytłumaczeniem, jak programować w Arduino.
   Język Arduino można podzielić na 3 główne części:
-  1. Strukturę
-  2. Zmienne
-  3. Funkcje
-
-\subsection  {Struktura}
+  \begin{enumerate}
+	\item Struktura
+	\item Zmienne
+	\item Funkcje
+\end{enumerate}
+\subsubsection  {Struktura}
 \begin{figure}
 	\centering
 		\includegraphics{../../Users/Madar/Desktop/bartek_pulpit/zdjęcia/bartek.jpg}
@@ -85,20 +102,18 @@ Wśród struktur możemy wyróżnić także:
 
 [https://www.arduino.cc/en/Guide/Introduction, https://www.arduino.cc/en/Reference/HomePage]
 
-	\section {Schematy blokowe}
-	\section{Jezyk używany}
-	\section{Środowisko}
+	\subsection {Schematy blokowe}
+	\subsection{Jezyk używany}
+	\subsection{Środowisko}
 		Środowisko w którym piszemy nasze progarmy(kompilujemy je i wygrywamy) jest Arduino. Wygląda w ten sposób: screeen z arudino. 
-		
-W tym celu pobieramy je z następującej strony
-	\section{Ogelne uwagi}
-\chapter{Podstawy elektroniki}
- \section{Fizyka w elektronice}
-	\subsection{Powtórka z gimnazjum}
-	\\Fizyka w elektronice nie różni się od tej poznanej w gimnazjum. Był cały dział "`prąd"'. Ten dział właśnie nam się przyda. Nie zagłębiając się we wszystkie szczegóły, potórzymy prawo Ohma:
-	\[
-	I=\frac{U}{R}
-\]
+W tym celu pobieramy je z następującej strony (odnośnik w przypisach) zgodne z naszą maszyną.
+
+Teraz aby zaprogramować nasz czujnik musimy ustawić płytkę, port szeregowy.%piękne zdjęcia tych rzeczy
+\section{Podstawy elektroniki}
+ \subsection{Fizyka w elektronice}
+	\subsubsection{Powtórka z gimnazjum}
+	\\Fizyka w elektronice nie różni się od tej poznanej w gimnazjum. Był cały dział 'prąd'. Ten dział właśnie nam się przyda. Nie zagłębiając się we wszystkie szczegóły, potórzymy prawo Ohma:
+	\[I=\frac{U}{R}\]
 
 	gdzie:\\*
 	I - natężenie w [A] \\*
@@ -108,8 +123,8 @@ W tym celu pobieramy je z następującej strony
 
 Zadanie z tym związane(pojęcia będą wytłumaczone w dalszej części): \\* Mamy diodę oraz źródło zasilania 5V. Jaki rezystor musimy podłączyć aby prąd płynący przez diodę był ok 20mA %do sprawdzenia
 %pracowało na prąd stały lub zmienny (podłączamy do gniazdka lub zasilanie z baterii - prosto tłumacząc).
-	\section{Elementy elektroniczne i ich symbole}
-	\subsection {Symbole}
+	\subsection{Elementy elektroniczne i ich symbole}
+	\subsubsection {Symbole}
 	\\Elektronika ma swój własny język.Przypominjmy oznaczenia niektórych elementów z elektroniki:
 \begin{itemize}
 	\item sym.-dioda świecąca
@@ -118,22 +133,30 @@ Zadanie z tym związane(pojęcia będą wytłumaczone w dalszej części): \\* M
 	\item sym.-rezystor
 \end{itemize}
 
-   \\Definicje:
+   \subsubsection{Definicje tych elementów}
 \\* Żarówka - jest to żródło światła(i ciepła) elektrycznego, poprzez żarzenie się trudno topliwego materiału(często wykorzystywany jest drucik wolfrmaowy przez który płynie duży prąd). Sprawność ok.
 8-10 lumenów/wat. 
+
 \\* Żródło prądu stałego - jak nazwa wskazuje jest to miejsce, w którym "powstaje prąd" jednostką jest napięcie wolt[V]. W elektronice powrzechnie stosuje się napięcie 3,3V i 5V. Dla porównia w gniazdku jest 220-230V.
+
 \\* Rezystor - jest wykorzystywany do ograniczenia płynącego prądu w obwodzie. Zamienia energię elektryczą w ciepło. (Kolejny rozdział)[jak czytać opór na rezystorze - te paski]
-dioda świecąca-element elektryczny który przewodzi prąd tylko w jedną stronę. Stosowane w wyświetlaczach LED jak również w pilotach(na światło podczerwone) Charkateryzuje się dosyć dużą sprawnością 
-26-300 lumenówm/W.  %oświetlnie na boiskach sportowych
-    \\Zastosowanie symboli:
-Do rysowania schematów używamy tych właśnie symboli. Symbole te są znane na całym świecie więc gdy narysujemy (dioda) każdy będzie wiedział, że to dioda. Na początku nie będziemy rysować jakoś bardzo skomplikowanych układów.
-Schem nasz(jeden układ sygnalizatora) i dla porównania schemat (arduino mini- lub czegoś innego)
-	\section{Jak Czytać opór}
+\\* Dioda świecąca - element elektryczny który przewodzi prąd tylko w jedną stronę. Stosowane w wyświetlaczach LED jak również w pilotach(na światło podczerwone) Charkateryzuje się dosyć dużą sprawnością 26-300 lumenówm/W. 
+%oświetlnie na boiskach sportowych
+
+\subsubsection{Zastosowanie symboli}
+    
+Do rysowania schematów używamy tych właśnie symboli. Symbole te są znane na całym świecie więc gdy narysujemy (dioda) każdy będzie wiedział, że to dioda. Na początku nie będziemy rysować bardzo skomplikowanych układów ale należy wiedzieć że one istnieją. Przydają się przy czytaniu niektórych instrukcji(np. do jakiegos czujnika).
+%Schem nasz(jeden układ sygnalizatora) i dla porównania schemat (arduino mini- lub czegoś innego)
+
+	\subsection{Jak Czytać opór}
 	W systemie znakowania paskowym 2 pierwsze paski oznaczają wartość rezystancji którą czytamy jako jedną liczbę, a 3 pasek mnożnik przez który należy pomnożyć te dwie pierwsze liczby.
 Czwarty pasek to dopuszczalna tolerancja. - tolerancja to zakres błędu. Np dla opornika 10[ohm] +- 10\% znazcy, że opór będzie nam się wahał od 9-11[ohm].
 Tabela kolorów:(jakiś jpg lub sami narysujemy)
 
-	\section {domowy warsztat}
+	\subsection {Domowy warsztat}
+    
+        \input{'./warsztat-domowy}
+        
 \chapter{Pierwszy mikrokontroler}
 	\section{zestaw do kupienia}
 	\section{kod}
