@@ -1,14 +1,14 @@
-\begin{thebibliography}{3}
-\bibitem{diller} Antoni Diller, \textit{\LaTeX\ wiersz po wierszu},
-wydawnictwo Helion, Gliwice 2001
-\bibitem{grfguide} D.P. Carlisle, \textit{Packages in the ‘graphics’
-bundle}
-\bibitem{lshort} Tobias Oetiker, \textit{The Not So Short Introduction
-To \LaTeX2e}
-\end{thebibliography}
-
-\label{nazwa}
-\ref {nazwa}
+%\begin{thebibliography}{3}
+%\bibitem{diller} Antoni Diller, \textit{\LaTeX\ wiersz po wierszu},
+%wydawnictwo Helion, Gliwice 2001
+%\bibitem{grfguide} D.P. Carlisle, \textit{Packages in the ‘graphics’
+%bundle}
+%\bibitem{lshort} Tobias Oetiker, \textit{The Not So Short Introduction
+%To \LaTeX2e}
+%\end{thebibliography}
+%
+%\label{nazwa}
+%\ref {nazwa}
 %świetny kurs lateksa  http://www.fuw.edu.pl/~kostecki/kurs_latexa.pdf
 %http://serwis-tv.com/opornik.html stworzenie tabelki
 %ugfdsjksdafnksdfnsdfklmd
@@ -17,11 +17,11 @@ To \LaTeX2e}
 % -*- TeX:PL -*-
 % Oto przykładowy plik polski.
 
-\documentclass[a4paper,10pt]{book}
+\documentclass[a4paper,12pt]{book}
 \usepackage{polski}
 \usepackage[utf8]{inputenc}
 \usepackage{listings}
-\usepakage{graphicx}
+\usepackage{graphicx}
 \setlength{\parindent}{5mm}
 
 %opening
@@ -36,17 +36,17 @@ To \LaTeX2e}
 
 %\end{abstract}
 \tableofcontents 
+\newpage
 \section{Programowanie Arduino}
- 
- \\Arduino aby działać musi zostać zaprogramowane. Programuje się je w języku Arduino, opartym na językach C/C++.
+
+\\Arduino aby działać musi zostać zaprogramowane. Programuje się je w języku Arduino, opartym na językach C/C++.
 \\*Program jest kompilowany, czyli przetwarzany na język zrozumiały dla urządzenia, oraz na nie wgrywany za pomocą
-Arduino IDE.
+Arduino IDE. 
 %![Arduino IDE](https://www.arduino.cc/en/pub/skins/arduinoWide/img/ArduinoAPP-01.svg)
 
 
 \subsection {Składnia języka używanego w środowisku C++}
-Największą różnicą jest struktura, składnia praktycznie się nie różni
-W tym rozdziale zajmiemy się wytłumaczeniem, jak programować w Arduino.
+%Największą różnicą jest struktura, składnia praktycznie się nie różni - CO TU CHCIAŁEŚ NAPISAĆ???
   Język Arduino można podzielić na 3 główne części:
   \begin{enumerate}
 	\item Struktura
@@ -54,53 +54,60 @@ W tym rozdziale zajmiemy się wytłumaczeniem, jak programować w Arduino.
 	\item Funkcje
 \end{enumerate}
 \subsubsection  {Struktura}
-\begin{figure}
-	\centering
-		\includegraphics{../../Users/Madar/Desktop/bartek_pulpit/zdjęcia/bartek.jpg}
-	\label{fig:bartek}
-\end{figure}
-Aby program działał niezbędne są dwie funkcje:
-
-  * void setup() - wykonywana tylko raz na początku programu\\*
+																											%\begin{figure}
+																												%\centering
+																													%\includegraphics{../../Users/Madar/Desktop/bartek_pulpit/zdjęcia/bartek.jpg}
+																												%\label{fig:bartek}
+																											%\end{figure}
+	Aby program działał niezbędne są dwie funkcje:
+	\renewcommand{\labelitemii}{$\circ$}
+	\begin{itemize}
 	
-  * void loop() - wykonywana cały czas po wykonaniu funkcji "setup"
-  %przykładowy kod
-Wśród struktur możemy wyróżnić także:
-
-  * Struktury kontrolne:
-
-    * if - wykonuje kod zawary w nawiasach klamrowych, jeśli warunek w zwykłych nawiasach jest spełniony\\*
-		\begin{lstlisting}[language=C++]
-		<html>
-		<div id='jsh'></div>
-		</html>
-		if(wartosc1 o wartosc2){}
-\end{lstlisting}
-%\verb||if(wartosc1 o wartosc2){}
-		\begin{verbatim}
-				if(wartosc1 o wartosc2){}
-		\end{verbatim}
-		\verb||
+	  \item void setup() - wykonywana tylko raz na początku programu
 		
-		najczęściej stosuje się:
-		> - jest większe
-		< - jest mniejsze
-		== - jest równe
-		!= - jest różne od
-    * else - wykonuje kod zawary w nawiasach klamrowych, jeśli warunek w if nie jest spełniony. **Używany tylko razem z "if".**
-	for - jest to pętla, której zawartość w klamrach zostanie tyle razy wykonana, ile razy spełniony jest warunek na wejściu 
-	for(index, warunek dla którego funkcja ma się wykonywać, co zrobić z indeksem po wykonaniu)
-	%\begin{verbatim} for (int x=0;x<3;x++){} \end {verbatim}
-  * Dalszą składnię
-  
-  * Operatory arytmetyczne
-  * Operatory porównawcze
-  * Operatory logiczne
-  * Operatory wskazujące
-  * Operatory bitowe
-  * Operatory złożone
+	  \item void loop() - wykonywana cały czas po wykonaniu funkcji "setup"
+	 
+	\end{itemize}
+	  %przykładowy kod
+	Wśród struktur możemy wyróżnić także:
 
-[https://www.arduino.cc/en/Guide/Introduction, https://www.arduino.cc/en/Reference/HomePage]
+	\begin{itemize}
+		\item if(){} - wykonuje kod zawary w nawiasach klamrowych, jeśli warunek w zwykłych nawiasach jest spełniony. Do porównania wartości najczęściej stosuje się:
+			\begin{itemize}
+				\item \textgreater  - jest większe
+				\item \textless  - jest mniejsze
+				\item == - jest równe
+				\item != - jest różne od
+			\end{itemize}
+		\item else - wykonuje kod zawary w nawiasach klamrowych, jeśli warunek w if nie jest spełniony. \textbf{Używany tylko razem z "if".} Przykład:\\*
+		if(x \textgreater y)\{\\*
+		\indent	Serial.println("x jest większe od y.");\\*
+		\} else \{\\*
+		\indent	Serial.println("x nie jest większe od y.");\\*
+		\}
+		\item for - jest to pętla, której zawartość w klamrach zostanie tyle razy wykonana, ile razy spełniony jest warunek podany na wejściu. Budowa:\\*
+		for(index, warunek dla którego funkcja ma się wykonywać, co zrobić z indeksem po wykonaniu){}\\*
+		Przykład pętli for, która wypisze wartości od 0 do 2 włącznie:\\*
+		for (int x=0;x<3;x++)\{\\*
+			Serial.println(x);\\*
+		\}
+		\item while() - pętla, która wykonuje kod w nawiasach klamrowych umieszczonych przed słowem "while", jeśli warunek w zwykłych nawiasach jest spełniony. 
+		Przykład pętli while wypisującej wartości zmiennej x i zwiększającjej tę wartość jeśli jest ona mniejsza niż 3:\\*
+		\{\\*
+		\indent	Serial.println(x);\\*
+		\indent	x++;\\*
+		\}while(x<3)
+	\end{itemize}
+%	  * Dalszą składnię
+%	  
+%	  * Operatory arytmetyczne
+%	  * Operatory porównawcze
+%	  * Operatory logiczne
+%	  * Operatory wskazujące
+%	  * Operatory bitowe
+%	  * Operatory złożone
+
+%to do bibliografi[https://www.arduino.cc/en/Guide/Introduction, https://www.arduino.cc/en/Reference/HomePage]
 
 	\subsection {Schematy blokowe}
 	\subsection{Jezyk używany}
@@ -109,6 +116,7 @@ Wśród struktur możemy wyróżnić także:
 W tym celu pobieramy je z następującej strony (odnośnik w przypisach) zgodne z naszą maszyną.
 
 Teraz aby zaprogramować nasz czujnik musimy ustawić płytkę, port szeregowy.%piękne zdjęcia tych rzeczy
+\newpage
 \section{Podstawy elektroniki}
  \subsection{Fizyka w elektronice}
 	\subsubsection{Powtórka z gimnazjum}
@@ -118,8 +126,7 @@ Teraz aby zaprogramować nasz czujnik musimy ustawić płytkę, port szeregowy.%
 	gdzie:\\*
 	I - natężenie w [A] \\*
 	U - napięcie w [V] \\*
-	R - rezystancja [\Omega]
-			
+	R - rezystancja [\Omega] \\*			
 
 Zadanie z tym związane(pojęcia będą wytłumaczone w dalszej części): \\* Mamy diodę oraz źródło zasilania 5V. Jaki rezystor musimy podłączyć aby prąd płynący przez diodę był ok 20mA %do sprawdzenia
 %pracowało na prąd stały lub zmienny (podłączamy do gniazdka lub zasilanie z baterii - prosto tłumacząc).
@@ -155,8 +162,9 @@ Tabela kolorów:(jakiś jpg lub sami narysujemy)
 
 	\subsection {Domowy warsztat}
     
-        \input{'./warsztat-domowy}
+%        \input{'./warsztat-domowy}
         
+\newpage
 \chapter{Pierwszy mikrokontroler}
 	\section{zestaw do kupienia}
 	\section{kod}

@@ -13,3 +13,4 @@ code/test/test.ino
 
 #Plik stanu programu TeXnicCenter (lokalizacja kursora)
 *.tps
+*.ps
