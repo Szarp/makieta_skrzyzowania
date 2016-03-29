@@ -74,29 +74,34 @@ Arduino IDE.
 	\begin{itemize}
 		\item if(){} - wykonuje kod zawary w nawiasach klamrowych, jeśli warunek w zwykłych nawiasach jest spełniony. Do porównania wartości najczęściej stosuje się:
 			\begin{itemize}
-				\item \textgreater  - jest większe
-				\item \textless  - jest mniejsze
+				\item \verb|>| - jest większe
+				\item \verb|<|  - jest mniejsze
 				\item == - jest równe
 				\item != - jest różne od
 			\end{itemize}
-		\item else - wykonuje kod zawary w nawiasach klamrowych, jeśli warunek w if nie jest spełniony. \textbf{Używany tylko razem z "if".} Przykład:\\*
-		if(x \textgreater y)\{\\*
-		\indent	Serial.println("x jest większe od y.");\\*
-		\} else \{\\*
-		\indent	Serial.println("x nie jest większe od y.");\\*
-		\}
+		\item else - wykonuje kod zawary w nawiasach klamrowych, jeśli warunek w if nie jest spełniony. \textbf{Używany tylko razem z "if".} Przykład:
+		\begin{verbatim}
+		if(x > y){
+		  Serial.println("x jest większe od y.");
+		} else {
+		  Serial.println("x nie jest większe od y.");
+		}
+		\end{verbatim}
 		\item for - jest to pętla, której zawartość w klamrach zostanie tyle razy wykonana, ile razy spełniony jest warunek podany na wejściu. Budowa:\\*
 		for(index, warunek dla którego funkcja ma się wykonywać, co zrobić z indeksem po wykonaniu){}\\*
-		Przykład pętli for, która wypisze wartości od 0 do 2 włącznie:\\*
-		for (int x=0;x<3;x++)\{\\*
-			Serial.println(x);\\*
-		\}
-		\item while() - pętla, która wykonuje kod w nawiasach klamrowych umieszczonych przed słowem "while", jeśli warunek w zwykłych nawiasach jest spełniony. 
-		Przykład pętli while wypisującej wartości zmiennej x i zwiększającjej tę wartość jeśli jest ona mniejsza niż 3:\\*
-		\{\\*
-		\indent	Serial.println(x);\\*
-		\indent	x++;\\*
-		\}while(x<3)
+		Przykład pętli for, która wypisze wartości od 0 do 2 włącznie:
+		\begin{verbatim}
+		for (int x=0;x<3;x++){
+		  Serial.println(x);
+		}
+		\end{verbatim}
+		\item while() - pętla, która wykonuje kod w nawiasach klamrowych umieszczonych przed słowem "while", jeśli warunek w zwykłych nawiasach jest spełniony.\\*
+		Przykład pętli while wypisującej wartości zmiennej x i zwiększającjej tę wartość jeśli jest ona mniejsza niż 3:
+		\begin{verbatim}{
+			Serial.println(x);
+		  x++;
+		}while(x<3);
+		\end{verbatim}
 	\end{itemize}
 %	  * Dalszą składnię
 %	  
