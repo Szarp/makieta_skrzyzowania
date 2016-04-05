@@ -1,0 +1,37 @@
+W tym dziale doweimy się co należy kupić ze zględu na 
+
+Podstawy podstaw:
+Zakupy:
+-Arduino Uno lub Nano
+-diody świecące(klor dowolny)
+-oporniki 300OHM
+-ew. przyciski
+-termometr jako jeden czujnik
+
+
+Advancet beginner:
+-różne czujiniki: czyt lista czujników, o których kiedykolwiek słyszałem
+-kolejne Arduino(Nano)
+-wyświetlacz
+
+
+Expert:
+-radia,
+-siliniki(np. serwo)
+
+
+
+Zadania
+-mrugająca dioda (pin 13)
+-mrugająca dioda (zewnętrzna+rezystor)
+-świecąca dioda przy naciśnieciu przycisku(z użyciem INPUT_PULLUP)
+-próba uruchomienia termometru(to zadanie jest już trudniejsze)
+
+-uruchamianie poszczególnych czujników
+-inteligntny dom, wyświetlanie temeratury np na wyświetlaczu,
+-zaplaenie lampki gdy płynie prąd(czyjnik hala)
+
+
+-automatyczne światło (przy pomocy 2 radiów),
+-sterowanie silnikami przy pomocy radia
+-
