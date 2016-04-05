@@ -95,14 +95,45 @@ Arduino IDE.
 		  Serial.println(x);
 		}
 		\end{verbatim}
-		\item while() - pętla, która wykonuje kod w nawiasach klamrowych umieszczonych przed słowem "while", jeśli warunek w zwykłych nawiasach jest spełniony.\\*
+		\item while() - pętla, która wykonuje kod w nawiasach klamrowych, jeśli warunek w zwykłych nawiasach jest spełniony.\\*
 		Przykład pętli while wypisującej wartości zmiennej x i zwiększającjej tę wartość jeśli jest ona mniejsza niż 3:
-		\begin{verbatim}{
-			Serial.println(x);
+		\begin{verbatim}while(x<3){
+		  Serial.println(x);
 		  x++;
-		}while(x<3);
+		}
 		\end{verbatim}
+		\item do... while() - pętla podobna do pę "while", ale kod zostanie wykonany conajmniej raz, nawet jeśli warunek nie jest spełniony. \\*
+		Przykład pętli do... while, która wypisze wartość x tylko raz (choć warunek \textbf{nie} jest spełniony):
+		\begin {verbatim}
+		int x = 3;
+		do{
+		  Serial.println(x);
+		}while(x<1);
+		\end{verbatim}
+		
 	\end{itemize}
+	Do tej kategorii możemy zaliczyć także niektóre symbole:
+	\begin{itemize}
+	\item ; - stawiany na końcu każdej (nie pustej) linii kodu. Nie jest nizbędny, jeśli linia jest zakończona znakiem \}
+	\item \{\} - w nawiasach klamrowych jest zawarty kod każdej funkcji, pętli i "if", oraz "else"
+	\item // - stawia się przed kometarzem. Ten typ komentarzy zaczyna się od tych znaków i kończy się z końcem linijki. \textbf{Komentarze są ignorowane przez kompilator} 
+	\item /**/ - komentarz wieloliniowy. Komentarz wstawia się za "/*", a kończy się go "*/".
+	\item = - przypisuje zmiennej określoną wartość. Przykład przypisania zmiennej "x" typu "string" wartości "wartość":
+		\begin{verbatim}
+		string x = "wartość";
+		\end{verbatim}
+	\item + - oznacza dodawanie
+	\item - - oznacza operację odejmowania
+	\item * - mnożenie
+	\item / - dzielenie
+	%###########################################################
+	%TERAZ MODULO I DALEJ
+	%###########################################################
+	
+	\end{itemize}
+	%###########################################################
+	%PAMIĘTAJ O #INCLUDE I #DEFINE!!!
+	%###########################################################
 %	  * Dalszą składnię
 %	  
 %	  * Operatory arytmetyczne
