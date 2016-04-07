@@ -72,12 +72,14 @@ Arduino IDE.
 	Wśród struktur możemy wyróżnić także:
 
 	\begin{itemize}
-		\item if(){} - wykonuje kod zawary w nawiasach klamrowych, jeśli warunek w zwykłych nawiasach jest spełniony. Do porównania wartości najczęściej stosuje się:
+		\item if(){} - wykonuje kod zawary w nawiasach klamrowych, jeśli warunek w zwykłych nawiasach jest spełniony. Do porównania wartości stosuje się:
 			\begin{itemize}
 				\item \verb|>| - jest większe
 				\item \verb|<|  - jest mniejsze
 				\item == - jest równe
 				\item != - jest różne od
+				\item \verb|<=| - mniejsze bądź równe
+				\item \verb|>=| - większe bądź równe
 			\end{itemize}
 		\item else - wykonuje kod zawary w nawiasach klamrowych, jeśli warunek w if nie jest spełniony. \textbf{Używany tylko razem z "if".} Przykład:
 		\begin{verbatim}
@@ -114,26 +116,60 @@ Arduino IDE.
 	\end{itemize}
 	Do tej kategorii możemy zaliczyć także niektóre symbole:
 	\begin{itemize}
-	\item ; - stawiany na końcu każdej (nie pustej) linii kodu. Nie jest nizbędny, jeśli linia jest zakończona znakiem \}
-	\item \{\} - w nawiasach klamrowych jest zawarty kod każdej funkcji, pętli i "if", oraz "else"
-	\item // - stawia się przed kometarzem. Ten typ komentarzy zaczyna się od tych znaków i kończy się z końcem linijki. \textbf{Komentarze są ignorowane przez kompilator} 
-	\item /**/ - komentarz wieloliniowy. Komentarz wstawia się za "/*", a kończy się go "*/".
-	\item = - przypisuje zmiennej określoną wartość. Przykład przypisania zmiennej "x" typu "string" wartości "wartość":
-		\begin{verbatim}
-		string x = "wartość";
-		\end{verbatim}
-	\item + - oznacza dodawanie
-	\item - - oznacza operację odejmowania
-	\item * - mnożenie
-	\item / - dzielenie
-	%###########################################################
-	%TERAZ MODULO I DALEJ
-	%###########################################################
-	
+		\item ; - stawiany na końcu każdej (nie pustej) linii kodu. Nie jest nizbędny, jeśli linia jest zakończona znakiem \}
+		\item \{\} - w nawiasach klamrowych jest zawarty kod każdej funkcji, pętli i "if", oraz "else"
+		\item // - stawia się przed kometarzem. Ten typ komentarzy zaczyna się od tych znaków i kończy się z końcem linijki. \textbf{Komentarze są ignorowane przez kompilator} 
+		\item /**/ - komentarz wieloliniowy. Komentarz wstawia się za "/*", a kończy się go "*/".
+		\item = - przypisuje zmiennej określoną wartość. Przykład przypisania zmiennej "x" typu "string" wartości "wartość":
+			\begin{verbatim}
+			string x = "wartość";
+			\end{verbatim}
+		\item + - oznacza dodawanie
+		\item - - oznacza operację odejmowania
+		\item * - mnożenie
+		\item / - dzielenie
+		\item \% - modulo (reszta z dzielenia). Działanie: x \% y - reszta z dzielenia x przez y
+		\item ++ - powiększ o 1. Przykład kodu zwiększającego zmienną x o 1:
+			\begin{verbatim}
+			x++;
+			\end{verbatim}
+		\item -- - zmniejsz o 1. Wykorzystanie w ten sam sposób co --
+		\item += - powiększ o. Przykład kodu zwiększającego zmienną x o 7:
+			\begin{verbatim}
+			x+=7;
+			\end{verbatim}
+			Równoważne z kodem
+			\begin{verbatim}
+			x = x + 7;
+			\end{verbatim}
+		\item -= - pomniejsz o. "x -= y" jest równoważne z "x = x - y"
+		\item *= - przemnóż przez. "x *= y" równoważne do "x = x*y"
+		\item /= - podziel przez. "x /= y" = "x = x/y"
+		\item \%= - zapisz jako resztę z dzielenia przez. "x \%= y" jest równoważne z "x = x\%y".
 	\end{itemize}
-	%###########################################################
-	%PAMIĘTAJ O #INCLUDE I #DEFINE!!!
-	%###########################################################
+	Należy pamiętać również o:
+	\begin{itemize}
+		\item #include - używany na początku kodu przed jakąkolwiek funkcją, aby dołączyć biblioteki. \textbf{Nie stawiamy po nim średnika!} Przykład:
+			\begin{verbatim}
+				#include <Keyboard.h> //dodaje bibliotekę wprowadzającą obsługę klawiatury
+			\end{verbatim}
+		\item #define - używany na samym początku kodu prze jakąkolwiek funkcją. Za jego pomocą możemy zdefiniować jaką wartość będzie mieć fragment tekstu.
+		Działa tak jakby zamiast ciągu znaków zaraz po słowie "define" były te oddzielone od nich spacją. \textbf{Nie stawiamy po nim średnika!} Przykład kodu wypisującego co 1s tekst zdefiniowany na początku.
+			\begin{verbatim}
+				#define tekst "Hej!"
+				#define przerwa 1000
+				
+				void setup(){
+				  Serial.begin(9600);
+				}
+				void loop(){
+				  Serial.println(tekst);
+				  delay(przerwa);
+				}
+			\end{verbatim}
+	\end{itemize}
+
+	
 %	  * Dalszą składnię
 %	  
 %	  * Operatory arytmetyczne
