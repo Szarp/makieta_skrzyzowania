@@ -41,7 +41,7 @@
 
 \\Arduino aby działać musi zostać zaprogramowane. Programuje się je w języku Arduino, opartym na językach C/C++.
 \\*Program jest kompilowany, czyli przetwarzany na język zrozumiały dla urządzenia, oraz na nie wgrywany za pomocą
-Arduino IDE. 
+Arduino IDE, o którym więcej w sekcji "Środowisko". 
 %![Arduino IDE](https://www.arduino.cc/en/pub/skins/arduinoWide/img/ArduinoAPP-01.svg)
 
 
@@ -168,7 +168,21 @@ Arduino IDE.
 				}
 			\end{verbatim}
 	\end{itemize}
+	\subsubsection{Zmienne}
+		\\Dane przetwarzane przez program przechowywane są jako zmienne. W zależności od rodzaju zmiennej może ona przechowywać różne wartości.
+		\\*Wyróżniamy następujące typy zmiennych:
+		\begin{itemize}
+			\item void - używany tylko do tworzenia funkcji, które nie zwracają żadnej wartości.
+			\item boolean - zmienne typu boolean przchowują tylko wartości \textbf{true} i \textbf{false}.
+			\item char - typ danych zawierający bajt pamięci. Przechowuje wartość znaku.
+				Podczas nadawania zmiennej wartości należy zapisać ją w pojedynczym cudzysłowie.
+				Jednak znaki przechowywane są jako odpowiadające im liczby zgodnie z kodowaniem ASCII.
+				Zmienna "char znak = 'A';" może być zapisana również tak: "char znak = 65;".
+				Korzystając z tej własności możemy np pisząc "znak += 32;" zmienić wartość tej zmiennej z 'A' na 'a', czyli zmienić dużą literą na małą (i odwrotnie).
+			\item byte oraz unsigned char - przechowuje 8 bitową liczbą od 0 do 255. Zalecane jest używanie "byte" zamiast "unsigned char".
+			\item 
 
+		\end{itemize}
 	
 %	  * Dalszą składnię
 %	  
@@ -191,9 +205,7 @@ CZytaj wartość czujnika -> analiza -> sygnał do odbiornika(zgaś światło, r
 W tym celu pobieramy je z następującej strony (odnośnik w przypisach) zgodne z naszą maszyną.
 
 Teraz aby zaprogramować nasz czujnik musimy ustawić płytkę, port szeregowy.%piękne zdjęcia tych rzeczy
-\newpage
-\section{Podstawy elektroniki}
- \subsection{Fizyka w elektronice}
+\newpage send  send  send  send 
 	\subsubsection{Powtórka z gimnazjum}
 	\\Fizyka w elektronice nie różni się od tej poznanej w gimnazjum. Był cały dział 'prąd'. Ten dział właśnie nam się przyda. Nie zagłębiając się we wszystkie szczegóły, potórzymy prawo Ohma:
 	\[I=\frac{U}{R}\]

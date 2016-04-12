@@ -1,17 +1,16 @@
 \contentsline {section}{\numberline {0.1}Programowanie Arduino}{4}
 \contentsline {subsection}{\numberline {0.1.1}Sk\IeC {\l }adnia j\IeC {\k e}zyka u\IeC {\.z}ywanego w \IeC {\'s}rodowisku C++}{4}
 \contentsline {subsubsection}{Struktura}{4}
-\contentsline {subsection}{\numberline {0.1.2}Algorytmy}{7}
-\contentsline {subsection}{\numberline {0.1.3}\IeC {\'S}rodowisko}{7}
-\contentsline {section}{\numberline {0.2}Podstawy elektroniki}{8}
-\contentsline {subsection}{\numberline {0.2.1}Fizyka w elektronice}{8}
-\contentsline {subsubsection}{Powt\IeC {\'o}rka z gimnazjum}{8}
-\contentsline {subsection}{\numberline {0.2.2}Elementy elektroniczne i ich symbole}{8}
-\contentsline {subsubsection}{Symbole}{8}
-\contentsline {subsubsection}{Definicje tych element\IeC {\'o}w}{8}
-\contentsline {subsubsection}{Zastosowanie symboli}{9}
-\contentsline {subsection}{\numberline {0.2.3}Jak Czyta\IeC {\'c} op\IeC {\'o}r}{9}
-\contentsline {subsection}{\numberline {0.2.4}Domowy warsztat}{9}
+\contentsline {subsubsection}{Zmienne}{7}
+\contentsline {subsection}{\numberline {0.1.2}Algorytmy}{8}
+\contentsline {subsection}{\numberline {0.1.3}\IeC {\'S}rodowisko}{8}
+\contentsline {subsubsection}{Powt\IeC {\'o}rka z gimnazjum}{9}
+\contentsline {subsection}{\numberline {0.1.4}Elementy elektroniczne i ich symbole}{9}
+\contentsline {subsubsection}{Symbole}{9}
+\contentsline {subsubsection}{Definicje tych element\IeC {\'o}w}{9}
+\contentsline {subsubsection}{Zastosowanie symboli}{10}
+\contentsline {subsection}{\numberline {0.1.5}Jak Czyta\IeC {\'c} op\IeC {\'o}r}{10}
+\contentsline {subsection}{\numberline {0.1.6}Domowy warsztat}{10}
 \contentsline {chapter}{\numberline {1}Pierwszy mikrokontroler}{11}
 \contentsline {section}{\numberline {1.1}kod}{11}
 \contentsline {section}{\numberline {1.2}budowa}{11}
