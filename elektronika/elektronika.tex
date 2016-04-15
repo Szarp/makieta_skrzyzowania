@@ -181,10 +181,21 @@ Arduino IDE, o którym więcej w sekcji "Środowisko".
 				Korzystając z tej własności możemy np pisząc "znak += 32;" zmienić wartość tej zmiennej z 'A' na 'a', czyli zmienić dużą literą na małą (i odwrotnie).
 			\item byte oraz unsigned char - przechowuje 8 bitową liczbą od 0 do 255. Zalecane jest używanie "byte" zamiast "unsigned char".
 			\item int - przechowuje wartości liczbowe. Zakres warości zależy od procesora.
-			Dla Arduino Uno (i innych urządzeniach opartch na procesorze ATMega) jest 16-bitowa i ma zakres od -32,768 do 32,767.
+				Dla Arduino Uno (i innych urządzeniach opartch na procesorze ATMega) jest 16-bitowa i ma zakres od -32768 do 32767.
 			\item word oraz unsigned int - od zwykłego różni się tym, że przechowuje tylko wartości nieujemne.
-			Jego zakres dla Arduino Uno i innych Arduino opartych na procesorach ATMega jest od 0 do 65,535.
-			\item 
+				Jego zakres dla Arduino Uno i innych Arduino opartych na procesorach ATMega jest od 0 do 65535.
+			\item long - przechowuje wartości liczbowe. Ma rozmiar 32 bitów. Przyjmuje wartości od -2147483648 to 2147483647. Po liczbie należy dać literę "L" (long liczba = 51523487L).
+			\item unsigned long przechowuje 32 bitową liczbę. Ma zakres od 0 do 4294967295.
+			\item short - dla wszystkich Arduino jest taki sam jak int na procesorach ATMega.
+			\item float - typ zmiennej dla liczb zmiennoprzecinkowych. Zajmują 32 bity pamięci. Mogą przechowywać warości od -34028235E+38 do 3.4028235E+38. Liczby zmiennoprzecinkowe \textbf{nie są dokładne}!
+				Na przykład "6.0 / 3.0" może nie być równe "2.0". Mają dokładność \textbf{tylko 6-7 cyfr znaczących}! Operacje na zmiennych zmiennoprzecinkowych \textbf{trwają dłużej} niż na liczbach całkowitych.
+				Należy również pamiętać, że nie umieszczenie kropki przy podawaniu wartości spowoduje, że zmienna traktowana będzie jako "int".
+			\item double - zmienna zmiennoprzecinkowa o podwójnej dokładności wzgledem "float". Na procesorach ATMega zajmuje 32 bity pamięci, a na Arduino Due 64 bity.
+				\textbf{W przypadku Arduino NIE jest dokładniejsza od zmiennej typu "float".}
+			\item string - tablica znaków. 
+			%##############################################################
+			%Dokończ string (tablicę), zrób string (obiekt) i napisz dalej
+			%##############################################################
 
 		\end{itemize}
 	
