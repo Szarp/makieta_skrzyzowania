@@ -173,13 +173,17 @@ Arduino IDE, o którym więcej w sekcji "Środowisko".
 		\\*Wyróżniamy następujące typy zmiennych:
 		\begin{itemize}
 			\item void - używany tylko do tworzenia funkcji, które nie zwracają żadnej wartości.
-			\item boolean - zmienne typu boolean przchowują tylko wartości \textbf{true} i \textbf{false}.
+			\item boolean - zmienne typu boolean przchowują tylko wartości \textbf{true} i \textbf{false}. Zamiast "false" można użyć 0, a każda niezerowa liczba zostanie uznana za "true".
 			\item char - typ danych zawierający bajt pamięci. Przechowuje wartość znaku.
 				Podczas nadawania zmiennej wartości należy zapisać ją w pojedynczym cudzysłowie.
 				Jednak znaki przechowywane są jako odpowiadające im liczby zgodnie z kodowaniem ASCII.
 				Zmienna "char znak = 'A';" może być zapisana również tak: "char znak = 65;".
 				Korzystając z tej własności możemy np pisząc "znak += 32;" zmienić wartość tej zmiennej z 'A' na 'a', czyli zmienić dużą literą na małą (i odwrotnie).
 			\item byte oraz unsigned char - przechowuje 8 bitową liczbą od 0 do 255. Zalecane jest używanie "byte" zamiast "unsigned char".
+			\item int - przechowuje wartości liczbowe. Zakres warości zależy od procesora.
+			Dla Arduino Uno (i innych urządzeniach opartch na procesorze ATMega) jest 16-bitowa i ma zakres od -32,768 do 32,767.
+			\item word oraz unsigned int - od zwykłego różni się tym, że przechowuje tylko wartości nieujemne.
+			Jego zakres dla Arduino Uno i innych Arduino opartych na procesorach ATMega jest od 0 do 65,535.
 			\item 
 
 		\end{itemize}
