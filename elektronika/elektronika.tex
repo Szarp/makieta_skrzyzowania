@@ -18,11 +18,12 @@
 % Oto przykładowy plik polski.
 
 \documentclass[a4paper,12pt, twoside]{article}
+
 \usepackage{polski}
 \usepackage[utf8]{inputenc}
 \usepackage{listings}
 \usepackage{graphicx}
-\setlength\parindent{25pt}
+%\setlength\parindent{125cp}
 \graphicspath{ {zdj/} }
 \renewcommand*{\figurename}{Ilustracja} %zmiana rysunek na ilustrracja przy opsie
 \usepackage{subcaption}
@@ -31,17 +32,19 @@
 \usepackage{titlesec}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
-\renewcommand{\sectionmark}[1]{\markright{#1}}%aby nie było0.1.2
-\fancyfoot[LE,RO]{\thepage}%numeracja lewo prawo(strona)
-\let\oldsection\section%nowa strona dla sekcji
+\renewcommand{\sectionmark}[1]{\markright{#1}}		%aby nie było0.1.2
+\fancyfoot[LE,RO]{\thepage}		%numeracja lewo prawo(strona)
+\let\oldsection\section		%nowa strona dla sekcji
 \renewcommand\section{\clearpage\oldsection}%nowa strona dla sekcji
 \renewcommand{\subsectionmark}[1]{}%nazwa rozdziału w nagólwku
-
+\usepackage[section]{placeins}
+%\renewcommand{\section}
 \titlelabel{\thetitle.\quad}%dodawankie kropki
 \rhead{\fancyplain{}{Elektronika}} % predefined ()
 \chead{\fancyplain{}{\rightmark }} % 1. sectionname
 \cfoot{\fancyplain{}{}} %środek stopki
 \lhead{\fancyplain{}{}} %lewa część nagłówka
+\usepackage[nottoc]{tocbibind}
 %opening
 \title{Elektronika}
 \author{Krzysztof Dziembała i Bartek Mazur}
@@ -49,7 +52,6 @@
 \begin{document}
 
 \maketitle
-
 %\begin{abstract}
 
 %\end{abstract}
@@ -59,12 +61,12 @@
 
 \section{Programowanie Arduino}
 
-\hspace{4ex} Arduino aby działać musi zostać zaprogramowane. Programuje się je w języku Arduino, opartym na językach C/C++.
-\\*Program jest kompilowany, czyli przetwarzany na język zrozumiały dla urządzenia, oraz na nie wgrywany za pomocą
+Arduino aby działać musi zostać zaprogramowane. Programuje się je w języku Arduino, opartym na językach C/C++.
+Program jest kompilowany, czyli przetwarzany na język zrozumiały dla urządzenia, oraz na nie wgrywany za pomocą
 Arduino IDE, o którym więcej w sekcji "Środowisko". 
 
 %![Arduino IDE](https://www.arduino.cc/en/pub/skins/arduinoWide/img/ArduinoAPP-01.svg)
-
+Kolejny akapit
 
 \subsection {Składnia języka używanego w środowisku C++}
 %Największą różnicą jest struktura, składnia praktycznie się nie różni - CO TU CHCIAŁEŚ NAPISAĆ???
@@ -286,11 +288,15 @@ Zadanie z tym związane(pojęcia będą wytłumaczone w dalszej części): \\* M
 	\item sym.-rezystor
 \end{itemize}
    \subsubsection{Definicje tych elementów}
+	
 Żarówka - jest to żródło światła(i ciepła) elektrycznego, poprzez żarzenie się trudno topliwego materiału(często wykorzystywany jest drucik wolfrmaowy przez który płynie duży prąd). Sprawność ok.
 8-10 lumenów/wat. 
-\\Żródło prądu stałego - jak nazwa wskazuje jest to miejsce, w którym "powstaje prąd" jednostką jest napięcie wolt[V]. W elektronice powrzechnie stosuje się napięcie 3,3V i 5V. Dla porównia w gniazdku jest 220-230V.
-\\ Rezystor - jest wykorzystywany do ograniczenia płynącego prądu w obwodzie. Zamienia energię elektryczą w ciepło. (Kolejny rozdział)[jak czytać opór na rezystorze - te paski]
-\\ Dioda świecąca - element elektryczny który przewodzi prąd tylko w jedną stronę. Stosowane w wyświetlaczach LED jak również w pilotach(na światło podczerwone) Charkateryzuje się dosyć dużą sprawnością 26-300 lumenówm/W. 
+
+Żródło prądu stałego - jak nazwa wskazuje jest to miejsce, w którym "powstaje prąd" jednostką jest napięcie wolt[V]. W elektronice powrzechnie stosuje się napięcie 3,3V i 5V. Dla porównia w gniazdku jest 220-230V.
+
+Rezystor - jest wykorzystywany do ograniczenia płynącego prądu w obwodzie. Zamienia energię elektryczą w ciepło. (Kolejny rozdział)[jak czytać opór na rezystorze - te paski]
+
+Dioda świecąca - element elektryczny który przewodzi prąd tylko w jedną stronę. Stosowane w wyświetlaczach LED jak również w pilotach(na światło podczerwone) Charkateryzuje się dosyć dużą sprawnością 26-300 lumenówm/W. 
 %oświetlnie na boiskach sportowych
 
 \subsubsection{Zastosowanie symboli}
@@ -298,25 +304,38 @@ Zadanie z tym związane(pojęcia będą wytłumaczone w dalszej części): \\* M
 Do rysowania schematów używamy tych właśnie symboli. Symbole te są znane na całym świecie więc gdy narysujemy (dioda) każdy będzie wiedział, że to dioda. Na początku nie będziemy rysować bardzo skomplikowanych układów ale należy wiedzieć że one istnieją. Przydają się przy czytaniu niektórych instrukcji(np. do jakiegos czujnika).
 %Schem nasz(jeden układ sygnalizatora) i dla porównania schemat (arduino mini- lub czegoś innego)
 
-	\subsection{Jak Czytać opór}
-	W systemie znakowania paskowym 2 pierwsze paski oznaczają wartość rezystancji którą czytamy jako jedną liczbę, a 3 pasek mnożnik przez który należy pomnożyć te dwie pierwsze liczby.
-Czwarty pasek to dopuszczalna tolerancja. - tolerancja to zakres błędu. Np dla opornika 10[ohm] +- 10\% znazcy, że opór będzie nam się wahał od 9-11[ohm].
-Tabela kolorów:(jakiś jpg lub sami narysujemy)
+	\subsection{Jak czytać opór}
+Nie ma tutaj żadnej filozofii. Musimy po prostu 'podstawić' nasz opornik i przeczytać. Spróbujcie sami ilustracja x. Rozwiązanie na koncu.
 
+W systemie znakowania paskowym 2 pierwsze paski oznaczają wartość rezystancji którą czytamy jako jedną liczbę, a 3 pasek mnożnik przez który należy pomnożyć te dwie pierwsze liczby.
+Czwarty pasek to dopuszczalna tolerancja. - tolerancja to zakres błędu. Np dla opornika 10[ohm] +- 10\% znazcy, że opór będzie nam się wahał od 9-11[ohm].
+\begin{figure}
+ \centering
+  \includegraphics[scale=0.7]{kod_paskowy.jpg}
+  \caption{Kod paskowy rezstorów}
+  \label{fig:test}
+\end{figure}
+\begin{figure}
+ \centering
+  \includegraphics[scale=0.4]{opornik.jpg}
+  \caption{Przykładowy rezystor}
+  \label{fig:test}
+\end{figure}
+\FloatBarrier
 	\subsection {Domowy warsztat}
     
-%        \input{'./warsztat-domowy}
+       \input{warsztat-domowy}
         
 
 \section{Pierwszy mikrokontroler}
 		Jest to dość podsawowy element: co trzeba mieć aby zacząc przygodę z elektroniką. Odpowiedz: praktycznie nic. W kolejnych częściach spróbujemy ustalić poziom zaawansowania w czytelnika w elektronice oraz w programowaniu.
-\begin{figure}[h]
+\begin{figure}[htb]
   \centering
   \includegraphics[scale=0.1,right]{universe.jpg}
   \caption{test figure}
   \label{fig:test}
 \end{figure}
-\begin{figure}[h]
+\begin{figure}[!h]
   \centering
   \includegraphics[scale=0.1,left]{universe.jpg}
   \caption{test figuwds}
@@ -336,12 +355,17 @@ Tabela kolorów:(jakiś jpg lub sami narysujemy)
 \section{Elektronika - dlaczego warto się nią interesować}
 Jest to 
 \section {Więcej}
-~\\
-%stackoverflow
+
+\subsection {Jak wiedzieć więcej}
+Internet jest pełen informacji ale nie zawsze jest je znaleźć. W tym celu powstały różne fora, poradniki i blogi, które pomagają nam. Polecam szukać w języku angielski (nasze problemy wpisywać po w Google po angielsku np. How to include new library to Arduino). Gdy to zrobimy najlepiej szukać odpowiedzi na formum Stackoverflow. Serwis ma ponad 10 milionów artyków, dzięki czemu jest duża szansa, że ktoś kiedyś miał taki sam problem jak wy. Stackoverflow można nazwać wikipedią dla informatyków.
+\subsection{System kotroli wersji}
+System kontroli wersji to oprogramowanie, które pomaga śledzić zmiany w kodzie źródłowym.
+Dzięki temu mamy dostęp do kodu który kiedyś napisaliśmy (i został zmieniony/usunięty). Możemy również całkowicie zmieniać kod bez obawy, że przestanie on działać (w każdym momencie możemy przywrócić poprzednią wersję). Jest stosowany w dużych korporacjach, ponieważ ułatwia wspólną pracę. Jest kilka systemów kontroli wersji na rynku ale najbardziej popularnym (i polecanym przez nas) jest GitHub. Jako przykład możemy dodać, że został on wykorzystany do pisania tej pracy. W załącznikach na końcu będzie link do serwisu i do naszych repozytoriów (nie ważne, że nie macie pojęcia co to oznacza. Musicie po prostu wejśc).
+\subsection{}
 %jak szukać bibliotek do czujników
 %system kontroli wersji
 %
-\newpage
+\bibliographystyle{acm}
 \bibliography{abib}
 
 
