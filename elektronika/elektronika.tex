@@ -269,14 +269,13 @@ Programowanie jest intuicyjne ale musimy pamiętać o kilku rzeczach. A mianowic
 
 \section{Podstawy elektroniki}
  \subsection{Fizyka w elektronice}
-	\subsubsection{Powtórka z gimnazjum}
 	Fizyka w elektronice nie różni się od tej poznanej w gimnazjum. Był cały dział 'prąd'. Ten dział właśnie nam się przyda. Nie zagłębiając się we wszystkie szczegóły, potórzymy prawo Ohma:
 	\begin{center}
 	\[
 	I=\frac{U}{R}
 	\]	
 	\end{center}
-Zadanie z tym związane(pojęcia będą wytłumaczone w dalszej części): \\* Mamy diodę oraz źródło zasilania 5V. Jaki rezystor musimy podłączyć aby prąd płynący przez diodę był ok 20mA %do sprawdzenia
+Zadanie z tym związane (pojęcia będą wytłumaczone w dalszej części): \\* Mamy diodę oraz źródło zasilania 5V. Jaki rezystor musimy podłączyć aby prąd płynący przez diodę był ok 20mA %do sprawdzenia
 %pracowało na prąd stały lub zmienny (podłączamy do gniazdka lub zasilanie z baterii - prosto tłumacząc).
 	\subsection{Elementy elektroniczne i ich symbole}
 	\subsubsection {Symbole}
@@ -352,22 +351,33 @@ Czwarty pasek to dopuszczalna tolerancja. - tolerancja to zakres błędu. Np dla
 
 \section {Zastosowanie elektroniki w życiu codziennym }
 	 %sygnalizacja  świetlna drukarki, zmywarki,samochody, sprzęt gospodarstwa domowego, telefony,
-\section{Elektronika - dlaczego warto się nią interesować}
-Jest to 
+
 \section {Więcej}
 
 \subsection {Jak wiedzieć więcej}
-Internet jest pełen informacji ale nie zawsze jest je znaleźć. W tym celu powstały różne fora, poradniki i blogi, które pomagają nam. Polecam szukać w języku angielski (nasze problemy wpisywać po w Google po angielsku np. How to include new library to Arduino). Gdy to zrobimy najlepiej szukać odpowiedzi na formum Stackoverflow. Serwis ma ponad 10 milionów artyków, dzięki czemu jest duża szansa, że ktoś kiedyś miał taki sam problem jak wy. Stackoverflow można nazwać wikipedią dla informatyków.
+Internet jest pełen informacji ale nie zawsze jest je znaleźć. W tym celu powstały różne fora, poradniki i blogi, które pomagają nam. Polecam szukać w języku angielski (nasze problemy wpisywać po w Google po angielsku np. How to include new library to Arduino). Gdy to zrobimy najlepiej szukać odpowiedzi na formum Stackoverflow. Serwis ma ponad 10 milionów artyków, dzięki czemu jest duża szansa, że ktoś kiedyś miał taki sam problem jak wy. Stackoverflow można nazwać wikipedią dla informatyków. \cite{klucz02,klucz03}
 \subsection{System kotroli wersji}
 System kontroli wersji to oprogramowanie, które pomaga śledzić zmiany w kodzie źródłowym.
 Dzięki temu mamy dostęp do kodu który kiedyś napisaliśmy (i został zmieniony/usunięty). Możemy również całkowicie zmieniać kod bez obawy, że przestanie on działać (w każdym momencie możemy przywrócić poprzednią wersję). Jest stosowany w dużych korporacjach, ponieważ ułatwia wspólną pracę. Jest kilka systemów kontroli wersji na rynku ale najbardziej popularnym (i polecanym przez nas) jest GitHub. Jako przykład możemy dodać, że został on wykorzystany do pisania tej pracy. W załącznikach na końcu będzie link do serwisu i do naszych repozytoriów (nie ważne, że nie macie pojęcia co to oznacza. Musicie po prostu wejśc).
 \subsection{}
 %jak szukać bibliotek do czujników
 %system kontroli wersji
-%
-\bibliographystyle{acm}
-\bibliography{abib}
+%%
+%\begin{thebibliography}{3}
+%\bibitem{diller} Antoni Diller, \textit{\LaTeX\ wiersz po wierszu},
+%wydawnictwo Helion, Gliwice 2001
+%\bibitem{grfguide} D.P. Carlisle, \textit{Packages in the ‘graphics’
+%bundle}
+%\bibitem{lshort} Tobias Oetiker, \textit{The Not So Short Introduction
+%To \LaTeX2e}
+%\end{thebibliography}
 
+%\nocite{*}
+\nocite{klucz01}
+
+\newpage
+\bibliography{abib} 
+\bibliographystyle{ieeetr}
 
 \end{document}
 

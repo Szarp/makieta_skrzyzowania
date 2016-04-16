@@ -1,3 +1,15 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{1}
+
+\bibitem{klucz02}
+J.~Doe, {\em The Book without Title}.
+\newblock Dummy Publisher, 2100.
+
+\bibitem{klucz03}
+J.~Doe, {\em The Book without Title}.
+\newblock Dummy Publisher, 2100.
+
+\bibitem{klucz01}
+J.~Doe, {\em The Book without Title}.
+\newblock Dummy Publisher, 2100.
 
 \end{thebibliography}
