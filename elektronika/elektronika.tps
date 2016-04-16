@@ -11,14 +11,14 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=595
-NormalPos.bottom=524
+NormalPos.right=1562
+NormalPos.bottom=513
 Class=LaTeXView
 Document=elektronika.tex
 
 [Frame0_View0,0]
-TopLine=42
-Cursor=2093
+TopLine=232
+Cursor=10678
 
 [Frame1]
 Flags=0
@@ -29,8 +29,8 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=595
-NormalPos.bottom=524
+NormalPos.right=1562
+NormalPos.bottom=513
 Class=BibTeXView
 Document=abib.bib
 

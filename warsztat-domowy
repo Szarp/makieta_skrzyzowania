@@ -1,16 +1,41 @@
-W tym rozdziale dowiesz się co trzeba kupić na samym początku.
-Projekt ten ma zainteresować czytelnika elektroniką. Jest to bardzo proste i nie wymaga zbyt dużej ilości pieniędzy. 
+\subsubsection{ O co chodzi}
+W tym rozdziale czytelnik dowie się jak zacząć przygodę z programowaniem jeśli nigdy nie miał styczności z tym. Po wybraniu swojego poziomu są umieszczone tabelki z zadaniami oraz z listą zakupów .
+\subsubsection{Podstawy podstaw - poziom 1}
+Jest to idealne połączenie dla czytelników, którzy zaczynają przygodę z elektroniką oraz z programowaniem jednoczśnie. Dzięki temu nauczy się podstaw z tych dziedzin. 
+To, co czytelnik ma zrobić aby posiąść tę wiedzę będzie omówione w dalszej części dokumentu. Koszyk odpwiedni w na tym poziomie znajdziemy w tab: Zawartość koszyka na poszczególnych poziomach.
 Poziom 1:
 -któreś arduino
 -płytka stykowa
 -kabelki(damsko-męskie i męsko-męskie)
 czujnik, oporniki(do diód)
+\subsubsection{Adwancet beginner - poziom 2}
+Czytelnik:
+-zna podstawową składnię używaną w arduino,
+-zna różnice między arduino nano oraz arduino uno,
+-potrafi uruchomić diodę wciskając przycisk,
+-spędził conajmiej 5h w środowisku Arduino
+
+Gdy czytelik posiądzie wiedzę minimalną, może przejść do kolejnego poziomu wtajemniczenia w elektronikę, prócz poszerzenia naszego warsztatu, zmiany trudności zadań, czytelnik musi wykazać się swoją kreatywnością, ponieważ w tym momencie pojawiają się schody.
+
+\subsubsection{Expert - poziom 3}
+Jako, że jest to poradnik dla początkujących i średnio zaawansowanych, wyróżnimy tylko 3 poziomy wtajemniczenia. W tym poziomie nie ma juz strikte list zakupów, ponieważ Expert sam dobrze wie co chce robić. 
+\subsubsection{Lista zakupów}
+Jak już wcześniej zostało napisane, w tym rozdziale zostanie poruszonty temat listy zakupów oraz jak kupować
+
+ Najlepszą stroną do kupowania elektroniki jest allegro, wszystkie dostępne(mniej lub bardziej podstawowe) czyjniki znajdziemy w kategorii 'Arduino' (opcjonalanie nazawa czujnika np magnetometr).
+
+Jeżeli mamy czas i potrzebujemy więcej czujników, najlepiej zamówić je w Chinach poprzez Aliexpress. Nie należy sie obawiać, że nie przyjdą jednak musimy uzbroić się w cierpliwość(najdłużej czekałem ok 70 dni).
+
+%tabelka
+\subsubsection{Zadania}
+Tak jak w przypadku zakupów, problemy zadaniowe mają swóje własne servisy, które ułatwiają pracę. Jest kilka ważnych zasad związanych z tym: szukamy po angielsku, problem wpisujemy w google i szukamy na stackowerflow, do arduino polecam forum arduino też(przykładowe problemy)
+\subsubsection{Reszta śmieci do zedytowania}
+Zadania mają charakter edukacyjny i wszystkie uczą różnych knifów w programowaniu arduino. Czasami jednak czytelnik będzie musiał wykazać się umiejętnością szperania w sieci. Podpowiedzi do zadań będą umieszczone w internecie.
+%github, pozdrawaim
 Jak zacząć:
 Gdy kupiliśmy arduino nano wpinamy je jak na zdjęciu(zdj płytka stykowa-arduino nano) teraz możemy bez probelemy wpiąć inne elementy(zdj serva i np naszego sygnalizatora
 Gdy kupimy arduino uno nie potrzebujemy nawet płytki stykowej ponieważ jest ono tak skonstruowane że możemy od razu wpinać użądzenie w płykę
 (znowu zdjęcia ale z uno)
-Kolejną wersją jest budowanie własnych rzeczy
-kupujemy wtedy lutownicę, cynę, topnik oraz płytkę(tą z dziórkami)
-i możemy budować np pilot(arduino nano +nrf ileś(kolejne zdjęcie)
+To jest tak jakby wersja testowa. Na płytce stykowej łączymy wszytko kabelkami.
 Załącznik lista zakupów: lv1, lv2, lv3
 

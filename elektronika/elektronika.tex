@@ -1,13 +1,29 @@
+%\begin{thebibliography}{3}
+%\bibitem{diller} Antoni Diller, \textit{\LaTeX\ wiersz po wierszu},
+%wydawnictwo Helion, Gliwice 2001
+%\bibitem{grfguide} D.P. Carlisle, \textit{Packages in the ‘graphics’
+%bundle}
+%\bibitem{lshort} Tobias Oetiker, \textit{The Not So Short Introduction
+%To \LaTeX2e}
+%\end{thebibliography}
+%
+%\label{nazwa}
+%\ref {nazwa}
+%świetny kurs lateksa  http://www.fuw.edu.pl/~kostecki/kurs_latexa.pdf
+%http://serwis-tv.com/opornik.html stworzenie tabelki
+%ugfdsjksdafnksdfnsdfklmd
+
 %zamien właściwość na cp1250
 % -*- TeX:PL -*-
 % Oto przykładowy plik polski.
 
-\documentclass[a4paper,10pt]{report}
+\documentclass[a4paper,12pt]{article}
 \usepackage{polski}
 \usepackage[utf8]{inputenc}
 \usepackage{listings}
-
-
+\usepackage{graphicx}
+\setlength{\parindent}{5mm}
+\graphicspath{ {zdj/} }
 %opening
 \title{Elektronika}
 \author{Krzysztof Dziembała i Bartek Mazur}
@@ -20,129 +36,209 @@
 
 %\end{abstract}
 \tableofcontents 
-\chapter{Programowanie Arduino}
- 
- \\Arduino aby działać musi zostać zaprogramowane. Programuje się je w języku Arduino, opartym na językach C/C++.
-\\*Program jest kompilowany, czyli przetwarzany na język zrozumiały dla urządzenia, oraz na nie wgrywany za pomocą
-Arduino IDE.
+\newpage
+
+\section{Programowanie Arduino}
+Arduino aby działać musi zostać zaprogramowane. Programuje się je w języku Arduino, opartym na językach C/C++.
+\\*Program jest kompilowany, czyli przetwarzany na język zrozumiały dla urządzenia oraz na nie wgrywany za pomocą
+Arduino IDE. 
 %![Arduino IDE](https://www.arduino.cc/en/pub/skins/arduinoWide/img/ArduinoAPP-01.svg)
 
 
-\section {Składnia języka używanego w środowisku C++}
-Największą różnicą jest struktura, składnia praktycznie się nie różni
-W tym rozdziale zajmiemy się wytłumaczeniem, jak programować w Arduino.
+\subsection {Składnia języka używanego w środowisku C++}
+%Największą różnicą jest struktura, składnia praktycznie się nie różni - CO TU CHCIAŁEŚ NAPISAĆ???
   Język Arduino można podzielić na 3 główne części:
-  1. Strukturę
-  2. Zmienne
-  3. Funkcje
-
-\subsection  {Struktura}
-\begin{figure}
-	\centering
-		\includegraphics{../../Users/Madar/Desktop/bartek_pulpit/zdjęcia/bartek.jpg}
-	\label{fig:bartek}
-\end{figure}
-Aby program działał niezbędne są dwie funkcje:
-
-  * void setup() - wykonywana tylko raz na początku programu\\*
+  \begin{enumerate}
+	\item Struktura
+	\item Zmienne
+	\item Funkcje
+\end{enumerate}
+\subsubsection  {Struktura}
+																											%\begin{figure}
+																												%\centering
+																													%\includegraphics{../../Users/Madar/Desktop/bartek_pulpit/zdjęcia/bartek.jpg}
+																												%\label{fig:bartek}
+																											%\end{figure}
+	Aby program działał niezbędne są dwie funkcje:
+	\renewcommand{\labelitemii}{$\circ$}
+	\begin{itemize}
 	
-  * void loop() - wykonywana cały czas po wykonaniu funkcji "setup"
-  %przykładowy kod
-Wśród struktur możemy wyróżnić także:
-
-  * Struktury kontrolne:
-
-    * if - wykonuje kod zawary w nawiasach klamrowych, jeśli warunek w zwykłych nawiasach jest spełniony\\*
-		\begin{lstlisting}[language=C++]
-		<html>
-		<div id='jsh'></div>
-		</html>
-		if(wartosc1 o wartosc2){}
-\end{lstlisting}
-%\verb||if(wartosc1 o wartosc2){}
+	  \item void setup() - wykonywana tylko raz na początku programu
+		
+	  \item void loop() - wykonywana cały czas po wykonaniu funkcji "setup"
+	 
+	\end{itemize}
+	  %przykładowy kod
+	Wśród struktur możemy wyróżnić także:
+	\begin{itemize}
+		\item if(){} - wykonuje kod zawary w nawiasach klamrowych, jeśli warunek w zwykłych nawiasach jest spełniony. Do porównania wartości najczęściej stosuje się:
+			\begin{itemize}
+				\item \verb|>| - jest większe
+				\item \verb|<|  - jest mniejsze
+				\item == - jest równe
+				\item != - jest różne od
+			\end{itemize}
+		\item else - wykonuje kod zawary w nawiasach klamrowych, jeśli warunek w if nie jest spełniony. \textbf{Używany tylko razem z "if".} Przykład:
 		\begin{verbatim}
-				if(wartosc1 o wartosc2){}
+		if(x > y){
+		  Serial.println("x jest większe od y.");
+		} else {
+		  Serial.println("x nie jest większe od y.");
+		}
 		\end{verbatim}
-		\verb||
+		\item for - jest to pętla, której zawartość w klamrach zostanie tyle razy wykonana, ile razy spełniony jest warunek podany na wejściu. Budowa:\\*
+		for(index, warunek dla którego funkcja ma się wykonywać, co zrobić z indeksem po wykonaniu){}\\*
+		Przykład pętli for, która wypisze wartości od 0 do 2 włącznie:
+		\begin{verbatim}
+		for (int x=0;x<3;x++){
+		  Serial.println(x);
+		}
+		\end{verbatim}
+		\item while() - pętla, która wykonuje kod w nawiasach klamrowych, jeśli warunek w zwykłych nawiasach jest spełniony.\\*
+		Przykład pętli while wypisującej wartości zmiennej x i zwiększającjej tę wartość jeśli jest ona mniejsza niż 3:
+		\begin{verbatim}while(x<3){
+		  Serial.println(x);
+		  x++;
+		}
+		\end{verbatim}
+		\item do... while() - pętla podobna do pę "while", ale kod zostanie wykonany conajmniej raz, nawet jeśli warunek nie jest spełniony. \\*
+		Przykład pętli do... while, która wypisze wartość x tylko raz (choć warunek \textbf{nie} jest spełniony):
+		\begin {verbatim}
+		int x = 3;
+		do{
+		  Serial.println(x);
+		}while(x<1);
+		\end{verbatim}
 		
-		najczęściej stosuje się:
-		> - jest większe
-		< - jest mniejsze
-		== - jest równe
-		!= - jest różne od
-    * else - wykonuje kod zawary w nawiasach klamrowych, jeśli warunek w if nie jest spełniony. **Używany tylko razem z "if".**
-	for - jest to pętla, której zawartość w klamrach zostanie tyle razy wykonana, ile razy spełniony jest warunek na wejściu 
-	for(index, warunek dla którego funkcja ma się wykonywać, co zrobić z indeksem po wykonaniu)
-	%\begin{verbatim} for (int x=0;x<3;x++){} \end {verbatim}
-  * Dalszą składnię
-  
-  * Operatory arytmetyczne
-  * Operatory porównawcze
-  * Operatory logiczne
-  * Operatory wskazujące
-  * Operatory bitowe
-  * Operatory złożone
+	\end{itemize}
+	Do tej kategorii możemy zaliczyć także niektóre symbole:
+	\begin{itemize}
+	\item ; - stawiany na końcu każdej (nie pustej) linii kodu. Nie jest nizbędny, jeśli linia jest zakończona znakiem \}
+	\item \{\} - w nawiasach klamrowych jest zawarty kod każdej funkcji, pętli i "if", oraz "else"
+	\item // - stawia się przed kometarzem. Ten typ komentarzy zaczyna się od tych znaków i kończy się z końcem linijki. \textbf{Komentarze są ignorowane przez kompilator} 
+	\item /**/ - komentarz wieloliniowy. Komentarz wstawia się za "/*", a kończy się go "*/".
+	\item = - przypisuje zmiennej określoną wartość. Przykład przypisania zmiennej "x" typu "string" wartości "wartość":
+		\begin{verbatim}
+		string x = "wartość";
+		\end{verbatim}
+	\item + - oznacza dodawanie
+	\item - - oznacza operację odejmowania
+	\item * - mnożenie
+	\item / - dzielenie
+	%###########################################################
+	%TERAZ MODULO I DALEJ
+	%###########################################################
+	
+	\end{itemize}
+	%###########################################################
+	%PAMIĘTAJ O #INCLUDE I #DEFINE!!!
+	%###########################################################
+%	  * Dalszą składnię
+%	  
+%	  * Operatory arytmetyczne
+%	  * Operatory porównawcze
+%	  * Operatory logiczne
+%	  * Operatory wskazujące
+%	  * Operatory bitowe
+%	  * Operatory złożone
 
-[https://www.arduino.cc/en/Guide/Introduction, https://www.arduino.cc/en/Reference/HomePage]
+%to do bibliografi[https://www.arduino.cc/en/Guide/Introduction, https://www.arduino.cc/en/Reference/HomePage]
 
-	\section {Schematy blokowe}
-	\section{Jezyk używany}
-	\section{Środowisko}
-		Środowisko w którym piszemy nasze progarmy(kompilujemy je i wygrywamy) jest Arduino. Wygląda w ten sposób: screeen z arudino. 
+	\subsection {Styl pisania}
+	Nie mówimy tutaj czysto o algorytmice(przeszukiwanie danych, analiza obrazu itp.) jednak jest pewien schemat postępowania. Arduino składa się z czujników(sensorów) oraz odbiorników %spis tego na samym końcu
+	\\
+	Możemy wtedy na bieżąco analizować i przetwarzać dane. Na samym początku może się to wydawać niezrozumiałe ale przy odrobinie wprawy i obycia z urządzeniem zmienią podejście.
 		
-W tym celu pobieramy je z następującej strony
-	\section{Ogelne uwagi}
-\chapter{Podstawy elektroniki}
- \section{Fizyka w elektronice}
-	\subsection{Powtórka z gimnazjum}
-	\\Fizyka w elektronice nie różni się od tej poznanej w gimnazjum. Był cały dział "`prąd"'. Ten dział właśnie nam się przyda. Nie zagłębiając się we wszystkie szczegóły, potórzymy prawo Ohma:
+	Podstawą jest umiejętość skunstruowania algorytmu, czyli 
+W ogólniej wersji wygląda to tak:
+\subsubsection{Schemat ogólny)
+	Przyjrzymy się ogólnej postaci programów. Zostaną one wytłumaczone na przykładzie schematu blokowego aby niewprawiony czytelnik był w stanie cokolwiek zrozumieć.
+\subsubsection{Przykłady z życia wzięte)
+W tej części przeanalizjemy kod 'normalnie' używany
+%CZytaj wartość czujnika -> analiza -> sygnał do odbiornika(zgaś światło, rusz silnikiem)
+	%\subsection{Jezyk używany}
+	\subsection{Środowisko}
+	Środowisko - miejsce w którym dzieją się cuda, a mianowicie powstają nasze programy. Jak każdy język, Arduino również ma swoje(o tej samej nazwie).
+	Środowisko umożliwia nam edytowanie programów oraz kompilację i wgrywanie(odnośniki do wyższego rozdziału tutaj powinny się znajdować)
+		Wygląda w ten sposób: screeen z arudino. 
+	\subsubsection{Skąd pobrać}
+		
+Pobieramy je ze strony (odnośnik w przypisach) zgodne z naszą maszyną. Następnie instalujemy, według instalatora.(ew. krok po kroku) 
+\subsubsection{Pierwsze kroki}
+Programowanie jest intuicyjne ale musimy pamiętać o kilku rzeczach. A mianowicie port szeregowy, płytka i coś jeszcze
+(zdjęcia z tego razem z podpisem)
+%\newpage
+
+\section{Podstawy elektroniki}
+ \subsection{Fizyka w elektronice}
+	\subsubsection{Powtórka z gimnazjum}
+	Fizyka w elektronice nie różni się od tej poznanej w gimnazjum. Był cały dział 'prąd'. Ten dział właśnie nam się przyda. Nie zagłębiając się we wszystkie szczegóły, potórzymy prawo Ohma:
+	\begin{center}
 	\[
 	I=\frac{U}{R}
-\]
-
-	gdzie:\\*
-	I - natężenie w [A] \\*
-	U - napięcie w [V] \\*
-	R - rezystancja [\Omega]
-			
-
+	\]	
+	\end{center}
 Zadanie z tym związane(pojęcia będą wytłumaczone w dalszej części): \\* Mamy diodę oraz źródło zasilania 5V. Jaki rezystor musimy podłączyć aby prąd płynący przez diodę był ok 20mA %do sprawdzenia
 %pracowało na prąd stały lub zmienny (podłączamy do gniazdka lub zasilanie z baterii - prosto tłumacząc).
-	\section{Elementy elektroniczne i ich symbole}
-	\subsection {Symbole}
-	\\Elektronika ma swój własny język.Przypominjmy oznaczenia niektórych elementów z elektroniki:
+	\subsection{Elementy elektroniczne i ich symbole}
+	\subsubsection {Symbole}
+	Elektronika ma swój własny język.Przypominjmy oznaczenia niektórych elementów z elektroniki:
 \begin{itemize}
 	\item sym.-dioda świecąca
 	\item sym.-żródło prądu stałego
 	\item sym.-żarówka
 	\item sym.-rezystor
 \end{itemize}
-
-   \\Definicje:
-\\* Żarówka - jest to żródło światła(i ciepła) elektrycznego, poprzez żarzenie się trudno topliwego materiału(często wykorzystywany jest drucik wolfrmaowy przez który płynie duży prąd). Sprawność ok.
+   \subsubsection{Definicje tych elementów}
+Żarówka - jest to żródło światła(i ciepła) elektrycznego, poprzez żarzenie się trudno topliwego materiału(często wykorzystywany jest drucik wolfrmaowy przez który płynie duży prąd). Sprawność ok.
 8-10 lumenów/wat. 
-\\* Żródło prądu stałego - jak nazwa wskazuje jest to miejsce, w którym "powstaje prąd" jednostką jest napięcie wolt[V]. W elektronice powrzechnie stosuje się napięcie 3,3V i 5V. Dla porównia w gniazdku jest 220-230V.
-\\* Rezystor - jest wykorzystywany do ograniczenia płynącego prądu w obwodzie. Zamienia energię elektryczą w ciepło. (Kolejny rozdział)[jak czytać opór na rezystorze - te paski]
-dioda świecąca-element elektryczny który przewodzi prąd tylko w jedną stronę. Stosowane w wyświetlaczach LED jak również w pilotach(na światło podczerwone) Charkateryzuje się dosyć dużą sprawnością 
-26-300 lumenówm/W.  %oświetlnie na boiskach sportowych
-    \\Zastosowanie symboli:
-Do rysowania schematów używamy tych właśnie symboli. Symbole te są znane na całym świecie więc gdy narysujemy (dioda) każdy będzie wiedział, że to dioda. Na początku nie będziemy rysować jakoś bardzo skomplikowanych układów.
-Schem nasz(jeden układ sygnalizatora) i dla porównania schemat (arduino mini- lub czegoś innego)
-	\section{Jak Czytać opór}
+\\Żródło prądu stałego - jak nazwa wskazuje jest to miejsce, w którym "powstaje prąd" jednostką jest napięcie wolt[V]. W elektronice powrzechnie stosuje się napięcie 3,3V i 5V. Dla porównia w gniazdku jest 220-230V.
+\\ Rezystor - jest wykorzystywany do ograniczenia płynącego prądu w obwodzie. Zamienia energię elektryczą w ciepło. (Kolejny rozdział)[jak czytać opór na rezystorze - te paski]
+\\ Dioda świecąca - element elektryczny który przewodzi prąd tylko w jedną stronę. Stosowane w wyświetlaczach LED jak również w pilotach(na światło podczerwone) Charkateryzuje się dosyć dużą sprawnością 26-300 lumenówm/W. 
+%oświetlnie na boiskach sportowych
+
+\subsubsection{Zastosowanie symboli}
+    
+Do rysowania schematów używamy tych właśnie symboli. Symbole te są znane na całym świecie więc gdy narysujemy (dioda) każdy będzie wiedział, że to dioda. Na początku nie będziemy rysować bardzo skomplikowanych układów ale należy wiedzieć że one istnieją. Przydają się przy czytaniu niektórych instrukcji(np. do jakiegos czujnika).
+%Schem nasz(jeden układ sygnalizatora) i dla porównania schemat (arduino mini- lub czegoś innego)
+
+	\subsection{Jak Czytać opór}
 	W systemie znakowania paskowym 2 pierwsze paski oznaczają wartość rezystancji którą czytamy jako jedną liczbę, a 3 pasek mnożnik przez który należy pomnożyć te dwie pierwsze liczby.
 Czwarty pasek to dopuszczalna tolerancja. - tolerancja to zakres błędu. Np dla opornika 10[ohm] +- 10\% znazcy, że opór będzie nam się wahał od 9-11[ohm].
 Tabela kolorów:(jakiś jpg lub sami narysujemy)
 
-	\section {domowy warsztat}
-\chapter{Pierwszy mikrokontroler}
-	\section{zestaw do kupienia}
-	\section{kod}
-	\section{budowa}
-\chapter {Zastosowanie elektroniki w życiu codziennym }
-\chapter{Elektronika - dlaczego warto się nią interesować}
-\chapter {Więcej}
+
+    
+%        \input{'./warsztat-domowy}
+        
+\newpage
+\section{Pierwszy mikrokontroler}
+		Jest to dość podsawowy element: co trzeba mieć aby zacząc przygodę z elektroniką. Odpowiedz: praktycznie nic. W kolejnych częściach spróbujemy ustalić poziom zaawansowania w czytelnika w elektronice oraz w programowaniu.
+\begin{figure}%                 use [hb] only if necceccary!
+  \centering
+  \includegraphics[bb=0 0 1000 1000, width=3cm, height=4cm]{universe.jpg}
+  \caption{test figure}
+  \label{fig:test}
+\end{figure}
+
+	%opis sygnalizatora świetlnego
+	%\section{zestaw do kupienia}
+		\subsection {Od czego zacząć}
+			Wielu z nas nie ma nawet miernika w domu, myślę że to jest dobry moment na zakupienie takiego urządzenia. Będziemy wyglądać bardziej profesjonalnie. Poza tak oczywisteym zakupem musimy mieć jeszcze kilka rzeczy o których dowiecie się w kolejnych częściach.
+	\subsection{budowa}
+	Przy pomocy arduino jesteśmy w stanie tworzyć bardzo skoplikowane rzeczy ale ono nie jest do tego przystosoane. Głównym zastosowaniem jest tj inteligenty dom.
+	\subsection{budowa}
+\section {Zastosowanie elektroniki w życiu codziennym }
+	 %sygnalizacja  świetlna drukarki, zmywarki,samochody, sprzęt gospodarstwa domowego, telefony,
+\section{Elektronika - dlaczego warto się nią interesować}
+Jest to 
+\section {Więcej}
+~\\
+%stackoverflow
+%jak szukać bibliotek do czujników
+%system kontroli wersji
+%
 \bibliography{abib}
 
 
 \end{document}
-

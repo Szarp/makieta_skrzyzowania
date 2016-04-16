@@ -1,2 +1,16 @@
 code/test/test.ino
 *.hex
+
+#Logi programów
+*.log
+
+#Tymczasowe pliki
+*.tmp
+
+#Pliki gotowe do otwarcia (mogą być nieaktualne)
+*.dvi
+*.pdf
+
+#Plik stanu programu TeXnicCenter (lokalizacja kursora)
+*.tps
+*.ps

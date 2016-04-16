@@ -1,23 +1,22 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=latex 2016.2.27)  17 MAR 2016 12:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.27)  7 APR 2016 00:37
 entering extended mode
 **./elektronika.tex
 (elektronika.tex
 LaTeX2e <2015/10/01> patch level 2
 Babel <3.9n> and hyphenation patterns for 69 languages loaded.
-(C:\praca_bartek\miktex\tex\latex\base\report.cls
-Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
-(C:\praca_bartek\miktex\tex\latex\base\size10.clo
-File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+(C:\praca_bartek\miktex\tex\latex\base\article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+(C:\praca_bartek\miktex\tex\latex\base\size12.clo
+File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
-\c@chapter=\count80
-\c@section=\count81
-\c@subsection=\count82
-\c@subsubsection=\count83
-\c@paragraph=\count84
-\c@subparagraph=\count85
-\c@figure=\count86
-\c@table=\count87
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
@@ -313,303 +312,168 @@ Now handling font encoding OT4 ...
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks16
 )
-\lst@mode=\count88
+\lst@mode=\count87
 \lst@gtempboxa=\box26
 \lst@token=\toks17
-\lst@length=\count89
+\lst@length=\count88
 \lst@currlwidth=\dimen103
-\lst@column=\count90
-\lst@pos=\count91
+\lst@column=\count89
+\lst@pos=\count90
 \lst@lostspace=\dimen104
 \lst@width=\dimen105
-\lst@newlines=\count92
-\lst@lineno=\count93
+\lst@newlines=\count91
+\lst@lineno=\count92
 \lst@maxwidth=\dimen106
 
 (C:\praca_bartek\miktex\tex\latex\listings\lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
-\c@lstnumber=\count94
-\lst@skipnumbers=\count95
+\c@lstnumber=\count93
+\lst@skipnumbers=\count94
 \lst@framebox=\box27
 )
 (C:\praca_bartek\miktex\tex\latex\listings\listings.cfg
 File: listings.cfg 2015/06/04 1.6 listings configuration
 ))
 Package: listings 2015/06/04 1.6 (Carsten Heinz)
- (elektronika.aux)
+
+(C:\praca_bartek\miktex\tex\latex\graphics\graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(C:\praca_bartek\miktex\tex\latex\graphics\graphics.sty
+Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\praca_bartek\miktex\tex\latex\graphics\trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(C:\praca_bartek\miktex\tex\latex\00miktex\graphics.cfg
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 94.
+
+(C:\praca_bartek\miktex\tex\latex\pdftex-def\pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(C:\praca_bartek\miktex\tex\generic\oberdiek\infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(C:\praca_bartek\miktex\tex\generic\oberdiek\ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count95
+))
+\Gin@req@height=\dimen107
+\Gin@req@width=\dimen108
+) (elektronika.aux)
 \openout1 = `elektronika.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
 \c@lstlisting=\count96
-LaTeX Font Info:    Try loading font information for OML+plm on input line 17.
 
-(C:\praca_bartek\miktex\tex\latex\polski\omlplm.fd
+(C:\praca_bartek\miktex\tex\context\base\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count97
+\scratchdimen=\dimen109
+\scratchbox=\box28
+\nofMPsegments=\count98
+\nofMParguments=\count99
+\everyMPshowfont=\toks18
+\MPscratchCnt=\count100
+\MPscratchDim=\dimen110
+\MPnumerator=\count101
+\makeMPintoPDFobject=\count102
+\everyMPtoPDFconversion=\toks19
+)
+LaTeX Font Info:    Try loading font information for OML+plm on input line 33.
+ (C:\praca_bartek\miktex\tex\latex\polski\omlplm.fd
 File: omlplm.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
-LaTeX Font Info:    Try loading font information for OMS+plsy on input line 17.
+LaTeX Font Info:    Try loading font information for OMS+plsy on input line 33.
 
 
 (C:\praca_bartek\miktex\tex\latex\polski\omsplsy.fd
 File: omsplsy.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
-LaTeX Font Info:    Try loading font information for OMX+plex on input line 17.
+LaTeX Font Info:    Try loading font information for OMX+plex on input line 33.
 
 
 (C:\praca_bartek\miktex\tex\latex\polski\omxplex.fd
 File: omxplex.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <12> on input line 17.
+(Font)              <14.4> on input line 33.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <8> on input line 17.
+(Font)              <10> on input line 33.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <6> on input line 17.
- [1
-
-] (elektronika.toc
-LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <10> on input line 2.
-LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <7> on input line 2.
-LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <5> on input line 2.
-)
+(Font)              <7> on input line 33.
+ (elektronika.toc)
 \tf@toc=\write3
 \openout3 = `elektronika.toc'.
 
+ [1
 
-[1
-
-]
-Rozdzia\PlPrIeC {\l } 1.
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.25  \\A
-         rduino aby dziaÅ‚aÄ‡ musi zostaÄ‡ zaprogramowane. Programuje siÄ™ j...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-Overfull \hbox (18.17456pt too wide) in paragraph at lines 31--31
-[]\OT4/cmr/bx/n/14.4 Skªadnia j¦-zy-ka u»y-wa-ne-go w ±ro-do-wi-sku C++ 
- []
-
-! Undefined control sequence.
-l.42 		\includegraphics
-                       {../../Users/Madar/Desktop/bartek_pulpit/zdjÄ™cia/bar...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.42 ...graphics{../../Users/Madar/Desktop/bartek_
-                                                  pulpit/zdjÄ™cia/bartek.jpg}
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-LaTeX Warning: Command \k invalid in math mode on input line 42.
-
-! Extra }, or forgotten $.
-l.42 ...Desktop/bartek_pulpit/zdjÄ™cia/bartek.jpg}
-                                                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.44 \end{figure}
-                 
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-Missing character: There is no ¦ in font plmi10!
-! Missing } inserted.
-<inserted text> 
-                }
-l.44 \end{figure}
-                 
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 47--48
-
- []
-
-(C:\praca_bartek\miktex\tex\latex\listings\lstlang1.sty
-File: lstlang1.sty 2015/06/04 1.6 listings language file
-)
-(C:\praca_bartek\miktex\tex\latex\listings\lstlang1.sty
-File: lstlang1.sty 2015/06/04 1.6 listings language file
-)
-(C:\praca_bartek\miktex\tex\latex\listings\lstmisc.sty
-File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
-)
-Underfull \hbox (badness 10000) in paragraph at lines 55--56
-
- []
-
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 57.
-(C:\praca_bartek\miktex\tex\latex\base\omlcmr.fd
-File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 57.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 60.
+{C:/Users/Madar/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 66.
 
 (C:\praca_bartek\miktex\tex\latex\base\omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 60.
-LaTeX Font Info:    Try loading font information for OT4+cmtt on input line 63.
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 66.
+LaTeX Font Info:    External font `plex10' loaded for size
+(Font)              <12> on input line 76.
+LaTeX Font Info:    External font `plex10' loaded for size
+(Font)              <8> on input line 76.
+LaTeX Font Info:    External font `plex10' loaded for size
+(Font)              <6> on input line 76.
+LaTeX Font Info:    Try loading font information for OT4+cmtt on input line 76.
 
 
 (C:\praca_bartek\miktex\tex\latex\polski\ot4cmtt.fd
 File: ot4cmtt.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
-) [2
-
-]
-Overfull \hbox (109.45921pt too wide) in paragraph at lines 86--87
-[][]\OT4/cmr/m/n/10 [https://www.arduino.cc/en/Guide/Introduction, https://www.
-arduino.cc/en/Reference/HomePage] 
+) [2]
+Overfull \hbox (0.15915pt too wide) in paragraph at lines 120--121
+[]\OT4/cmr/m/n/12 = - przy-pi-su-je zmien-nej okre-±lo-n¡ war-to±¢. Przy-kªad p
+rzy-pi-sa-nia zmien-
  []
 
-[3]
-
-! LaTeX Error: Float(s) lost.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.95 \chapter
-             {Podstawy elektroniki}
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-Rozdzia\PlPrIeC {\l } 2.
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.98 	\\F
-         izyka w elektronice nie rÃ³Å¼ni siÄ™ od tej poznanej w gimnazjum. B...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! Missing $ inserted.
+[3])
+Runaway argument?
+{Schemat ogÃ³lny) Przyjrzymy siÄ™ ogÃ³lnej postaci programÃ³w. Zostan\ETC.
+! File ended while scanning use of \@xdblarg.
 <inserted text> 
-                $
-l.106 	R - rezystancja [\Omega
-                              ]
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+                \par 
+<*> ./elektronika.tex
+                     
+I suspect you have forgotten a `}', causing me
+to read past where you wanted me to stop.
+I'll try to recover; but if the error is serious,
+you'd better type `E' or `X' now and fix your file.
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.107 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+! Emergency stop.
+<*> ./elektronika.tex
+                     
+*** (job aborted, no legal \end found)
 
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.113 	\\E
-          lektronika ma swÃ³j wÅ‚asny jÄ™zyk.Przypominjmy oznaczenia niektÃ³...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.121    \\D
-            efinicje:
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-Overfull \hbox (3.13956pt too wide) in paragraph at lines 121--131
-\OT4/cmr/m/n/10 trud-no to-pli-we-go ma-te-ria-ªu(cz¦sto wy-ko-rzy-sty-wa-ny je
-st dru-cik wol-fr-ma-owy przez
- []
-
-[4
-
-] [5]
-Rozdzia\PlPrIeC {\l } 3.
-[6
-
-]
-Rozdzia\PlPrIeC {\l } 4.
-[7
-
-]
-Rozdzia\PlPrIeC {\l } 5.
-[8
-
-]
-Rozdzia\PlPrIeC {\l } 6.
-(elektronika.bbl) [9
-
-] (elektronika.aux) ) 
+ 
 Here is how much of TeX's memory you used:
- 2576 strings out of 493635
- 32397 string characters out of 3145821
- 108015 words of memory out of 3000000
- 5952 multiletter control sequences out of 15000+200000
- 15579 words of font info for 43 fonts, out of 3000000 for 9000
+ 2961 strings out of 493634
+ 39119 string characters out of 3145795
+ 96736 words of memory out of 3000000
+ 6328 multiletter control sequences out of 15000+200000
+ 14158 words of font info for 41 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 33i,6n,60p,271b,1393s stack positions out of 5000i,500n,10000p,200000b,50000s
-
-Output written on elektronika.dvi (10 pages, 15064 bytes).
+ 27i,6n,32p,375b,236s stack positions out of 5000i,500n,10000p,200000b,50000s
+!  ==> Fatal error occurred, no output PDF file produced!
