@@ -18,11 +18,14 @@
 % Oto przykładowy plik polski.
 
 \documentclass[a4paper,12pt, twoside]{article}
-
 \usepackage{polski}
 \usepackage[utf8]{inputenc}
 \usepackage{listings}
 \usepackage{graphicx}
+
+\usepackage{xcolor} % Required for specifying custom colors
+\usepackage{fix-cm} % Allows increasing the font size of specific fonts beyond LaTeX default specifications
+
 %\setlength\parindent{125cp}
 \graphicspath{ {zdj/} }
 \renewcommand*{\figurename}{Ilustracja} %zmiana rysunek na ilustrracja przy opsie
@@ -44,20 +47,69 @@
 \chead{\fancyplain{}{\rightmark }} % 1. sectionname
 \cfoot{\fancyplain{}{}} %środek stopki
 \lhead{\fancyplain{}{}} %lewa część nagłówka
-\usepackage[nottoc]{tocbibind}
-%opening
-\title{Elektronika}
-\author{Krzysztof Dziembała i Bartek Mazur}
+\usepackage[nottoc]{tocbibind}  %opening
+
+\setlength{\oddsidemargin}{0mm} % Adjust margins to center the colored title box
+\setlength{\evensidemargin}{0mm} % Margins on even pages - only necessary if adding more content to this template
+
+\newcommand{\HRule}[1]{\hfill \rule{0.2\linewidth}{#1}} % Horizontal rule at the bottom of the page, adjust width here
+
+\definecolor{grey}{rgb}{0.9,0.9,0.9} % Color of the box surrounding the title - these values can be changed to give the box a different color
 
 \begin{document}
 
-\maketitle
+ % Remove page numbering on this page
+
+%----------------------------------------------------------------------------------------
+% TITLE SECTION
+%----------------------------------------------------------------------------------------
+\begin{titlepage}
+\small Gimnazjum nr 3 w Zabrzu\\
+\line(1,0){431}\\
+\colorbox{grey}{
+	\parbox[t]{1.0\linewidth}{
+		\centering \fontsize{50pt}{80pt}\selectfont % The first argument for fontsize is the font size of the text and the second is the line spacing - you may need to play with these for your particular title
+		\vspace*{0.7cm} % Space between the start of the title and the top of the grey box
+		
+		\hfill Projekt \\
+		\hfill Elektronika \\
+
+		\vspace*{0.7cm} % Space between the end of the title and the bottom of the grey box
+	}
+}
+
+%----------------------------------------------------------------------------------------
+\vfill % Space between the title box and author information
+
+%----------------------------------------------------------------------------------------
+%	AUTHOR NAME AND INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+
+{\centering \large 
+\hfill Autorzy: \\
+\hfill Bartek Mazur \\
+\hfill Krzyś Dziembała \\
+\hfill \\
+\hfill Klasa 3gb\\
+
+\HRule{1pt}} % Horizontal line, thickness changed here
+
+%----------------------------------------------------------------------------------------
+
+\begin{tabular}{r}
+\small\today
+\end{tabular}
+\hfill
+\clearpage % Whitespace to the end of the page
+
+\end{titlepage}
+%\newpage\null\thispagestyle{empty}\newpage
 %\begin{abstract}
 
 %\end{abstract}
 
 \tableofcontents 
-
+\setcounter{page}{1}
 
 \section{Programowanie Arduino}
 
