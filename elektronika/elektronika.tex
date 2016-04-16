@@ -24,6 +24,7 @@
 \usepackage{graphicx}
 \setlength{\parindent}{5mm}
 \graphicspath{ {zdj/} }
+
 %opening
 \title{Elektronika}
 \author{Krzysztof Dziembała i Bartek Mazur}
@@ -39,9 +40,11 @@
 \newpage
 
 \section{Programowanie Arduino}
-Arduino aby działać musi zostać zaprogramowane. Programuje się je w języku Arduino, opartym na językach C/C++.
-\\*Program jest kompilowany, czyli przetwarzany na język zrozumiały dla urządzenia oraz na nie wgrywany za pomocą
-Arduino IDE. 
+
+\\Arduino aby działać musi zostać zaprogramowane. Programuje się je w języku Arduino, opartym na językach C/C++.
+\\*Program jest kompilowany, czyli przetwarzany na język zrozumiały dla urządzenia, oraz na nie wgrywany za pomocą
+Arduino IDE, o którym więcej w sekcji "Środowisko". 
+
 %![Arduino IDE](https://www.arduino.cc/en/pub/skins/arduinoWide/img/ArduinoAPP-01.svg)
 
 
@@ -70,13 +73,16 @@ Arduino IDE.
 	\end{itemize}
 	  %przykładowy kod
 	Wśród struktur możemy wyróżnić także:
+
 	\begin{itemize}
-		\item if(){} - wykonuje kod zawary w nawiasach klamrowych, jeśli warunek w zwykłych nawiasach jest spełniony. Do porównania wartości najczęściej stosuje się:
+		\item if(){} - wykonuje kod zawary w nawiasach klamrowych, jeśli warunek w zwykłych nawiasach jest spełniony. Do porównania wartości stosuje się:
 			\begin{itemize}
 				\item \verb|>| - jest większe
 				\item \verb|<|  - jest mniejsze
 				\item == - jest równe
 				\item != - jest różne od
+				\item \verb|<=| - mniejsze bądź równe
+				\item \verb|>=| - większe bądź równe
 			\end{itemize}
 		\item else - wykonuje kod zawary w nawiasach klamrowych, jeśli warunek w if nie jest spełniony. \textbf{Używany tylko razem z "if".} Przykład:
 		\begin{verbatim}
@@ -113,26 +119,88 @@ Arduino IDE.
 	\end{itemize}
 	Do tej kategorii możemy zaliczyć także niektóre symbole:
 	\begin{itemize}
-	\item ; - stawiany na końcu każdej (nie pustej) linii kodu. Nie jest nizbędny, jeśli linia jest zakończona znakiem \}
-	\item \{\} - w nawiasach klamrowych jest zawarty kod każdej funkcji, pętli i "if", oraz "else"
-	\item // - stawia się przed kometarzem. Ten typ komentarzy zaczyna się od tych znaków i kończy się z końcem linijki. \textbf{Komentarze są ignorowane przez kompilator} 
-	\item /**/ - komentarz wieloliniowy. Komentarz wstawia się za "/*", a kończy się go "*/".
-	\item = - przypisuje zmiennej określoną wartość. Przykład przypisania zmiennej "x" typu "string" wartości "wartość":
-		\begin{verbatim}
-		string x = "wartość";
-		\end{verbatim}
-	\item + - oznacza dodawanie
-	\item - - oznacza operację odejmowania
-	\item * - mnożenie
-	\item / - dzielenie
-	%###########################################################
-	%TERAZ MODULO I DALEJ
-	%###########################################################
-	
+		\item ; - stawiany na końcu każdej (nie pustej) linii kodu. Nie jest nizbędny, jeśli linia jest zakończona znakiem \}
+		\item \{\} - w nawiasach klamrowych jest zawarty kod każdej funkcji, pętli i "if", oraz "else"
+		\item // - stawia się przed kometarzem. Ten typ komentarzy zaczyna się od tych znaków i kończy się z końcem linijki. \textbf{Komentarze są ignorowane przez kompilator} 
+		\item /**/ - komentarz wieloliniowy. Komentarz wstawia się za "/*", a kończy się go "*/".
+		\item = - przypisuje zmiennej określoną wartość. Przykład przypisania zmiennej "x" typu "string" wartości "wartość":
+			\begin{verbatim}
+			string x = "wartość";
+			\end{verbatim}
+		\item + - oznacza dodawanie
+		\item - - oznacza operację odejmowania
+		\item * - mnożenie
+		\item / - dzielenie
+		\item \% - modulo (reszta z dzielenia). Działanie: x \% y - reszta z dzielenia x przez y
+		\item ++ - powiększ o 1. Przykład kodu zwiększającego zmienną x o 1:
+			\begin{verbatim}
+			x++;
+			\end{verbatim}
+		\item -- - zmniejsz o 1. Wykorzystanie w ten sam sposób co --
+		\item += - powiększ o. Przykład kodu zwiększającego zmienną x o 7:
+			\begin{verbatim}
+			x+=7;
+			\end{verbatim}
+			Równoważne z kodem
+			\begin{verbatim}
+			x = x + 7;
+			\end{verbatim}
+		\item -= - pomniejsz o. "x -= y" jest równoważne z "x = x - y"
+		\item *= - przemnóż przez. "x *= y" równoważne do "x = x*y"
+		\item /= - podziel przez. "x /= y" = "x = x/y"
+		\item \%= - zapisz jako resztę z dzielenia przez. "x \%= y" jest równoważne z "x = x\%y".
 	\end{itemize}
-	%###########################################################
-	%PAMIĘTAJ O #INCLUDE I #DEFINE!!!
-	%###########################################################
+	Należy pamiętać również o:
+	\begin{itemize}
+		\item #include - używany na początku kodu przed jakąkolwiek funkcją, aby dołączyć biblioteki. \textbf{Nie stawiamy po nim średnika!} Przykład:
+			\begin{verbatim}
+				#include <Keyboard.h> //dodaje bibliotekę wprowadzającą obsługę klawiatury
+			\end{verbatim}
+		\item #define - używany na samym początku kodu prze jakąkolwiek funkcją. Za jego pomocą możemy zdefiniować jaką wartość będzie mieć fragment tekstu.
+		Działa tak jakby zamiast ciągu znaków zaraz po słowie "define" były te oddzielone od nich spacją. \textbf{Nie stawiamy po nim średnika!} Przykład kodu wypisującego co 1s tekst zdefiniowany na początku.
+			\begin{verbatim}
+				#define tekst "Hej!"
+				#define przerwa 1000
+				
+				void setup(){
+				  Serial.begin(9600);
+				}
+				void loop(){
+				  Serial.println(tekst);
+				  delay(przerwa);
+				}
+			\end{verbatim}
+	\end{itemize}
+	\subsubsection{Zmienne}
+		\\Dane przetwarzane przez program przechowywane są jako zmienne. W zależności od rodzaju zmiennej może ona przechowywać różne wartości.
+		\\*Wyróżniamy następujące typy zmiennych:
+		\begin{itemize}
+			\item void - używany tylko do tworzenia funkcji, które nie zwracają żadnej wartości.
+			\item boolean - zmienne typu boolean przchowują tylko wartości \textbf{true} i \textbf{false}. Zamiast "false" można użyć 0, a każda niezerowa liczba zostanie uznana za "true".
+			\item char - typ danych zawierający bajt pamięci. Przechowuje wartość znaku.
+				Podczas nadawania zmiennej wartości należy zapisać ją w pojedynczym cudzysłowie.
+				Jednak znaki przechowywane są jako odpowiadające im liczby zgodnie z kodowaniem ASCII.
+				Zmienna "char znak = 'A';" może być zapisana również tak: "char znak = 65;".
+				Korzystając z tej własności możemy np pisząc "znak += 32;" zmienić wartość tej zmiennej z 'A' na 'a', czyli zmienić dużą literą na małą (i odwrotnie).
+			\item byte oraz unsigned char - przechowuje 8 bitową liczbą od 0 do 255. Zalecane jest używanie "byte" zamiast "unsigned char".
+			\item int - przechowuje wartości liczbowe. Zakres warości zależy od procesora.
+				Dla Arduino Uno (i innych urządzeniach opartch na procesorze ATMega) jest 16-bitowa i ma zakres od -32768 do 32767.
+			\item word oraz unsigned int - od zwykłego różni się tym, że przechowuje tylko wartości nieujemne.
+				Jego zakres dla Arduino Uno i innych Arduino opartych na procesorach ATMega jest od 0 do 65535.
+			\item long - przechowuje wartości liczbowe. Ma rozmiar 32 bitów. Przyjmuje wartości od -2147483648 to 2147483647. Po liczbie należy dać literę "L" (long liczba = 51523487L).
+			\item unsigned long przechowuje 32 bitową liczbę. Ma zakres od 0 do 4294967295.
+			\item short - dla wszystkich Arduino jest taki sam jak int na procesorach ATMega.
+			\item float - typ zmiennej dla liczb zmiennoprzecinkowych. Zajmują 32 bity pamięci. Mogą przechowywać warości od -34028235E+38 do 3.4028235E+38. Liczby zmiennoprzecinkowe \textbf{nie są dokładne}!
+				Na przykład "6.0 / 3.0" może nie być równe "2.0". Mają dokładność \textbf{tylko 6-7 cyfr znaczących}! Operacje na zmiennych zmiennoprzecinkowych \textbf{trwają dłużej} niż na liczbach całkowitych.
+				Należy również pamiętać, że nie umieszczenie kropki przy podawaniu wartości spowoduje, że zmienna traktowana będzie jako "int".
+			\item double - zmienna zmiennoprzecinkowa o podwójnej dokładności wzgledem "float". Na procesorach ATMega zajmuje 32 bity pamięci, a na Arduino Due 64 bity.
+				\textbf{W przypadku Arduino NIE jest dokładniejsza od zmiennej typu "float".}
+			\item string - tablica znaków. 
+			%##############################################################
+			%Dokończ string (tablicę), zrób string (obiekt) i napisz dalej
+			%##############################################################
+
+		\end{itemize}
 %	  * Dalszą składnię
 %	  
 %	  * Operatory arytmetyczne
@@ -207,7 +275,7 @@ Do rysowania schematów używamy tych właśnie symboli. Symbole te są znane na
 Czwarty pasek to dopuszczalna tolerancja. - tolerancja to zakres błędu. Np dla opornika 10[ohm] +- 10\% znazcy, że opór będzie nam się wahał od 9-11[ohm].
 Tabela kolorów:(jakiś jpg lub sami narysujemy)
 
-
+	\subsection {Domowy warsztat}
     
 %        \input{'./warsztat-domowy}
         
@@ -242,3 +310,4 @@ Jest to
 
 
 \end{document}
+
