@@ -152,11 +152,11 @@ Arduino IDE, o którym więcej w sekcji "Środowisko".
 	\end{itemize}
 	Należy pamiętać również o:
 	\begin{itemize}
-		\item #include - używany na początku kodu przed jakąkolwiek funkcją, aby dołączyć biblioteki. \textbf{Nie stawiamy po nim średnika!} Przykład:
+		\item \#include - używany na początku kodu przed jakąkolwiek funkcją, aby dołączyć biblioteki. \textbf{Nie stawiamy po nim średnika!} Przykład:
 			\begin{verbatim}
-				#include <Keyboard.h> //dodaje bibliotekę wprowadzającą obsługę klawiatury
+				\#include <Keyboard.h> //dodaje bibliotekę wprowadzającą obsługę klawiatury
 			\end{verbatim}
-		\item #define - używany na samym początku kodu prze jakąkolwiek funkcją. Za jego pomocą możemy zdefiniować jaką wartość będzie mieć fragment tekstu.
+		\item \#define - używany na samym początku kodu prze jakąkolwiek funkcją. Za jego pomocą możemy zdefiniować jaką wartość będzie mieć fragment tekstu.
 		Działa tak jakby zamiast ciągu znaków zaraz po słowie "define" były te oddzielone od nich spacją. \textbf{Nie stawiamy po nim średnika!} Przykład kodu wypisującego co 1s tekst zdefiniowany na początku.
 			\begin{verbatim}
 				#define tekst "Hej!"
@@ -219,9 +219,9 @@ Arduino IDE, o którym więcej w sekcji "Środowisko".
 		
 	Podstawą jest umiejętość skunstruowania algorytmu, czyli 
 W ogólniej wersji wygląda to tak:
-\subsubsection{Schemat ogólny)
+\subsubsection{Schemat ogólny}
 	Przyjrzymy się ogólnej postaci programów. Zostaną one wytłumaczone na przykładzie schematu blokowego aby niewprawiony czytelnik był w stanie cokolwiek zrozumieć.
-\subsubsection{Przykłady z życia wzięte)
+\subsubsection{Przykłady z życia wzięte}
 W tej części przeanalizjemy kod 'normalnie' używany
 %CZytaj wartość czujnika -> analiza -> sygnał do odbiornika(zgaś światło, rusz silnikiem)
 	%\subsection{Jezyk używany}

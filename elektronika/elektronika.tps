@@ -12,7 +12,7 @@ MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
 NormalPos.right=1562
-NormalPos.bottom=513
+NormalPos.bottom=536
 Class=LaTeXView
 Document=elektronika.tex
 
@@ -30,7 +30,7 @@ MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
 NormalPos.right=1562
-NormalPos.bottom=513
+NormalPos.bottom=536
 Class=BibTeXView
 Document=abib.bib
 

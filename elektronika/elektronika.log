@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.27)  7 APR 2016 00:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.27)  16 APR 2016 10:00
 entering extended mode
 **./elektronika.tex
 (elektronika.tex
@@ -366,20 +366,20 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 ) (elektronika.aux)
 \openout1 = `elektronika.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
 \c@lstlisting=\count96
 
 (C:\praca_bartek\miktex\tex\context\base\supp-pdf.mkii
@@ -396,84 +396,144 @@ LaTeX Font Info:    ... okay on input line 31.
 \makeMPintoPDFobject=\count102
 \everyMPtoPDFconversion=\toks19
 )
-LaTeX Font Info:    Try loading font information for OML+plm on input line 33.
+LaTeX Font Info:    Try loading font information for OML+plm on input line 34.
  (C:\praca_bartek\miktex\tex\latex\polski\omlplm.fd
 File: omlplm.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
-LaTeX Font Info:    Try loading font information for OMS+plsy on input line 33.
+LaTeX Font Info:    Try loading font information for OMS+plsy on input line 34.
 
 
 (C:\praca_bartek\miktex\tex\latex\polski\omsplsy.fd
 File: omsplsy.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
-LaTeX Font Info:    Try loading font information for OMX+plex on input line 33.
+LaTeX Font Info:    Try loading font information for OMX+plex on input line 34.
 
 
 (C:\praca_bartek\miktex\tex\latex\polski\omxplex.fd
 File: omxplex.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <14.4> on input line 33.
+(Font)              <14.4> on input line 34.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <10> on input line 33.
+(Font)              <10> on input line 34.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <7> on input line 33.
- (elektronika.toc)
+(Font)              <7> on input line 34.
+ (elektronika.toc
+LaTeX Font Info:    External font `plex10' loaded for size
+(Font)              <12> on input line 2.
+LaTeX Font Info:    External font `plex10' loaded for size
+(Font)              <8> on input line 2.
+LaTeX Font Info:    External font `plex10' loaded for size
+(Font)              <6> on input line 2.
+)
 \tf@toc=\write3
 \openout3 = `elektronika.toc'.
 
  [1
 
-{C:/Users/Madar/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 66.
+{C:/Users/Madar/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2]
 
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.44 \\A
+        rduino aby dziaÅ‚aÄ‡ musi zostaÄ‡ zaprogramowane. Programuje siÄ™ je...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 69.
 (C:\praca_bartek\miktex\tex\latex\base\omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 66.
-LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <12> on input line 76.
-LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <8> on input line 76.
-LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <6> on input line 76.
-LaTeX Font Info:    Try loading font information for OT4+cmtt on input line 76.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 69.
+LaTeX Font Info:    Try loading font information for OT4+cmtt on input line 80.
 
 
 (C:\praca_bartek\miktex\tex\latex\polski\ot4cmtt.fd
 File: ot4cmtt.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
-) [2]
-Overfull \hbox (0.15915pt too wide) in paragraph at lines 120--121
+) [3] [4]
+Overfull \hbox (0.15915pt too wide) in paragraph at lines 126--127
 []\OT4/cmr/m/n/12 = - przy-pi-su-je zmien-nej okre-±lo-n¡ war-to±¢. Przy-kªad p
 rzy-pi-sa-nia zmien-
  []
 
-[3])
-Runaway argument?
-{Schemat ogÃ³lny) Przyjrzymy siÄ™ ogÃ³lnej postaci programÃ³w. Zostan\ETC.
-! File ended while scanning use of \@xdblarg.
-<inserted text> 
-                \par 
-<*> ./elektronika.tex
-                     
-I suspect you have forgotten a `}', causing me
-to read past where you wanted me to stop.
-I'll try to recover; but if the error is serious,
-you'd better type `E' or `X' now and fix your file.
+[5]
+Overfull \hbox (102.49992pt too wide) in paragraph at lines 158--158
+ []\OT4/cmtt/m/n/12 \#include <Keyboard.h> //dodaje bibliotek¦ wprowadzaj¡c¡ ob
+sªug¦ klawiatury[] 
+ []
 
-! Emergency stop.
-<*> ./elektronika.tex
-                     
-*** (job aborted, no legal \end found)
 
- 
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.175 		\\D
+           ane przetwarzane przez program przechowywane sÄ… jako zmienne. W ...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[6]
+Overfull \hbox (16.47633pt too wide) in paragraph at lines 191--192
+[]\OT4/cmr/m/n/12 unsigned long prze-cho-wu-je 32 bi-to-w¡ licz-b¦. Ma za-kres 
+od 0 do 4294967295. 
+ []
+
+
+Overfull \hbox (25.87209pt too wide) in paragraph at lines 193--196
+\OT4/cmr/m/n/12 pa-mi¦-ci. Mo-g¡ prze-cho-wy-wa¢ wa-ro-±ci od -34028235E+38 do 
+3.4028235E+38.
+ []
+
+[7] [8] [9] [10]
+
+Package pdftex.def Warning: Option `bb' does not make sense,
+(pdftex.def)                using `viewport' instead on input line 287.
+
+<zdj/universe.jpg, id=40, 2569.6pt x 1927.2pt>
+File: zdj/universe.jpg Graphic file (type jpg)
+ <use zdj/universe.jpg>
+Package pdftex.def Info: zdj/universe.jpg used on input line 287.
+(pdftex.def)             Requested size: 85.35611pt x 113.79794pt.
+ [11 <./zdj/universe.jpg>] (elektronika.bbl
+Underfull \hbox (badness 10000) in paragraph at lines 304--1
+
+ []
+
+) [12] (elektronika.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 2961 strings out of 493634
- 39119 string characters out of 3145795
- 96736 words of memory out of 3000000
- 6328 multiletter control sequences out of 15000+200000
+ 2975 strings out of 493634
+ 39302 string characters out of 3145795
+ 97745 words of memory out of 3000000
+ 6334 multiletter control sequences out of 15000+200000
  14158 words of font info for 41 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 27i,6n,32p,375b,236s stack positions out of 5000i,500n,10000p,200000b,50000s
-!  ==> Fatal error occurred, no output PDF file produced!
+ 27i,6n,32p,383b,258s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/praca_bartek/miktex/fonts/enc/dvips/pl/plmi.enc}{C:/praca_bartek/miktex/f
+onts/enc/dvips/pl/pltt.enc}{C:/praca_bartek/miktex/fonts/enc/dvips/pl/plms.enc}
+{C:/praca_bartek/miktex/fonts/enc/dvips/pl/plrm.enc}<C:/praca_bartek/miktex/fon
+ts/type1/public/amsfonts/cm/cmsy10.pfb><C:/praca_bartek/miktex/fonts/type1/publ
+ic/pl/plbx12.pfb><C:/praca_bartek/miktex/fonts/type1/public/pl/plmi12.pfb><C:/p
+raca_bartek/miktex/fonts/type1/public/pl/plr12.pfb><C:/praca_bartek/miktex/font
+s/type1/public/pl/plr17.pfb><C:/praca_bartek/miktex/fonts/type1/public/pl/plsy1
+0.pfb><C:/praca_bartek/miktex/fonts/type1/public/pl/pltt12.pfb>
+Output written on elektronika.pdf (12 pages, 2152442 bytes).
+PDF statistics:
+ 74 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+
