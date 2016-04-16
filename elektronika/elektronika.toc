@@ -1,35 +1,36 @@
-\contentsline {section}{\numberline {1}Programowanie Arduino}{3}
-\contentsline {subsection}{\numberline {1.1}Sk\IeC {\l }adnia j\IeC {\k e}zyka u\IeC {\.z}ywanego w \IeC {\'s}rodowisku C++}{3}
-\contentsline {subsubsection}{\numberline {1.1.1}Struktura}{3}
-\contentsline {subsubsection}{\numberline {1.1.2}Zmienne}{6}
-\contentsline {subsection}{\numberline {1.2}Styl pisania}{8}
-\contentsline {subsubsection}{\numberline {1.2.1}Schemat og\IeC {\'o}lny}{8}
-\contentsline {subsubsection}{\numberline {1.2.2}Przyk\IeC {\l }ady z \IeC {\.z}ycia wzi\IeC {\k e}te}{8}
-\contentsline {subsection}{\numberline {1.3}\IeC {\'S}rodowisko}{8}
-\contentsline {subsubsection}{\numberline {1.3.1}Sk\IeC {\k a}d pobra\IeC {\'c}}{8}
-\contentsline {subsubsection}{\numberline {1.3.2}Pierwsze kroki}{8}
-\contentsline {section}{\numberline {2}Podstawy elektroniki}{10}
-\contentsline {subsection}{\numberline {2.1}Fizyka w elektronice}{10}
-\contentsline {subsection}{\numberline {2.2}Elementy elektroniczne i ich symbole}{10}
-\contentsline {subsubsection}{\numberline {2.2.1}Symbole}{10}
-\contentsline {subsubsection}{\numberline {2.2.2}Definicje tych element\IeC {\'o}w}{10}
-\contentsline {subsubsection}{\numberline {2.2.3}Zastosowanie symboli}{11}
-\contentsline {subsection}{\numberline {2.3}Jak czyta\IeC {\'c} op\IeC {\'o}r}{11}
-\contentsline {subsection}{\numberline {2.4}Domowy warsztat}{12}
-\contentsline {subsubsection}{\numberline {2.4.1} O co chodzi}{12}
-\contentsline {subsubsection}{\numberline {2.4.2}Podstawy podstaw - poziom 1}{12}
-\contentsline {subsubsection}{\numberline {2.4.3}Adwancet beginner - poziom 2}{12}
-\contentsline {subsubsection}{\numberline {2.4.4}Expert - poziom 3}{13}
-\contentsline {subsubsection}{\numberline {2.4.5}Lista zakup\IeC {\'o}w}{13}
-\contentsline {subsubsection}{\numberline {2.4.6}Zadania}{13}
-\contentsline {subsubsection}{\numberline {2.4.7}Reszta \IeC {\'s}mieci do zedytowania}{13}
-\contentsline {section}{\numberline {3}Pierwszy mikrokontroler}{14}
-\contentsline {subsection}{\numberline {3.1}Od czego zacz\IeC {\k a}\IeC {\'c}}{14}
-\contentsline {subsection}{\numberline {3.2}budowa}{14}
-\contentsline {subsection}{\numberline {3.3}budowa}{14}
-\contentsline {section}{\numberline {4}Zastosowanie elektroniki w \IeC {\.z}yciu codziennym }{15}
-\contentsline {section}{\numberline {5}Wi\IeC {\k e}cej}{16}
-\contentsline {subsection}{\numberline {5.1}Jak wiedzie\IeC {\'c} wi\IeC {\k e}cej}{16}
-\contentsline {subsection}{\numberline {5.2}System kotroli wersji}{16}
-\contentsline {subsection}{\numberline {5.3}}{16}
-\contentsline {section}{Bibliografia}{17}
+\contentsline {section}{Wst\IeC {\k e}p}{4}
+\contentsline {section}{\numberline {1}Programowanie Arduino}{6}
+\contentsline {subsection}{\numberline {1.1}Sk\IeC {\l }adnia j\IeC {\k e}zyka u\IeC {\.z}ywanego w \IeC {\'s}rodowisku C++}{6}
+\contentsline {subsubsection}{\numberline {1.1.1}Struktura}{6}
+\contentsline {subsubsection}{\numberline {1.1.2}Zmienne}{9}
+\contentsline {subsection}{\numberline {1.2}Styl pisania}{11}
+\contentsline {subsubsection}{\numberline {1.2.1}Schemat og\IeC {\'o}lny}{11}
+\contentsline {subsubsection}{\numberline {1.2.2}Przyk\IeC {\l }ady z \IeC {\.z}ycia wzi\IeC {\k e}te}{11}
+\contentsline {subsection}{\numberline {1.3}\IeC {\'S}rodowisko}{11}
+\contentsline {subsubsection}{\numberline {1.3.1}Sk\IeC {\k a}d pobra\IeC {\'c}}{11}
+\contentsline {subsubsection}{\numberline {1.3.2}Pierwsze kroki}{11}
+\contentsline {section}{\numberline {2}Podstawy elektroniki}{13}
+\contentsline {subsection}{\numberline {2.1}Fizyka w elektronice}{13}
+\contentsline {subsection}{\numberline {2.2}Elementy elektroniczne i ich symbole}{13}
+\contentsline {subsubsection}{\numberline {2.2.1}Symbole}{13}
+\contentsline {subsubsection}{\numberline {2.2.2}Definicje tych element\IeC {\'o}w}{13}
+\contentsline {subsubsection}{\numberline {2.2.3}Zastosowanie symboli}{14}
+\contentsline {subsection}{\numberline {2.3}Jak czyta\IeC {\'c} op\IeC {\'o}r}{14}
+\contentsline {subsection}{\numberline {2.4}Domowy warsztat}{15}
+\contentsline {subsubsection}{\numberline {2.4.1} O co chodzi}{15}
+\contentsline {subsubsection}{\numberline {2.4.2}Podstawy podstaw - poziom 1}{15}
+\contentsline {subsubsection}{\numberline {2.4.3}Adwancet beginner - poziom 2}{15}
+\contentsline {subsubsection}{\numberline {2.4.4}Expert - poziom 3}{16}
+\contentsline {subsubsection}{\numberline {2.4.5}Lista zakup\IeC {\'o}w}{16}
+\contentsline {subsubsection}{\numberline {2.4.6}Zadania}{16}
+\contentsline {subsubsection}{\numberline {2.4.7}Reszta \IeC {\'s}mieci do zedytowania}{16}
+\contentsline {section}{\numberline {3}Pierwszy mikrokontroler}{17}
+\contentsline {subsection}{\numberline {3.1}Od czego zacz\IeC {\k a}\IeC {\'c}}{17}
+\contentsline {subsection}{\numberline {3.2}budowa}{17}
+\contentsline {subsection}{\numberline {3.3}budowa}{17}
+\contentsline {section}{\numberline {4}Zastosowanie elektroniki w \IeC {\.z}yciu codziennym }{18}
+\contentsline {section}{\numberline {5}Wi\IeC {\k e}cej}{19}
+\contentsline {subsection}{\numberline {5.1}Jak wiedzie\IeC {\'c} wi\IeC {\k e}cej}{19}
+\contentsline {subsection}{\numberline {5.2}System kotroli wersji}{19}
+\contentsline {subsection}{\numberline {5.3}}{19}
+\contentsline {section}{Bibliografia}{20}

@@ -1,21 +1,3 @@
-%\begin{thebibliography}{3}
-%\bibitem{diller} Antoni Diller, \textit{\LaTeX\ wiersz po wierszu},
-%wydawnictwo Helion, Gliwice 2001
-%\bibitem{grfguide} D.P. Carlisle, \textit{Packages in the ‘graphics’
-%bundle}
-%\bibitem{lshort} Tobias Oetiker, \textit{The Not So Short Introduction
-%To \LaTeX2e}
-%\end{thebibliography}
-%
-%\label{nazwa}
-%\ref {nazwa}
-%świetny kurs lateksa  http://www.fuw.edu.pl/~kostecki/kurs_latexa.pdf
-%http://serwis-tv.com/opornik.html stworzenie tabelki
-%ugfdsjksdafnksdfnsdfklmd
-
-%zamien właściwość na cp1250
-% -*- TeX:PL -*-
-% Oto przykładowy plik polski.
 
 \documentclass[a4paper,12pt, twoside]{article}
 \usepackage{polski}
@@ -43,12 +25,15 @@
 \usepackage[section]{placeins}
 %\renewcommand{\section}
 \titlelabel{\thetitle.\quad}%dodawankie kropki
-\rhead{\fancyplain{}{Elektronika}} % predefined ()
-\chead{\fancyplain{}{\rightmark }} % 1. sectionname
+\rhead{\fancyplain{}{}} % predefined ()
+\fancyhead[CE]{Elektronika}
+\fancyhead[CO]{\rightmark }
+%\chead{\fancyplain{}{\rightmark }} % 1. sectionname
 \cfoot{\fancyplain{}{}} %środek stopki
 \lhead{\fancyplain{}{}} %lewa część nagłówka
 \usepackage[nottoc]{tocbibind}  %opening
-
+\setlength{\parindent}{2em}
+\usepackage{indentfirst}
 \setlength{\oddsidemargin}{0mm} % Adjust margins to center the colored title box
 \setlength{\evensidemargin}{0mm} % Margins on even pages - only necessary if adding more content to this template
 
@@ -103,13 +88,20 @@
 \clearpage % Whitespace to the end of the page
 
 \end{titlepage}
-%\newpage\null\thispagestyle{empty}\newpage
+\newpage\null\thispagestyle{empty}\newpage
 %\begin{abstract}
 
 %\end{abstract}
 
 \tableofcontents 
-\setcounter{page}{1}
+\addcontentsline{toc}{section}{Wstęp}
+%\addtocontents{toc}{\protect\thispagestyle{empty}}
+\thispagestyle {empty}
+
+\section*{Wstęp}
+Ten projekt jest dedykowany ludziom na każdym poziomie znajomości tematu. Przez kolejne rozdziały będziemy uzupełniać podstawowe informacje potrzebne do zbudowania prostych układów elektronicznych, aby w kolejnej części zacząć przedstawiać podstawowe schematy i proste programy. Doświadczony w tej dziedzinie czytelnik może je po prostu pominąć (nie wszysy chcą się uczyć programowania schematami blokowymi). 
+*Nota dla zaawansowanych czytelników:
+Używamy procesorów "atmel", a do programowania środowiska Arduino. Cały kod używany w prezentacji będzie udostępniony na GitHub'ie.
 
 \section{Programowanie Arduino}
 
