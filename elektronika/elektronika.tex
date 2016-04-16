@@ -17,14 +17,31 @@
 % -*- TeX:PL -*-
 % Oto przykładowy plik polski.
 
-\documentclass[a4paper,12pt]{article}
+\documentclass[a4paper,12pt, twoside]{article}
 \usepackage{polski}
 \usepackage[utf8]{inputenc}
 \usepackage{listings}
 \usepackage{graphicx}
-\setlength{\parindent}{5mm}
+\setlength\parindent{25pt}
 \graphicspath{ {zdj/} }
+\renewcommand*{\figurename}{Ilustracja} %zmiana rysunek na ilustrracja przy opsie
+\usepackage{subcaption}
+\usepackage[export]{adjustbox}
+\usepackage{geometry}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\sectionmark}[1]{\markright{#1}}%aby nie było0.1.2
+\fancyfoot[LE,RO]{\thepage}%numeracja lewo prawo(strona)
+\let\oldsection\section%nowa strona dla sekcji
+\renewcommand\section{\clearpage\oldsection}%nowa strona dla sekcji
+\renewcommand{\subsectionmark}[1]{}%nazwa rozdziału w nagólwku
 
+\titlelabel{\thetitle.\quad}%dodawankie kropki
+\rhead{\fancyplain{}{Elektronika}} % predefined ()
+\chead{\fancyplain{}{\rightmark }} % 1. sectionname
+\cfoot{\fancyplain{}{}} %środek stopki
+\lhead{\fancyplain{}{}} %lewa część nagłówka
 %opening
 \title{Elektronika}
 \author{Krzysztof Dziembała i Bartek Mazur}
@@ -36,12 +53,13 @@
 %\begin{abstract}
 
 %\end{abstract}
+
 \tableofcontents 
-\newpage
+
 
 \section{Programowanie Arduino}
 
-\\Arduino aby działać musi zostać zaprogramowane. Programuje się je w języku Arduino, opartym na językach C/C++.
+\hspace{4ex} Arduino aby działać musi zostać zaprogramowane. Programuje się je w języku Arduino, opartym na językach C/C++.
 \\*Program jest kompilowany, czyli przetwarzany na język zrozumiały dla urządzenia, oraz na nie wgrywany za pomocą
 Arduino IDE, o którym więcej w sekcji "Środowisko". 
 
@@ -195,47 +213,57 @@ Arduino IDE, o którym więcej w sekcji "Środowisko".
 				Należy również pamiętać, że nie umieszczenie kropki przy podawaniu wartości spowoduje, że zmienna traktowana będzie jako "int".
 			\item double - zmienna zmiennoprzecinkowa o podwójnej dokładności wzgledem "float". Na procesorach ATMega zajmuje 32 bity pamięci, a na Arduino Due 64 bity.
 				\textbf{W przypadku Arduino NIE jest dokładniejsza od zmiennej typu "float".}
-			\item string - tablica znaków. 
+			\item string - tablica znaków. Naprościej tworzy się ją tak:
+				\begin{verbatim}
+				char nazwa[] = "Zawartość zmiennej nazwa";
+				\end{verbatim}
 			%##############################################################
 			%Dokończ string (tablicę), zrób string (obiekt) i napisz dalej
 			%##############################################################
 
 		\end{itemize}
-%	  * Dalszą składnię
-%	  
-%	  * Operatory arytmetyczne
-%	  * Operatory porównawcze
-%	  * Operatory logiczne
-%	  * Operatory wskazujące
-%	  * Operatory bitowe
-%	  * Operatory złożone
+
 
 %to do bibliografi[https://www.arduino.cc/en/Guide/Introduction, https://www.arduino.cc/en/Reference/HomePage]
 
 	\subsection {Styl pisania}
-	Nie mówimy tutaj czysto o algorytmice(przeszukiwanie danych, analiza obrazu itp.) jednak jest pewien schemat postępowania. Arduino składa się z czujników(sensorów) oraz odbiorników %spis tego na samym końcu
+	Nie mówimy tutaj czysto o algorytmice (przeszukiwanie danych, analiza obrazu itp.) jednak jest pewien schemat postępowania. Arduino składa się z czujników (sensorów) oraz odbiorników. %spis tego na samym końcu
 	\\
-	Możemy wtedy na bieżąco analizować i przetwarzać dane. Na samym początku może się to wydawać niezrozumiałe ale przy odrobinie wprawy i obycia z urządzeniem zmienią podejście.
+	Możemy  na bieżąco analizować i przetwarzać dane. Na samym początku może się to wydawać niezrozumiałe ale przy odrobinie wprawy i obycia z urządzeniem zmienią podejście.
 		
-	Podstawą jest umiejętość skunstruowania algorytmu, czyli 
-W ogólniej wersji wygląda to tak:
+	Podstawą jest umiejętość skunstruowania algorytmu, czyli ciągu poleceń do wykonania. Można zapisać to tak:
+	\\Czytaj wartość czujnika \verb|->| analiza \verb|->| akcja zależna od wyniku analizy (np. zapal światło, włącz silnik).
+%W ogólniej wersji wygląda to tak:
 \subsubsection{Schemat ogólny}
-	Przyjrzymy się ogólnej postaci programów. Zostaną one wytłumaczone na przykładzie schematu blokowego aby niewprawiony czytelnik był w stanie cokolwiek zrozumieć.
+	Przyjrzymy się ogólnej postaci programów. Zostaną one wytłumaczone na przykładzie schematu blokowego aby nawet niewprawiony czytelnik był w stanie cokolwiek zrozumieć.
 \subsubsection{Przykłady z życia wzięte}
-W tej części przeanalizjemy kod 'normalnie' używany
+W tej części przeanalizjemy kod "normalnie" używany
 %CZytaj wartość czujnika -> analiza -> sygnał do odbiornika(zgaś światło, rusz silnikiem)
 	%\subsection{Jezyk używany}
 	\subsection{Środowisko}
-	Środowisko - miejsce w którym dzieją się cuda, a mianowicie powstają nasze programy. Jak każdy język, Arduino również ma swoje(o tej samej nazwie).
-	Środowisko umożliwia nam edytowanie programów oraz kompilację i wgrywanie(odnośniki do wyższego rozdziału tutaj powinny się znajdować)
-		Wygląda w ten sposób: screeen z arudino. 
+	Środowisko - miejsce w którym dzieją się cuda, a mianowicie powstają nasze programy. Jak każdy język, Arduino również ma własne środowisko (Arduino IDE).
+	Środowisko umożliwia nam edytowanie programów oraz kompilację i wgrywanie ich na urządzenie %(odnośniki do wyższego rozdziału tutaj powinny się znajdować)
+		Wygląda ono w ten sposób: screeen z arudino. 
 	\subsubsection{Skąd pobrać}
-		
-Pobieramy je ze strony (odnośnik w przypisach) zgodne z naszą maszyną. Następnie instalujemy, według instalatora.(ew. krok po kroku) 
+	Pobieramy je ze strony (odnośnik w przypisach) zgodne z wersją naszego systemu operacyjnego. Następnie instalujemy, wykonując polecenia instalatora
+	ew. (w przypadku Windowsa) rozpakowujemy zip'a do dowolnej lokalizacji i z niej uruchamiamy arduino.exe.
 \subsubsection{Pierwsze kroki}
-Programowanie jest intuicyjne ale musimy pamiętać o kilku rzeczach. A mianowicie port szeregowy, płytka i coś jeszcze
-(zdjęcia z tego razem z podpisem)
-%\newpage
+Programowanie jest intuicyjne ale musimy pamiętać o kilku rzeczach. A mianowicie należy ustawić płytkę (zdj. numer),  port szeregowy (zdj. numer)% i coś jeszcze
+%(zdjęcia z tego razem z podpisem)
+
+\begin{figure} %     
+%  \centering
+  \includegraphics[scale=0.7]{arduino-ustawPlytke.jpg}
+  \caption{Ustawianie płytki}
+  \label{fig:test}
+	\end{figure}
+	\begin{figure}
+%  \centering
+  \includegraphics[scale=0.7]{arduino-ustawPort.jpg}
+  \caption{Ustawianie portu}
+  \label{fig:test}
+\end{figure}
+
 
 \section{Podstawy elektroniki}
  \subsection{Fizyka w elektronice}
@@ -279,13 +307,19 @@ Tabela kolorów:(jakiś jpg lub sami narysujemy)
     
 %        \input{'./warsztat-domowy}
         
-\newpage
+
 \section{Pierwszy mikrokontroler}
 		Jest to dość podsawowy element: co trzeba mieć aby zacząc przygodę z elektroniką. Odpowiedz: praktycznie nic. W kolejnych częściach spróbujemy ustalić poziom zaawansowania w czytelnika w elektronice oraz w programowaniu.
-\begin{figure}%                 use [hb] only if necceccary!
+\begin{figure}[h]
   \centering
-  \includegraphics[bb=0 0 1000 1000, width=3cm, height=4cm]{universe.jpg}
+  \includegraphics[scale=0.1,right]{universe.jpg}
   \caption{test figure}
+  \label{fig:test}
+\end{figure}
+\begin{figure}[h]
+  \centering
+  \includegraphics[scale=0.1,left]{universe.jpg}
+  \caption{test figuwds}
   \label{fig:test}
 \end{figure}
 
@@ -296,6 +330,7 @@ Tabela kolorów:(jakiś jpg lub sami narysujemy)
 	\subsection{budowa}
 	Przy pomocy arduino jesteśmy w stanie tworzyć bardzo skoplikowane rzeczy ale ono nie jest do tego przystosoane. Głównym zastosowaniem jest tj inteligenty dom.
 	\subsection{budowa}
+
 \section {Zastosowanie elektroniki w życiu codziennym }
 	 %sygnalizacja  świetlna drukarki, zmywarki,samochody, sprzęt gospodarstwa domowego, telefony,
 \section{Elektronika - dlaczego warto się nią interesować}
@@ -306,6 +341,7 @@ Jest to
 %jak szukać bibliotek do czujników
 %system kontroli wersji
 %
+\newpage
 \bibliography{abib}
 
 
