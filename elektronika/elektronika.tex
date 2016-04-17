@@ -41,6 +41,8 @@
 
 \definecolor{grey}{rgb}{0.9,0.9,0.9} % Color of the box surrounding the title - these values can be changed to give the box a different color
 
+\linespread{1.3} %interlinia 1,5 (1.3=1,5 i 1.6=2 - Dlaczego!?)
+
 \begin{document}
 
  % Remove page numbering on this page
@@ -189,7 +191,7 @@ Kolejny akapit
 		\item /**/ - komentarz wieloliniowy. Komentarz wstawia się za "/*", a kończy się go "*/".
 		\item = - przypisuje zmiennej określoną wartość. Przykład przypisania zmiennej "x" typu "string" wartości "wartość":
 			\begin{verbatim}
-			string x = "wartość";
+			char x[] = "wartość";
 			\end{verbatim}
 		\item + - oznacza dodawanie
 		\item - - oznacza operację odejmowania
@@ -263,12 +265,20 @@ Kolejny akapit
 				\begin{verbatim}
 				char nazwa[] = "Zawartość zmiennej nazwa";
 				\end{verbatim}
-			%##############################################################
-			%Dokończ string (tablicę), zrób string (obiekt) i napisz dalej
-			%##############################################################
-
+			\item String - obiekt przechowujący ciągi znaków. Umożliwia więcej niż tablica znaków. Posiada tzw. metody, które ułatwiają m.in. łączenie ich, wyszukiwanie znaków i podmienianie ich.
 		\end{itemize}
-
+	
+\subsubsection{Funkcje}
+	Funkcje to segmenty kodu, które można wywołać wiele razy i z różnymi parametrami.
+	Zapisuje się je w ten sposób:
+	\begin{verbatim}
+	typ nazwa(typP parametr1, typP parametr2, ...){
+	  kod;
+		return(zwracanaWartosc);
+	}
+	\end{verbatim}
+	gdzie typ oznacza typ wartości zwracanej przez funkcję (np. void, int, boolean, itd.).
+	W zwykłych nawiasach umieszcza się nazwy parametrów, które mogą zostać funkcji przekazane i ich typ (np. int, boolean, itd.). Na końcu funkcji zazwyczaj umieszcza się return(wartosc). Nie dotyczy to jednak funkcji typu "void", które nie zwracają żadnych wartości.
 
 %to do bibliografi[https://www.arduino.cc/en/Guide/Introduction, https://www.arduino.cc/en/Reference/HomePage]
 
