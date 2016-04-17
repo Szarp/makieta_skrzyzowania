@@ -1,15 +1,15 @@
 \begin{thebibliography}{1}
 
-\bibitem{klucz02}
-J.~Doe, {\em The Book without Title}.
-\newblock Dummy Publisher, 2100.
+\bibitem{Introduction}
+{\em https://www.arduino.cc/en/Guide/Introduction}.
 
-\bibitem{klucz03}
-J.~Doe, {\em The Book without Title}.
-\newblock Dummy Publisher, 2100.
+\bibitem{Reference}
+{\em https://www.arduino.cc/en/Reference/HomePage}.
 
-\bibitem{klucz01}
-J.~Doe, {\em The Book without Title}.
-\newblock Dummy Publisher, 2100.
+\bibitem{SKW-Wiki}
+{\em https://pl.wikipedia.org/wiki/System\_kontroli\_wersji}.
+
+\bibitem{Git-Wiki}
+{\em https://pl.wikipedia.org/wiki/Git\_(oprogramowanie)}.
 
 \end{thebibliography}
