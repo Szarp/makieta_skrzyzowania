@@ -20,18 +20,18 @@
 \contentsline {subsection}{\numberline {2.4}Domowy warsztat}{18}
 \contentsline {subsubsection}{\numberline {2.4.1} O co chodzi}{18}
 \contentsline {subsubsection}{\numberline {2.4.2}Podstawy podstaw - poziom 1}{18}
-\contentsline {subsubsection}{\numberline {2.4.3}Advanced beginner - poziom 2}{18}
-\contentsline {subsubsection}{\numberline {2.4.4}Expert - poziom 3}{18}
+\contentsline {subsubsection}{\numberline {2.4.3}Advanced beginner - poziom 2}{19}
+\contentsline {subsubsection}{\numberline {2.4.4}Expert - poziom 3}{19}
 \contentsline {subsubsection}{\numberline {2.4.5}Lista zakup\IeC {\'o}w}{19}
 \contentsline {subsubsection}{\numberline {2.4.6}Zadania}{19}
-\contentsline {subsubsection}{\numberline {2.4.7}Reszta \IeC {\'s}mieci do zedytowania}{19}
-\contentsline {section}{\numberline {3}Pierwszy mikrokontroler}{20}
-\contentsline {subsection}{\numberline {3.1}Od czego zacz\IeC {\k a}\IeC {\'c}}{20}
-\contentsline {subsection}{\numberline {3.2}budowa}{20}
-\contentsline {subsection}{\numberline {3.3}budowa}{20}
-\contentsline {section}{\numberline {4}Zastosowanie elektroniki w \IeC {\.z}yciu codziennym }{21}
-\contentsline {section}{\numberline {5}Wi\IeC {\k e}cej}{22}
-\contentsline {subsection}{\numberline {5.1}Jak wiedzie\IeC {\'c} wi\IeC {\k e}cej}{22}
-\contentsline {subsection}{\numberline {5.2}System kontroli wersji}{22}
-\contentsline {subsection}{\numberline {5.3}}{22}
-\contentsline {section}{Bibliografia}{23}
+\contentsline {subsubsection}{\numberline {2.4.7}Reszta \IeC {\'s}mieci do zedytowania}{20}
+\contentsline {section}{\numberline {3}Pierwszy mikrokontroler}{21}
+\contentsline {subsection}{\numberline {3.1}Od czego zacz\IeC {\k a}\IeC {\'c}}{21}
+\contentsline {subsection}{\numberline {3.2}budowa}{21}
+\contentsline {subsection}{\numberline {3.3}budowa}{21}
+\contentsline {section}{\numberline {4}Zastosowanie elektroniki w \IeC {\.z}yciu codziennym }{22}
+\contentsline {section}{\numberline {5}Wi\IeC {\k e}cej}{23}
+\contentsline {subsection}{\numberline {5.1}Jak wiedzie\IeC {\'c} wi\IeC {\k e}cej}{23}
+\contentsline {subsection}{\numberline {5.2}System kontroli wersji}{23}
+\contentsline {subsection}{\numberline {5.3}}{23}
+\contentsline {section}{Bibliografia}{24}
