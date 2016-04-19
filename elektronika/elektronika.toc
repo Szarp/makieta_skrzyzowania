@@ -8,15 +8,15 @@
 \contentsline {subsubsection}{\numberline {1.2.1}Schemat og\IeC {\'o}lny}{12}
 \contentsline {subsubsection}{\numberline {1.2.2}Przyk\IeC {\l }ady z \IeC {\.z}ycia wzi\IeC {\k e}te}{13}
 \contentsline {subsection}{\numberline {1.3}\IeC {\'S}rodowisko}{13}
-\contentsline {subsubsection}{\numberline {1.3.1}Sk\IeC {\k a}d pobra\IeC {\'c}}{13}
-\contentsline {subsubsection}{\numberline {1.3.2}Pierwsze kroki}{13}
+\contentsline {subsubsection}{\numberline {1.3.1}Sk\IeC {\k a}d pobra\IeC {\'c}}{14}
+\contentsline {subsubsection}{\numberline {1.3.2}Pierwsze kroki}{14}
 \contentsline {section}{\numberline {2}Podstawy elektroniki}{15}
 \contentsline {subsection}{\numberline {2.1}Fizyka w elektronice}{15}
 \contentsline {subsection}{\numberline {2.2}Elementy elektroniczne i ich symbole}{15}
 \contentsline {subsubsection}{\numberline {2.2.1}Symbole}{15}
-\contentsline {subsubsection}{\numberline {2.2.2}Definicje tych element\IeC {\'o}w}{15}
+\contentsline {subsubsection}{\numberline {2.2.2}Definicje tych element\IeC {\'o}w}{16}
 \contentsline {subsubsection}{\numberline {2.2.3}Zastosowanie symboli}{16}
-\contentsline {subsection}{\numberline {2.3}Jak czyta\IeC {\'c} op\IeC {\'o}r}{16}
+\contentsline {subsection}{\numberline {2.3}Jak czyta\IeC {\'c} op\IeC {\'o}r}{17}
 \contentsline {subsection}{\numberline {2.4}Domowy warsztat}{18}
 \contentsline {subsubsection}{\numberline {2.4.1} O co chodzi}{18}
 \contentsline {subsubsection}{\numberline {2.4.2}Podstawy podstaw - poziom 1}{18}
@@ -34,4 +34,4 @@
 \contentsline {subsection}{\numberline {5.1}Jak wiedzie\IeC {\'c} wi\IeC {\k e}cej}{23}
 \contentsline {subsection}{\numberline {5.2}System kontroli wersji}{23}
 \contentsline {subsection}{\numberline {5.3}}{23}
-\contentsline {section}{Bibliografia}{24}
+\contentsline {section}{Bibliografia}{25}

@@ -103,7 +103,7 @@
 \section*{Wstęp}
 Ten projekt jest dedykowany ludziom na każdym poziomie znajomości tematu. Przez kolejne rozdziały będziemy uzupełniać podstawowe informacje potrzebne do zbudowania prostych układów elektronicznych, aby w kolejnej części zacząć przedstawiać podstawowe schematy i proste programy. Doświadczony w tej dziedzinie czytelnik może je po prostu pominąć (nie wszyscy chcą się uczyć programowania schematami blokowymi). 
 *Nota dla zaawansowanych czytelników:
-Używamy procesorów "atmel", a do programowania środowiska Arduino. Cały kod używany w prezentacji będzie udostępniony na GitHub'ie.
+Używamy procesorów "atmel", a do programowania środowiska Arduino. Cały kod używany w prezentacji będzie udostępniony na GitHub'ie. (Załącznik \ref{itm:Git_makieta}.)
 
 \section{Programowanie Arduino}
 
@@ -298,33 +298,41 @@ W tej części przeanalizujemy kod "normalnie" używany
 	%\subsection{Jezyk używany}
 	\subsection{Środowisko}
 	Środowisko - miejsce w którym dzieją się cuda, a mianowicie powstają nasze programy. Jak każdy język, Arduino również ma własne środowisko (Arduino IDE).
-	Środowisko umożliwia nam edytowanie programów oraz kompilację i wgrywanie ich na urządzenie %(odnośniki do wyższego rozdziału tutaj powinny się znajdować)
-		Wygląda ono w ten sposób: screen z Arduino. 
+	Środowisko umożliwia nam edytowanie programów oraz kompilację i wgrywanie ich na urządzenie.\\ %(odnośniki do wyższego rozdziału tutaj powinny się znajdować)
+		Wygląda ono w ten sposób: Ilustracja \ref{fig:IDE}.
+	\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.7]{ArduinoIDE.png}
+			\caption{Arduino IDE}
+			\label{fig:IDE}
+		\end{figure}
 	\subsubsection{Skąd pobrać}
-	Pobieramy je ze strony (odnośnik w przypisach) zgodne z wersją naszego systemu operacyjnego. Następnie instalujemy, wykonując polecenia instalatora
+	Pobieramy je ze strony (Załącznik \ref{itm:Download_Arduino}) zgodne z wersją naszego systemu operacyjnego. Następnie instalujemy, wykonując polecenia instalatora
 	ew. (w przypadku Windowsa) rozpakowujemy zip'a do dowolnej lokalizacji i z niej uruchamiamy arduino.exe.
 \subsubsection{Pierwsze kroki}
-Programowanie jest intuicyjne ale musimy pamiętać o kilku rzeczach. A mianowicie należy ustawić płytkę (zdj. numer),  port szeregowy (zdj. numer)% i coś jeszcze
+Programowanie jest intuicyjne ale musimy pamiętać o kilku rzeczach. A mianowicie należy ustawić płytkę (Ilustracja \ref{fig:plytka}), oraz port szeregowy (Ilustracja \ref{fig:port})% i coś jeszcze
 %(zdjęcia z tego razem z podpisem)
+
+
+\begin{figure}[h]  
+%  \centering
+  \includegraphics[scale=0.7]{arduino-ustawPlytke.jpg}
+  \caption{Ustawianie płytki}
+  \label{fig:plytka}
+	\end{figure}
+	\begin{figure}[h]
+%  \centering
+  \includegraphics[scale=0.7]{arduino-ustawPort.jpg}
+  \caption{Ustawianie portu szeregowego}
+  \label{fig:port}
+\end{figure}
+
 
 
 %---Do bibliografii-----------------------------------
 \cite{Introduction, Reference}
 %-----------------------------------------------------
 
-
-\begin{figure} %     
-%  \centering
-  \includegraphics[scale=0.7]{arduino-ustawPlytke.jpg}
-  \caption{Ustawianie płytki}
-  \label{fig:test}
-	\end{figure}
-	\begin{figure}
-%  \centering
-  \includegraphics[scale=0.7]{arduino-ustawPort.jpg}
-  \caption{Ustawianie portu}
-  \label{fig:test}
-\end{figure}
 
 
 \section{Podstawy elektroniki}
@@ -341,10 +349,10 @@ Zadanie z tym związane (pojęcia będą wytłumaczone w dalszej części): \\* 
 	\subsubsection {Symbole}
 	Elektronika ma swój własny język. Przypomnijmy oznaczenia niektórych elementów z elektroniki:
 \begin{itemize}
-	\item \ref{fig:dioda}-dioda świecąca
-	\item sym.-źródło prądu stałego
-	\item sym.-żarówka
-	\item sym.-rezystor
+	\item Ilustracja \ref{fig:dioda}-dioda świecąca
+	\item Ilustracja \ref{fig:DC}-źródło prądu stałego
+	\item Ilustracja \ref{fig:zar}-żarówka
+	\item Ilustracja \ref{fig:rezystor}-rezystor
 \end{itemize}
 \begin{figure}
 	\centering
@@ -354,19 +362,19 @@ Zadanie z tym związane (pojęcia będą wytłumaczone w dalszej części): \\* 
       \caption{Dioda świecąca}
 			\label{fig:dioda}
    \end{subfigure}
-	\begin{subfigure}[h!]{0.25\textwidth}
+	\begin{subfigure}[h]{0.25\textwidth}
       \centering
       \includegraphics[scale=0.05]{DC-Source.png}
       \caption{Źródło prądu stałego}
 			\label{fig:DC}
    \end{subfigure}
-	\begin{subfigure}[h!]{0.25\textwidth}
+	\begin{subfigure}[h]{0.25\textwidth}
       \centering
       \includegraphics[scale=0.2]{LightBulb.png}
       \caption{Żarówka}
 			\label{fig:zar}
    \end{subfigure}
-	\begin{subfigure}[h!]{0.25\textwidth}
+	\begin{subfigure}[h]{0.25\textwidth}
       \centering
       \includegraphics[scale=0.05]{Resistor-Europe.png}
       \caption{Rezystor}
@@ -375,6 +383,7 @@ Zadanie z tym związane (pojęcia będą wytłumaczone w dalszej części): \\* 
 	\caption{Symbole}
 	\label{fig:symbole}
 \end{figure}
+\FloatBarrier
    \subsubsection{Definicje tych elementów}
 	
 Żarówka - jest to źródło światła (i ciepła) elektrycznego, poprzez żarzenie się trudno topliwego materiału (często wykorzystywany jest drucik wolframowy przez który płynie duży prąd). Sprawność ok.
@@ -389,25 +398,25 @@ Dioda świecąca - element elektryczny który przewodzi prąd tylko w jedną str
 
 \subsubsection{Zastosowanie symboli}
     
-Do rysowania schematów używamy tych właśnie symboli. Symbole te są znane na całym świecie więc gdy narysujemy (dioda) każdy będzie wiedział, że to dioda. Na początku nie będziemy rysować bardzo skomplikowanych układów ale należy wiedzieć że one istnieją. Przydają się przy czytaniu niektórych instrukcji (np. do jakiegoś czujnika).
+Do rysowania schematów używamy tych właśnie symboli. Symbole te są znane na całym świecie więc gdy narysujemy to co jest na ilustracji \ref{fig:dioda} każdy będzie wiedział, że to dioda. Na początku nie będziemy rysować bardzo skomplikowanych układów ale należy wiedzieć że one istnieją. Przydają się przy czytaniu niektórych instrukcji (np. do jakiegoś czujnika).
 %Schem nasz(jeden układ sygnalizatora) i dla porównania schemat (arduino mini- lub czegoś innego)
 
 	\subsection{Jak czytać opór}
-Nie ma tutaj żadnej filozofii. Musimy po prostu 'podstawić' nasz opornik i przeczytać. Spróbujcie sami ilustracja x. Rozwiązanie na końcu.
+Nie ma tutaj żadnej filozofii. Musimy po prostu 'podstawić' nasz opornik i przeczytać. Spróbujcie sami - ilustracja \ref{fig:rez_zad}. Rozwiązanie na końcu.
 
 W systemie znakowania paskowym 2 pierwsze paski oznaczają wartość rezystancji którą czytamy jako jedną liczbę, a 3 pasek mnożnik przez który należy pomnożyć te dwie pierwsze liczby.
-Czwarty pasek to dopuszczalna tolerancja. - tolerancja to zakres błędu. Np dla opornika 10[ohm] +- 10\% znaczy, że opór będzie nam się wahał od 9-11[ohm].
+Czwarty pasek to dopuszczalna tolerancja. - tolerancja to zakres błędu. Np dla opornika 10[ohm] +- 10\% znaczy, że opór będzie nam się wahał od 9-11[ohm]. Użyjcie do tego ilustracji \ref{fig:kod}.
 \begin{figure}
  \centering
   \includegraphics[scale=0.7]{kod_paskowy.jpg}
   \caption{Kod paskowy rezystorów}
-  \label{fig:test}
+  \label{fig:kod}
 \end{figure}
 \begin{figure}
  \centering
   \includegraphics[scale=0.4]{opornik.jpg}
   \caption{Przykładowy rezystor}
-  \label{fig:test}
+  \label{fig:rez_zad}
 \end{figure}
 \FloatBarrier
 	\subsection {Domowy warsztat}
@@ -427,7 +436,7 @@ Czwarty pasek to dopuszczalna tolerancja. - tolerancja to zakres błędu. Np dla
   \centering
   \includegraphics[scale=0.1,left]{universe.jpg}
   \caption{test figuwds}
-  \label{fig:test}
+  \label{fig:testa}
 \end{figure}
 
 	%opis sygnalizatora świetlnego
@@ -444,7 +453,7 @@ Czwarty pasek to dopuszczalna tolerancja. - tolerancja to zakres błędu. Np dla
 \section {Więcej}
 
 \subsection {Jak wiedzieć więcej}
-Internet jest pełen informacji ale nie zawsze jest je znaleźć. W tym celu powstały różne fora, poradniki i blogi, które pomagają nam. Polecam szukać w języku angielski (nasze problemy wpisywać po w Google po angielsku np. How to include new library to Arduino). Gdy to zrobimy najlepiej szukać odpowiedzi na forum Stackoverflow. Serwis ma ponad 10 milionów artykułów, dzięki czemu jest duża szansa, że ktoś kiedyś miał taki sam problem jak wy. Stackoverflow można nazwać Wikipedią dla informatyków. 
+Internet jest pełen informacji ale nie zawsze łatwo jest je znaleźć. W tym celu powstały różne fora, poradniki i blogi, które pomagają nam. Polecam szukać w języku angielskim (nasze problemy wpisywać po w Google po angielsku np. "How to include new library to Arduino"). Gdy to zrobimy najlepiej szukać odpowiedzi na forum Stackoverflow. Serwis ma ponad 10 milionów artykułów, dzięki czemu jest duża szansa, że ktoś kiedyś miał taki sam problem jak wy. Stackoverflow można nazwać Wikipedią dla informatyków. 
 \subsection{System kontroli wersji}
 System kontroli wersji to oprogramowanie, które pomaga śledzić zmiany w kodzie źródłowym.
 Dzięki temu mamy dostęp do kodu który kiedyś napisaliśmy (i został zmieniony/usunięty). Możemy również całkowicie zmieniać kod bez obawy, że przestanie on działać (w każdym momencie możemy przywrócić poprzednią wersję). Jest stosowany w dużych korporacjach, ponieważ ułatwia wspólną pracę. Jest kilka systemów kontroli wersji na rynku ale najbardziej popularnym (i polecanym przez nas) jest GitHub. Jako przykład możemy dodać, że został on wykorzystany do pisania tej pracy. W załącznikach na końcu będzie link do serwisu i do naszych repozytoriów (nie ważne, że nie macie pojęcia co to oznacza. Musicie po prostu wejść).
@@ -453,6 +462,13 @@ Dzięki temu mamy dostęp do kodu który kiedyś napisaliśmy (i został zmienio
 %jak szukać bibliotek do czujników
 %system kontroli wersji
 %%
+
+\section*{Załączniki}
+\begin{enumerate}
+	\item \label{itm:Git_makieta} https://github.com/Szarp/makieta\_skrzyzowania
+	\item \label{itm:Download_Arduino} https://www.arduino.cc/en/Main/Software
+\end{enumerate}
+
 %\begin{thebibliography}{3}
 %\bibitem{diller} Antoni Diller, \textit{\LaTeX\ wiersz po wierszu},
 %wydawnictwo Helion, Gliwice 2001
