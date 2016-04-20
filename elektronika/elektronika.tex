@@ -109,10 +109,10 @@ Używamy procesorów "atmel", a do programowania środowiska Arduino. Cały kod 
 
 Arduino aby działać musi zostać zaprogramowane. Programuje się je w języku Arduino, opartym na językach C/C++.
 Program jest kompilowany, czyli przetwarzany na język zrozumiały dla urządzenia, oraz na nie wgrywany za pomocą
-Arduino IDE, o którym więcej w sekcji "Środowisko". 
+Arduino IDE, o którym więcej w sekcji "\ref{subsec:Srodowisko}. Środowisko". 
 
 %![Arduino IDE](https://www.arduino.cc/en/pub/skins/arduinoWide/img/ArduinoAPP-01.svg)
-Kolejny akapit
+%Kolejny akapit
 
 \subsection {Składnia języka używanego w środowisku C++}
 %Największą różnicą jest struktura, składnia praktycznie się nie różni - CO TU CHCIAŁEŚ NAPISAĆ???
@@ -123,6 +123,7 @@ Kolejny akapit
 	\item Funkcje
 \end{enumerate}
 \subsubsection  {Struktura}
+\label{subsec:struktura}
 																											%\begin{figure}
 																												%\centering
 																													%\includegraphics{../../Users/Madar/Desktop/bartek_pulpit/zdjęcia/bartek.jpg}
@@ -220,7 +221,8 @@ Kolejny akapit
 	\begin{itemize}
 		\item \#include - używany na początku kodu przed jakąkolwiek funkcją, aby dołączyć biblioteki. \textbf{Nie stawiamy po nim średnika!} Przykład:
 			\begin{verbatim}
-				\#include <Keyboard.h> //dodaje bibliotekę wprowadzającą obsługę klawiatury
+				\#include <Keyboard.h> //dodaje bibliotekę wprowadzającą
+				  obsługę klawiatury
 			\end{verbatim}
 		\item \#define - używany na samym początku kodu prze jakąkolwiek funkcją. Za jego pomocą możemy zdefiniować jaką wartość będzie mieć fragment tekstu.
 		Działa tak jakby zamiast ciągu znaków zaraz po słowie "define" były te oddzielone od nich spacją. \textbf{Nie stawiamy po nim średnika!} Przykład kodu wypisującego co 1s tekst zdefiniowany na początku.
@@ -274,11 +276,45 @@ Kolejny akapit
 	\begin{verbatim}
 	typ nazwa(typP parametr1, typP parametr2, ...){
 	  kod;
-		return(zwracanaWartosc);
+	  return(zwracanaWartosc);
 	}
 	\end{verbatim}
 	gdzie typ oznacza typ wartości zwracanej przez funkcję (np. void, int, boolean, itd.).
 	W zwykłych nawiasach umieszcza się nazwy parametrów, które mogą zostać funkcji przekazane i ich typ (np. int, boolean, itd.). Na końcu funkcji zazwyczaj umieszcza się return(wartosc). Nie dotyczy to jednak funkcji typu "void", które nie zwracają żadnych wartości.
+	
+	W sekcji "\ref{subsec:struktura}. Struktura" wymieniliśmy już funkcje "setup" i "loop". Jednak Arduino ma więcej predefiniowanych funkcji, z których wymienimy kilka podstawowych.
+	\begin{itemize}
+		\item pinMode(x, y) - funkcja określająca jaką rolę (y) ma pełnić pin cyfrowy (digital pin) o numerze "x". "y" może przyjmować następujące wartości:
+			\begin{itemize}
+				\item OUTPUT - wyjście
+				\item INPUT - wejście
+				\item INPUT\_PULLUP - wejście z wewn. opornikiem
+			\end{itemize}
+		\item digitalWrite(x, y) - funkcja określająca jaki stan (y) ma przyjąć pin cyfrowy (zdefiniowany jako "OUTPUT") o numerze "x". "y" może przyjmować następujące wartości:
+			\begin{itemize}
+				\item LOW - masa (-)
+				\item HIGH - zasilanie (+)
+			\end{itemize}
+		\item digitalRead(x) - funkcja zwracająca stan wejściowego pinu cyfrowego "x". Zwraca tylko wartości HIGH i LOW
+		\item milis() - podaje czas w milisekundach
+		\item delay(x) - zatrzymuje wykonywanie programu na "x" milisekund (1000ms=1s).
+		\item attachInterrupt(digitalPinToInterrupt(x), func, mode) - dodaje przerwanie wykonujące funkcję "func", jeśli z cyfrowym pinem wejściowym "x" stanie się to co określono jako "mode". Piny obsługujące przerwania są różne w zależności od Arduino. Przed użyciem attachInterrupt() radzę zobaczyć załącznik \ref{itm:InterruptPin} Funkcja func \textbf{nie może pobierać parametrów, ani zwracać żadnych wartości} (definiowana jako void). "mode" może przyjmować następujące wartości:
+			\begin{itemize}
+				\item LOW - jeśli stan pinu to "LOW".
+				\item CHANGE - jeśli zmieni się wartość (LOW\verb|->|HIGH lub odwrotnie).
+				\item RISING - jeśli wartość zmieni się z LOW na HIGH.
+				\item FALLING - jeśli wartość zmieni się z HIGH na LOW.
+			\end{itemize}
+		\item detachInterrupt(digitalPinToInterrupt(x)) - usuwa przerwanie z pinu "x".
+		\item Serial - umożliwia komunikację przez port szeregowy. Korzystamy do tego z "monitora portu szeregowego" w Arduino IDE. Używa się jako Serial.func(), gdzie funkcji "func()" jest naprawdę wiele. Wymienię jednak kilka podstawowych:
+			\begin{itemize}
+				\item begin(x) - ustala częstotliwość przesyłania danych w bitach na sekundę (baud) jako "x". "x" może przyjmować wartości 300, 600, 1200, 2400, 4800, 9600, 14400, 19200, 28800, 38400, 57600 lub 115200.
+				\item print(x) - przesyła wartość x przez port szeregowy.
+				\item println(x) - działa jak Serial.print(), ale kolejny komunikat będzie w nowej linijce.
+			\end{itemize}
+			Jeśli chcecie zobaczyć wszystkie funkcje Serial.func() zobaczcie załącznik \ref{itm:Serial}.
+	\end{itemize}
+	Jak wcześniej napisaliśmy istnieje wiele predefiniowanych funkcji, których tu nie wymieniliśmy, ale jeśli chcecie je wszystkie poznać zobaczcie załącznik \ref{itm:Ref} i kolumnę "Functions".
 
 %to do bibliografi[https://www.arduino.cc/en/Guide/Introduction, https://www.arduino.cc/en/Reference/HomePage]
 
@@ -297,6 +333,7 @@ W tej części przeanalizujemy kod "normalnie" używany
 %CZytaj wartość czujnika -> analiza -> sygnał do odbiornika(zgaś światło, rusz silnikiem)
 	%\subsection{Jezyk używany}
 	\subsection{Środowisko}
+	\label{subsec:Srodowisko}
 	Środowisko - miejsce w którym dzieją się cuda, a mianowicie powstają nasze programy. Jak każdy język, Arduino również ma własne środowisko (Arduino IDE).
 	Środowisko umożliwia nam edytowanie programów oraz kompilację i wgrywanie ich na urządzenie.\\ %(odnośniki do wyższego rozdziału tutaj powinny się znajdować)
 		Wygląda ono w ten sposób: Ilustracja \ref{fig:IDE}.
@@ -391,7 +428,7 @@ Zadanie z tym związane (pojęcia będą wytłumaczone w dalszej części): \\* 
 
 Źródło prądu stałego - jak nazwa wskazuje jest to miejsce, w którym "powstaje prąd" jednostką jest napięcie wolt[V]. W elektronice powszechnie stosuje się napięcie 3,3V i 5V. Dla porównania w gniazdku jest 220-230V.
 
-Rezystor - jest wykorzystywany do ograniczenia płynącego prądu w obwodzie. Zamienia energię elektryczną w ciepło. (Kolejny rozdział)[jak czytać opór na rezystorze - te paski]
+Rezystor - jest wykorzystywany do ograniczenia płynącego prądu w obwodzie. Zamienia energię elektryczną w ciepło. Rezystory posiadają również własny kod o którym więcej w sekcji "\ref{subsec:kod}. Jak czytać opór" %(Kolejny rozdział)[jak czytać opór na rezystorze - te paski]
 
 Dioda świecąca - element elektryczny który przewodzi prąd tylko w jedną stronę. Stosowane w wyświetlaczach LED jak również w pilotach (na światło podczerwone) Charakteryzuje się dosyć dużą sprawnością 26-300 lumenów/W. 
 %oświetlnie na boiskach sportowych
@@ -399,14 +436,16 @@ Dioda świecąca - element elektryczny który przewodzi prąd tylko w jedną str
 \subsubsection{Zastosowanie symboli}
     
 Do rysowania schematów używamy tych właśnie symboli. Symbole te są znane na całym świecie więc gdy narysujemy to co jest na ilustracji \ref{fig:dioda} każdy będzie wiedział, że to dioda. Na początku nie będziemy rysować bardzo skomplikowanych układów ale należy wiedzieć że one istnieją. Przydają się przy czytaniu niektórych instrukcji (np. do jakiegoś czujnika).
+%\FloatBarrier
 %Schem nasz(jeden układ sygnalizatora) i dla porównania schemat (arduino mini- lub czegoś innego)
 
 	\subsection{Jak czytać opór}
+	\label{subsec:kod}
 Nie ma tutaj żadnej filozofii. Musimy po prostu 'podstawić' nasz opornik i przeczytać. Spróbujcie sami - ilustracja \ref{fig:rez_zad}. Rozwiązanie na końcu.
 
 W systemie znakowania paskowym 2 pierwsze paski oznaczają wartość rezystancji którą czytamy jako jedną liczbę, a 3 pasek mnożnik przez który należy pomnożyć te dwie pierwsze liczby.
 Czwarty pasek to dopuszczalna tolerancja. - tolerancja to zakres błędu. Np dla opornika 10[ohm] +- 10\% znaczy, że opór będzie nam się wahał od 9-11[ohm]. Użyjcie do tego ilustracji \ref{fig:kod}.
-\begin{figure}
+\begin{figure}[h]
  \centering
   \includegraphics[scale=0.7]{kod_paskowy.jpg}
   \caption{Kod paskowy rezystorów}
@@ -426,18 +465,25 @@ Czwarty pasek to dopuszczalna tolerancja. - tolerancja to zakres błędu. Np dla
 
 \section{Pierwszy mikrokontroler}
 		Jest to dość podstawowy element: co trzeba mieć aby zacząć przygodę z elektroniką. Odpowiedz: praktycznie nic. W kolejnych częściach spróbujemy ustalić poziom zaawansowania w czytelnika w elektronice oraz w programowaniu.
-\begin{figure}[htb]
-  \centering
-  \includegraphics[scale=0.1,right]{universe.jpg}
-  \caption{test figure}
-  \label{fig:test}
-\end{figure}
-\begin{figure}[!h]
-  \centering
-  \includegraphics[scale=0.1,left]{universe.jpg}
-  \caption{test figuwds}
-  \label{fig:testa}
-\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%Poniżej obrazki testowe%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\begin{figure}[htb]
+  %\centering
+  %\includegraphics[scale=0.1,right]{universe.jpg}
+  %\caption{test figure}
+  %\label{fig:test}
+%\end{figure}
+%\begin{figure}[!h]
+  %\centering
+  %\includegraphics[scale=0.1,left]{universe.jpg}
+  %\caption{test figuwds}
+  %\label{fig:testa}
+%\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 	%opis sygnalizatora świetlnego
 	%\section{zestaw do kupienia}
@@ -466,7 +512,10 @@ Dzięki temu mamy dostęp do kodu który kiedyś napisaliśmy (i został zmienio
 \section*{Załączniki}
 \begin{enumerate}
 	\item \label{itm:Git_makieta} https://github.com/Szarp/makieta\_skrzyzowania
-	\item \label{itm:Download_Arduino} https://www.arduino.cc/en/Main/Software
+	\item \label{itm:Download_Arduino} https://www.arduino.cc/en/Main/Software (ang.)
+	\item \label{itm:InterruptPin} https://www.arduino.cc/en/Reference/AttachInterrupt (ang.)
+	\item \label{itm:Serial} https://www.arduino.cc/en/Reference/Serial (ang.)
+	\item \label{itm:Ref} https://www.arduino.cc/en/Reference/HomePage (ang.)
 \end{enumerate}
 
 %\begin{thebibliography}{3}

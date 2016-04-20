@@ -9,7 +9,8 @@ code/test/test.ino
 
 #Pliki gotowe do otwarcia (mogą być nieaktualne)
 *.dvi
-*.pdf
+#*.pdf
+#Musimy pokazac panu pdf, wiec pdf'y moga byc. Aby ponownie wylaczyc pdf'y usun # przed *.pdf
 
 #Plik stanu programu TeXnicCenter (lokalizacja kursora)
 *.tps
