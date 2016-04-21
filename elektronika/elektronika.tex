@@ -26,8 +26,8 @@
 %\renewcommand{\section}
 \titlelabel{\thetitle.\quad}%dodawankie kropki
 \rhead{\fancyplain{}{}} % predefined ()
-\fancyhead[CE]{Elektronika}
-\fancyhead[CO]{\rightmark }
+\fancyhead[CE]{Elektronika na przykładzie Arduino}
+\fancyhead[CO]{\rightmark}
 %\chead{\fancyplain{}{\rightmark }} % 1. sectionname
 \cfoot{\fancyplain{}{}} %środek stopki
 \lhead{\fancyplain{}{}} %lewa część nagłówka
@@ -93,12 +93,16 @@
 \clearpage % Whitespace to the end of the page
 
 \end{titlepage}
+
 \newpage\null\thispagestyle{empty}\newpage
+
 %\begin{abstract}
 
 %\end{abstract}
 
 \tableofcontents 
+
+
 \addcontentsline{toc}{section}{Wstęp}
 %\addtocontents{toc}{\protect\thispagestyle{empty}}
 \thispagestyle {empty}
@@ -207,18 +211,19 @@ Arduino IDE, o którym więcej w sekcji "\ref{subsec:Srodowisko}. Środowisko".
 			x++;
 			\end{verbatim}
 		\item -- - zmniejsz o 1. Wykorzystanie w ten sam sposób co --
-		\item += - powiększ o. Przykład kodu zwiększającego zmienną x o 7:
-			\begin{verbatim}
-			x+=7;
-			\end{verbatim}
-			Równoważne z kodem
-			\begin{verbatim}
-			x = x + 7;
-			\end{verbatim}
-		\item -= - pomniejsz o. "x -= y" jest równoważne z "x = x - y"
-		\item *= - przemnóż przez. "x *= y" równoważne do "x = x*y"
-		\item /= - podziel przez. "x /= y" = "x = x/y"
-		\item \%= - zapisz jako resztę z dzielenia przez. "x \%= y" jest równoważne z "x = x\%y".
+		\item ?= - tzw. operator złożony, gdzie "?" to jeden z poznanych wcześniej operatorów (+, -, *, /, \%). Jego działanie można opisać w następujący sposób: "\verb|x?=y|" jest równoważne z "\verb|x=x?y|".
+		%\item += - powiększ o. Przykład kodu zwiększającego zmienną x o 7:
+			%\begin{verbatim}
+			%x+=7;
+			%\end{verbatim}
+			%Równoważne z kodem
+			%\begin{verbatim}
+			%x = x + 7;
+			%\end{verbatim}
+		%\item -= - pomniejsz o. "x -= y" jest równoważne z "x = x - y"
+		%\item *= - przemnóż przez. "x *= y" równoważne do "x = x*y"
+		%\item /= - podziel przez. "x /= y" = "x = x/y"
+		%\item \%= - zapisz jako resztę z dzielenia przez. "x \%= y" jest równoważne z "x = x\%y".
 	\end{itemize}
 	Należy pamiętać również o:
 	\begin{itemize}
