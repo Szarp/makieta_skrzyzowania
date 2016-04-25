@@ -1,37 +1,41 @@
 W tym dziale doweimy się co należy kupić ze zględu na 
 
 Podstawy podstaw:
+
 Zakupy:
--Arduino Uno lub Nano
--diody świecące(klor dowolny)
--oporniki 300OHM
--ew. przyciski
--termometr jako jeden czujnik
+Poziom pierwszy:
+\begin{itemize}
+\item Arduino Uno lub Nano
+\item diody świecące (klor dowolny)
+\item oporniki 300OHM
+\item przyciski (opcjonalne)
+\item termometr jako jeden czujnik
+ \end{itemize}
 
+Poziom drugi:
+\begin{itemize}
+\item czujniki dostępne na Allegro
+\item kolejne Arduino (Nano najlepiej)
+\item wyświetlacz
+ \end{itemize}
 
-Advancet beginner:
--różne czujiniki: czyt lista czujników, o których kiedykolwiek słyszałem
--kolejne Arduino(Nano)
--wyświetlacz
-
-
-Expert:
--radia,
--siliniki(np. serwo)
-
+Poziom trzeci:
+\begin{itemize}
+\item radia
+\item siliniki (np. serwo)
+\item batrie do Arduino (pilot bezprezwodowy)
+\end{itemize}
 
 
 Zadania
--mrugająca dioda (pin 13)
--mrugająca dioda (zewnętrzna+rezystor)
--świecąca dioda przy naciśnieciu przycisku(z użyciem INPUT_PULLUP)
--próba uruchomienia termometru(to zadanie jest już trudniejsze)
-
--uruchamianie poszczególnych czujników
--inteligntny dom, wyświetlanie temeratury np na wyświetlaczu,
--zaplaenie lampki gdy płynie prąd(czyjnik hala)
-
-
--automatyczne światło (przy pomocy 2 radiów),
--sterowanie silnikami przy pomocy radia
--
+ \begin{itemize}
+\item mrugająca dioda (pin 13)
+\item mrugająca dioda (zewnętrzna+rezystor)
+\item świecąca dioda przy naciśnieciu przycisku (z użyciem INPUT_PULLUP)
+\item podpięcie czujnika (sterowanie przy pomocy I2C)
+\item więcej czujników
+\item inteligntny dom, wyświetlanie temeratury np na wyświetlaczu,
+\item zaplaenie lampki przy wykryciu ruchu(łaczenie kilku czujników \item  jeden z przykładów)
+\item światło sterowane pilotem (2 Arduino i 2 radia)
+\item sterowanie silnikami przy pomocy radia
+ \end{itemize}
