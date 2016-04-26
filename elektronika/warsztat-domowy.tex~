@@ -1,0 +1,60 @@
+\subsection{ O co chodzi }
+W tym rozdziale czytelnik dowie się jak zacząć przygodę z elektroniką jeśli nigdy nie miał styczności z tym. Rozdział ten będzie miał
+nietypową budowę, ponieważ będzie podzielony na poziomy ze względu na stopień zaawansowania. Po wybraniu swojego poziomu są umieszczone tabelki z zadaniami oraz z listą zakupów .
+\subsection{Podstawy podstaw - poziom 1}
+Jest to idealne połączenie dla czytelników, którzy zaczynają przygodę z~elektroniką oraz z~programowaniem jednocześnie. Dzięki temu nauczy się podstaw z~tych dziedzin. 
+To, co czytelnik ma zrobić aby posiąść tę wiedzę będzie omówione w dalszej części dokumentu.
+%Poziom 1:
+%-Arduino Uno lub Nano,
+%płytka stykowa,
+%-kabelki (damsko-męskie i męsko-męskie),
+%-czujnik, oporniki (do diod)
+\subsection{Advanced beginner - poziom 2}
+Czytelnik:
+\begin{itemize}
+\item zna podstawową składnię używaną w Arduino,
+\item zna różnice między Arduino Nano oraz Arduino Uno,
+\item potrafi uruchomić diodę wciskając przycisk,
+\item spędził co najmniej 5h w środowisku Arduino
+\end{itemize}
+
+Gdy czytelnik posiądzie wiedzę minimalną, może przejść do kolejnego poziomu, prócz poszerzenia naszego warsztatu, zmiany trudności zadań, czytelnik musi wykazać się swoją kreatywnością, ponieważ w tym momencie pojawiają się schody.
+
+\subsection{Expert - poziom 3}
+Jako, że jest to poradnik dla początkujących i średnio zaawansowanych, wyróżnimy tylko 3 poziomy. W tym poziomie nie ma już list zakupów, ponieważ Expert sam dobrze wie co chce robić.
+\subsection{Lista zakupów i zadania}
+Jak już wcześniej zostało napisane, w tym rozdziale zostanie poruszony temat listy zakupów oraz jak kupować
+%Zakupy:
+Poziom pierwszy:
+\begin{itemize}
+\item Arduino Uno lub Nano
+\item diody świecące (klor dowolny)
+\item oporniki $300\Omega$
+\item przyciski (opcjonalne)
+\item termometr jako jeden czujnik
+ \end{itemize}
+
+Poziom drugi:
+\begin{itemize}
+\item czujniki dostępne na Allegro
+\item kolejne Arduino (Nano najlepiej)
+\item wyświetlacz
+ \end{itemize}
+
+Poziom trzeci:
+\begin{itemize}
+\item radia
+\item siliniki (np. serwo)
+\item batrie do Arduino (pilot bezprezwodowy)
+\end{itemize}
+        
+Kolejnośc zadań jest od najprostrzego do najtrudniejszego:
+ \begin{itemize}
+\item mrugająca dioda (pin 13)
+\item mrugająca dioda (zewnętrzna + rezystor)
+\item świecąca dioda przy naciśnieciu przycisku (opornik wewnętrzny)
+\item podpięcie czujnika (sterowanie przy pomocy I2C)
+\item zaplaenie lampki przy wykryciu ruchu (łaczenie kilku czujników - jeden z~przykładów)
+\item światło sterowane pilotem (2 Arduino i 2 radia)
+\item sterowanie silnikami przy pomocy radia
+ \end{itemize}
