@@ -123,7 +123,7 @@
 
 \section*{Wstęp}
 \pagestyle{style2}
-Ten projekt jest dedykowany ludziom na każdym poziomie znajomości tematu. Przez kolejne rozdziały będziemy uzupełniać podstawowe informacje potrzebne do zbudowania prostych układów elektronicznych, aby w~kolejnej części zacząć przedstawiać podstawowe schematy i~proste programy. Doświadczony w~tej dziedzinie czytelnik może je po prostu pominąć (nie wszyscy chcą się uczyć programowania schematami blokowymi). 
+Ten projekt jest dedykowany ludziom na każdym poziomie znajomości tematu. Przez kolejne rozdziały będziemy uzupełniać podstawowe informacje potrzebne do zbudowania prostych układów elektronicznych, aby w~kolejnej części zacząć przedstawiać podstawowe schematy i~proste programy. Doświadczony w~tej dziedzinie czytelnik może je po prostu pominąć. 
 
 Nota dla zaawansowanych czytelników:
 Używamy procesorów "atmel", a do programowania środowiska Arduino. Cały kod używany w~prezentacji będzie udostępniony na GitHub'ie. (Załącznik \ref{itm:Git_makieta}.)
@@ -156,25 +156,25 @@ Arduino IDE, o~którym więcej~w  sekcji "\ref{subsec:Srodowisko}. Środowisko".
 	\renewcommand{\labelitemii}{$\circ$}
 	\begin{itemize}
 	
-	  \item void setup() - wykonywana tylko raz na początku programu
+	  \item void setup() -- wykonywana tylko raz na początku programu
 		
-	  \item void loop() - wykonywana cały czas po wykonaniu funkcji "setup"
+	  \item void loop() -- wykonywana cały czas po wykonaniu funkcji "setup"
 	 
 	\end{itemize}
 	  %przykładowy kod
 	Wśród struktur możemy wyróżnić także:
 
 	\begin{itemize}
-		\item if(){} - wykonuje kod zawarty w~nawiasach klamrowych, jeśli warunek w~zwykłych nawiasach jest spełniony. Do porównania wartości stosuje się:
+		\item if(){} -- wykonuje kod zawarty w~nawiasach klamrowych, jeśli warunek w~zwykłych nawiasach jest spełniony. Do porównania wartości stosuje się:
 			\begin{itemize}
-				\item \verb|>| - jest większe
-				\item \verb|<|  - jest mniejsze
-				\item == - jest równe
-				\item != - jest różne od
-				\item \verb|<=| - mniejsze bądź równe
-				\item \verb|>=| - większe bądź równe
+				\item \verb|>| -- jest większe
+				\item \verb|<|  -- jest mniejsze
+				\item == -- jest równe
+				\item != -- jest różne od
+				\item \verb|<=| -- mniejsze bądź równe
+				\item \verb|>=| -- większe bądź równe
 			\end{itemize}
-		\item else - wykonuje kod zawarty w~nawiasach klamrowych, jeśli warunek w~if nie jest spełniony. \textbf{Używany tylko razem z~"if".} Przykład:
+		\item else -- wykonuje kod zawarty w~nawiasach klamrowych, jeśli warunek w~if nie jest spełniony. \textbf{Używany tylko razem z~"if".} Przykład:
 		\begin{verbatim}
 		if(x > y){
 		  Serial.println("x jest większe od y.");
@@ -182,7 +182,7 @@ Arduino IDE, o~którym więcej~w  sekcji "\ref{subsec:Srodowisko}. Środowisko".
 		  Serial.println("x nie jest większe od y.");
 		}
 		\end{verbatim}
-		\item for - jest to pętla, której zawartość w~klamrach zostanie tyle razy wykonana, ile razy spełniony jest warunek podany na wejściu. Budowa:\\*
+		\item for -- jest to pętla, której zawartość w~klamrach zostanie tyle razy wykonana, ile razy spełniony jest warunek podany na wejściu. Budowa:\\*
 		for(indeks, warunek dla którego funkcja ma się wykonywać, co zrobić z~indeksem po wykonaniu){}\\*
 		Przykład pętli for, która wypisze wartości od 0 do 2 włącznie:
 		\begin{verbatim}
@@ -190,14 +190,14 @@ Arduino IDE, o~którym więcej~w  sekcji "\ref{subsec:Srodowisko}. Środowisko".
 		  Serial.println(x);
 		}
 		\end{verbatim}
-		\item while() - pętla, która wykonuje kod w~nawiasach klamrowych, jeśli warunek w~zwykłych nawiasach jest spełniony.\\*
+		\item while() -- pętla, która wykonuje kod w~nawiasach klamrowych, jeśli warunek w~zwykłych nawiasach jest spełniony.\\*
 		Przykład pętli while wypisującej wartości zmiennej $x$ i~zwiększającej tę wartość jeśli jest ona mniejsza niż 3:
 		\begin{verbatim}while(x<3){
 		  Serial.println(x);
 		  x++;
 		}
 		\end{verbatim}
-		\item do... while() - pętla podobna do pętli "while", ale kod zostanie wykonany co najmniej raz, nawet jeśli warunek nie jest spełniony. \\*
+		\item do... while() -- pętla podobna do pętli "while", ale kod zostanie wykonany co najmniej raz, nawet jeśli warunek nie jest spełniony. \\*
 		Przykład pętli do... while, która wypisze wartość x tylko raz (choć warunek \textbf{nie} jest spełniony):
 		\begin {verbatim}
 		int x = 3;
@@ -209,24 +209,24 @@ Arduino IDE, o~którym więcej~w  sekcji "\ref{subsec:Srodowisko}. Środowisko".
 	\end{itemize}
 	Do tej kategorii możemy zaliczyć także niektóre symbole:
 	\begin{itemize}
-		\item ; - stawiany na końcu każdej (nie pustej) linii kodu. Nie jest niezbędny, jeśli linia jest zakończona znakiem \}
-		\item \{\} - w~nawiasach klamrowych jest zawarty kod każdej funkcji, pętli i~"if", oraz "else"
-		\item // - stawia się przed komentarzem. Ten typ komentarzy zaczyna się od tych znaków i~kończy się z~końcem linijki. \textbf{Komentarze są ignorowane przez kompilator} 
-		\item /**/ - komentarz wieloliniowy. Komentarz wstawia się za "/*", a kończy się go "*/".
-		\item = - przypisuje zmiennej określoną wartość. Przykład przypisania zmiennej "x" typu "string" wartości "wartość":
+		\item ; -- stawiany na końcu każdej (nie pustej) linii kodu. Nie jest niezbędny, jeśli linia jest zakończona znakiem \}
+		\item \{\} -- w~nawiasach klamrowych jest zawarty kod każdej funkcji, pętli i~"if", oraz "else"
+		\item // -- stawia się przed komentarzem. Ten typ komentarzy zaczyna się od tych znaków i~kończy się z~końcem linijki. \textbf{Komentarze są ignorowane przez kompilator} 
+		\item /**/ -- komentarz wieloliniowy. Komentarz wstawia się za "/*", a kończy się go "*/".
+		\item = -- przypisuje zmiennej określoną wartość. Przykład przypisania zmiennej "x" typu "string" wartości "wartość":
 			\begin{verbatim}
 			char x[] = "wartość";
 			\end{verbatim}
-		\item + - oznacza dodawanie
-		\item - - oznacza operację odejmowania
-		\item * - mnożenie
-		\item / - dzielenie
-		\item ++ - powiększ o~1. Przykład kodu zwiększającego zmienną x o~1:
+		\item + -- oznacza dodawanie
+		\item - -- oznacza operację odejmowania
+		\item * -- mnożenie
+		\item / -- dzielenie
+		\item ++ -- powiększ o~1. Przykład kodu zwiększającego zmienną x o~1:
 			\begin{verbatim}
 			x++;
 			\end{verbatim}
-		\item -- - zmniejsz o~1. Wykorzystanie w~ten sam sposób co --
-		\item ?= - tzw. operator złożony, gdzie "?" to jeden z~poznanych wcześniej operatorów (+, -, *, /, \%). Jego działanie można opisać w~następujący sposób: "\verb|x?=y|" jest równoważne z~"\verb|x=x?y|".
+		\item -- -- zmniejsz o~1. Wykorzystanie w~ten sam sposób co --
+		\item ?= -- tzw. operator złożony, gdzie "?" to jeden z~poznanych wcześniej operatorów (+, -, *, /, \%). Jego działanie można opisać w~następujący sposób: "\verb|x?=y|" jest równoważne z~"\verb|x=x?y|".
 		%\item += - powiększ o. Przykład kodu zwiększającego zmienną x o~7:
 			%\begin{verbatim}
 			%x+=7;
@@ -242,13 +242,13 @@ Arduino IDE, o~którym więcej~w  sekcji "\ref{subsec:Srodowisko}. Środowisko".
 	\end{itemize}
 	Należy pamiętać również o:
 	\begin{itemize}
-		\item \#include - używany na początku kodu przed jakąkolwiek funkcją, aby dołączyć biblioteki. \textbf{Nie stawiamy po nim średnika!} Przykład:
+		\item \#include -- używany na początku kodu przed jakąkolwiek funkcją, aby dołączyć biblioteki. \textbf{Nie stawiamy po nim średnika!} Przykład:
 			\begin{verbatim}
 				\#include <Keyboard.h> //dodaje bibliotekę wprowadzającą
 				  obsługę klawiatury
 			\end{verbatim}
-		\item \#define - używany na samym początku kodu prze jakąkolwiek funkcją. Za jego pomocą możemy zdefiniować jaką wartość będzie mieć fragment tekstu.
-		Działa tak jakby zamiast ciągu znaków zaraz po słowie "define" były te oddzielone od nich spacją. \textbf{Nie stawiamy po nim średnika!} Przykład kodu wypisującego co 1s tekst zdefiniowany na początku.
+		\item \#define -- używany na samym początku kodu przed jakąkolwiek funkcją. Za~jego pomocą możemy zdefiniować jaką wartość będzie mieć fragment tekstu.
+		Działa tak jakby zamiast ciągu znaków zaraz po słowie "define" były te oddzielone od nich spacją. \textbf{Nie stawiamy po nim średnika!} Przykład~kodu wypisującego co 1s tekst zdefiniowany na początku.
 			\begin{verbatim}
 				#define tekst "Hej!"
 				#define przerwa 1000
@@ -266,22 +266,22 @@ Arduino IDE, o~którym więcej~w  sekcji "\ref{subsec:Srodowisko}. Środowisko".
 		Dane przetwarzane przez program przechowywane są jako zmienne. W zależności od rodzaju zmiennej może ona przechowywać różne wartości.
 		\\*Wyróżniamy następujące typy zmiennych:
 		\begin{itemize}
-			\item void - używany tylko do tworzenia funkcji, które nie zwracają żadnej wartości.
-			\item boolean - zmienne typu boolean przechowują tylko wartości \textbf{true} i~\textbf{false}. Zamiast "false" można użyć $0$, a każda niezerowa liczba zostanie uznana za "true".
-			\item char - typ danych zawierający bajt pamięci. Przechowuje wartość znaku.
+			\item void -- używany tylko do tworzenia funkcji, które nie zwracają żadnej wartości.
+			\item boolean -- zmienne typu boolean przechowują tylko wartości \textbf{true} i~\textbf{false}. Zamiast "false" można użyć $0$, a każda niezerowa liczba zostanie uznana za "true".
+			\item char -- typ danych zawierający bajt pamięci. Przechowuje wartość znaku.
 				Podczas nadawania zmiennej wartości należy zapisać ją w~pojedynczym cudzysłowie.
 				Jednak znaki przechowywane są jako odpowiadające im liczby zgodnie z~kodowaniem ASCII.
 				Zmienna "char znak = 'A';" może być zapisana również tak: "char znak = 65;".
-				Korzystając z~tej własności możemy np pisząc "znak += 32;" zmienić wartość tej zmiennej z~'A' na 'a', czyli zmienić dużą literą na małą (i odwrotnie).
-			\item byte oraz unsigned char - przechowuje 8 bitową liczbą od 0 do 255. Zalecane jest używanie "byte" zamiast "unsigned char".
-			\item int - przechowuje wartości liczbowe. Zakres wartości zależy od procesora.
+				Korzystając z~tej własności możemy np. pisząc "znak += 32;" zmienić wartość tej zmiennej z~'A' na 'a', czyli zmienić dużą literą na małą (i odwrotnie).
+			\item byte oraz unsigned char -- przechowuje 8 bitową liczbą od 0 do 255. Zalecane~jest używanie "byte" zamiast "unsigned char".
+			\item int -- przechowuje wartości liczbowe. Zakres wartości zależy od procesora.
 				Dla Arduino Uno (i innych urządzeniach opartych na procesorze ATMega) jest 16-bitowa i~ma zakres od -32768 do 32767.
-			\item long - przechowuje wartości liczbowe. Ma rozmiar 32 bitów. Przyjmuje wartości od -2147483648 to 2147483647. Po liczbie należy dać literę "L" (long liczba = 51523487L).
-			\item string - tablica znaków. Najprościej tworzy się ją tak:
+			\item long -- przechowuje wartości liczbowe. Ma rozmiar 32 bitów. Przyjmuje wartości od -2147483648 to 2147483647. Po liczbie należy dać literę "L" (long liczba = 51523487L).
+			\item string -- tablica znaków. Najprościej tworzy się ją tak:
 				\begin{verbatim}
 				char nazwa[] = "Zawartość zmiennej nazwa";
 				\end{verbatim}
-			\item String - obiekt przechowujący ciągi znaków. Umożliwia więcej niż tablica znaków. Posiada tzw. metody, które ułatwiają m.in. łączenie ich, wyszukiwanie znaków i~podmienianie ich.
+			\item String -- obiekt przechowujący ciągi znaków. Umożliwia więcej niż tablica znaków. Posiada tzw. metody, które ułatwiają m.in. łączenie ich, wyszukiwanie znaków i~podmienianie ich.
 		\end{itemize}
 	
 \subsubsection{Funkcje}
@@ -296,31 +296,31 @@ Arduino IDE, o~którym więcej~w  sekcji "\ref{subsec:Srodowisko}. Środowisko".
 	gdzie typ oznacza typ wartości zwracanej przez funkcję (np. void, int, boolean, itd.).
 	W zwykłych nawiasach umieszcza się nazwy parametrów, które mogą zostać funkcji przekazane i~ich typ (np. int, boolean, itd.). Na końcu funkcji zazwyczaj umieszcza się return (wartosc). Nie dotyczy to jednak funkcji typu "void", które nie zwracają żadnych wartości.
 	
-	W sekcji "\ref{subsec:struktura}. Struktura" wymieniliśmy już funkcje "setup" i~"loop". Jednak Arduino ma więcej predefiniowanych funkcji, z~których wymienimy kilka podstawowych.
+	W sekcji "\ref{subsec:struktura}. Struktura" wymieniliśmy już funkcje "setup" i~"loop". Jednak~Arduino ma więcej predefiniowanych funkcji, z~których wymienimy kilka podstawowych.
 	\begin{itemize}
-		\item pinMode(x, y) - funkcja określająca jaką rolę (y) ma pełnić pin cyfrowy (digital pin) o~numerze "x". "y" może przyjmować następujące wartości:
+		\item pinMode(x, y) -- funkcja określająca jaką rolę (y) ma pełnić pin cyfrowy (digital pin) o~numerze "x". "y" może przyjmować następujące wartości:
 			\begin{itemize}
-				\item OUTPUT - wyjście
-				\item INPUT - wejście
-				\item INPUT\_PULLUP - wejście z~wewn. opornikiem
+				\item OUTPUT -- wyjście
+				\item INPUT -- wejście
+				\item INPUT\_PULLUP -- wejście z~wewn. opornikiem
 			\end{itemize}
-		\item digitalWrite(x, y) - funkcja określająca jaki stan (y) ma przyjąć pin cyfrowy (zdefiniowany jako "OUTPUT") o~numerze "x". "y" może przyjmować następujące wartości:
+		\item digitalWrite(x, y) -- funkcja określająca jaki stan (y) ma przyjąć pin cyfrowy (zdefiniowany jako "OUTPUT") o~numerze "x". "y" może przyjmować następujące wartości:
 			\begin{itemize}
-				\item LOW - masa (-)
-				\item HIGH - zasilanie (+)
+				\item LOW -- masa (-)
+				\item HIGH -- zasilanie (+)
 			\end{itemize}
 		\item digitalRead(x) -- funkcja zwracająca stan wejściowego pinu cyfrowego "x". Zwraca tylko wartości HIGH i~LOW
 		\item milis() -- podaje czas w~milisekundach
 		\item delay(x) -- zatrzymuje wykonywanie programu na "x" milisekund (1000ms = 1s).
-		\item attachInterrupt(digitalPinToInterrupt(x), func, mode) - dodaje przerwanie wykonujące funkcję "func", jeśli z~cyfrowym pinem wejściowym "x" stanie się to co określono jako "mode". Piny obsługujące przerwania są różne w~zależności od Arduino. Przed użyciem attachInterrupt() radzę zobaczyć załącznik \ref{itm:InterruptPin} Funkcja func \textbf{nie może pobierać parametrów, ani zwracać żadnych wartości} (definiowana jako void). "mode" może przyjmować następujące wartości:
+		\item attachInterrupt(digitalPinToInterrupt(x), func, mode) -- dodaje przerwanie wykonujące funkcję "func", jeśli z~cyfrowym pinem wejściowym "x" stanie się to co określono jako "mode". Piny obsługujące przerwania są różne w~zależności od Arduino. Przed użyciem attachInterrupt() radzę zobaczyć załącznik \ref{itm:InterruptPin} Funkcja func \textbf{nie może pobierać parametrów, ani zwracać żadnych wartości} (definiowana jako void). "mode" może przyjmować następujące wartości:
 			\begin{itemize}
 				\item LOW -- jeśli stan pinu to "LOW"
 				\item CHANGE -- jeśli zmieni się wartość (LOW\verb|->|HIGH lub odwrotnie)
 				\item RISING -- jeśli wartość zmieni się z~LOW na HIGH
 				\item FALLING -- jeśli wartość zmieni się z~HIGH na LOW
 			\end{itemize}
-		\item detachInterrupt(digitalPinToInterrupt(x)) - usuwa przerwanie z~pinu "x"
-		\item Serial - umożliwia komunikację przez port szeregowy. Korzystamy do tego z~"monitora portu szeregowego" w~Arduino IDE. Używa się jako Serial.func(), gdzie funkcji "func()" jest naprawdę wiele. Wymienię jednak kilka podstawowych:
+		\item detachInterrupt(digitalPinToInterrupt(x)) -- usuwa przerwanie z~pinu "x"
+		\item Serial -- umożliwia komunikację przez port szeregowy. Korzystamy do tego z~"monitora portu szeregowego" w~Arduino IDE. Używa się jako Serial.func(), gdzie funkcji "func()" jest naprawdę wiele. Wymienię jednak kilka podstawowych:
 			\begin{itemize}
 				\item begin(x) -- ustala częstotliwość przesyłania danych w~bitach na sekundę (baud) jako "x". "x" może przyjmować wartości 300, 600, 1200, 2400, 4800, 9600, 14400, 19200, 28800, 38400, 57600 lub 115200
 				\item print(x) -- przesyła wartość x przez port szeregowy
@@ -348,7 +348,7 @@ Arduino IDE, o~którym więcej~w  sekcji "\ref{subsec:Srodowisko}. Środowisko".
 	%\subsection{Jezyk używany}
 	\subsection{Środowisko}
 	\label{subsec:Srodowisko}
-	Środowisko - miejsce w~którym dzieją się cuda, a mianowicie powstają nasze programy. Jak każdy język, Arduino również ma własne środowisko (Arduino IDE).
+	Środowisko -- miejsce w~którym dzieją się cuda, a mianowicie powstają nasze programy. Jak każdy język, Arduino również ma własne środowisko (Arduino IDE).
 	Środowisko umożliwia nam edytowanie programów oraz kompilację i~wgrywanie ich na urządzenie.\\ %(odnośniki do wyższego rozdziału tutaj powinny się znajdować)
 		Wygląda ono w~ten sposób: Ilustracja \ref{fig:IDE}.
 	\begin{figure}[h]
@@ -357,6 +357,7 @@ Arduino IDE, o~którym więcej~w  sekcji "\ref{subsec:Srodowisko}. Środowisko".
 			\caption{Arduino IDE}
 			\label{fig:IDE}
 		\end{figure}
+		\FloatBarrier
 	\subsubsection{Skąd pobrać}
 	Pobieramy je ze strony (Załącznik \ref{itm:Download_Arduino}) zgodne z~wersją naszego systemu operacyjnego. Następnie instalujemy, wykonując polecenia instalatora
 	ew. (w przypadku Windowsa) rozpakowujemy zip'a do dowolnej lokalizacji i~z~niej uruchamiamy arduino.exe.
@@ -366,13 +367,13 @@ Programowanie jest intuicyjne ale musimy pamiętać o~kilku rzeczach. A mianowic
 
 
 \begin{figure}[h]  
-%  \centering
+  \centering
   \includegraphics[scale=0.7]{arduino-ustawPlytke.jpg}
   \caption{Ustawianie płytki}
   \label{fig:plytka}
 	\end{figure}
 	\begin{figure}[h]
-%  \centering
+  \centering
   \includegraphics[scale=0.7]{arduino-ustawPort.jpg}
   \caption{Ustawianie portu szeregowego}
   \label{fig:port}
@@ -388,7 +389,7 @@ Programowanie jest intuicyjne ale musimy pamiętać o~kilku rzeczach. A mianowic
 
 \section{Podstawy elektroniki}
  \subsection{Fizyka w elektronice}
-	Fizyka w~elektronice nie różni się od tej poznanej w~gimnazjum. Był cały dział 'prąd'. Ten dział właśnie nam się przyda. Nie zagłębiając się we wszystkie szczegóły, powtórzymy prawo Ohma:
+	Fizyka w~elektronice nie różni się od tej poznanej w~gimnazjum. Był cały dział "prąd". Ten dział właśnie nam się przyda. Nie zagłębiając się we wszystkie szczegóły, powtórzymy prawo Ohma:
 	\begin{center}
 	\[
 	I=\frac{U}{R}
@@ -400,10 +401,10 @@ Zadanie z~tym związane (pojęcia będą wytłumaczone w~dalszej części): \\* 
 	\subsubsection {Symbole}
 	Elektronika ma swój własny język. Przypomnijmy oznaczenia niektórych elementów z~elektroniki:
 \begin{itemize}
-	\item Ilustracja \ref{fig:dioda} --- dioda świecąca
-	\item Ilustracja \ref{fig:DC} --- źródło prądu stałego
-	\item Ilustracja \ref{fig:zar} --- żarówka
-	\item Ilustracja \ref{fig:rezystor} --- rezystor
+	\item Ilustracja \ref{fig:dioda} -- dioda świecąca
+	\item Ilustracja \ref{fig:DC} -- źródło prądu stałego
+	\item Ilustracja \ref{fig:zar} -- żarówka
+	\item Ilustracja \ref{fig:rezystor} -- rezystor
 \end{itemize}
 \begin{figure}
 	\centering
@@ -440,11 +441,11 @@ Zadanie z~tym związane (pojęcia będą wytłumaczone w~dalszej części): \\* 
 Żarówka -- jest to źródło światła (i ciepła) elektrycznego, poprzez żarzenie się trudno topliwego materiału (często wykorzystywany jest drucik wolframowy przez który płynie duży prąd). Sprawność ok.
 8-10 lumenów/wat. 
 
-Źródło prądu stałego - jak nazwa wskazuje jest to miejsce, w~którym "powstaje prąd" jednostką jest napięcie wolt[V]. W elektronice powszechnie stosuje się napięcie 3.3V i~5V. Dla porównania w~gniazdku jest $220-230V$.
+Źródło prądu stałego -- jak nazwa wskazuje jest to miejsce, w~którym "powstaje prąd" jednostką jest napięcie wolt[V]. W elektronice powszechnie stosuje się napięcie 3.3V i~5V. Dla porównania w~gniazdku jest $220-230$V.
 
-Rezystor - jest wykorzystywany do ograniczenia płynącego prądu w~obwodzie. Zamienia energię elektryczną w~ciepło. Rezystory posiadają również własny kod o~którym więcej w~sekcji "\ref{subsec:kod}. Jak czytać opór" %(Kolejny rozdział)[jak czytać opór na rezystorze - te paski]
+Rezystor -- jest wykorzystywany do ograniczenia płynącego prądu w~obwodzie. Zamienia energię elektryczną w~ciepło. Rezystory posiadają również własny kod o~którym więcej w~sekcji "\ref{subsec:kod}. Jak czytać opór" %(Kolejny rozdział)[jak czytać opór na rezystorze - te paski]
 
-Dioda świecąca - element elektryczny który przewodzi prąd tylko w~jedną stronę. Stosowane w~wyświetlaczach LED jak również w~pilotach (na światło podczerwone) Charakteryzuje się dosyć dużą sprawnością 26-300 lumenów/W. 
+Dioda świecąca -- element elektryczny który przewodzi prąd tylko w~jedną stronę. Stosowane w~wyświetlaczach LED jak również w~pilotach (na światło podczerwone) Charakteryzuje się dosyć dużą sprawnością 26-300 lumenów/W. 
 %oświetlnie na boiskach sportowych
 
 \subsubsection{Zastosowanie symboli}
@@ -455,10 +456,10 @@ Do rysowania schematów używamy tych właśnie symboli. Symbole te są znane na
 
 	\subsection{Jak czytać opór}
 	\label{subsec:kod}
-Nie ma tutaj żadnej filozofii. Musimy po prostu 'podstawić' nasz opornik i~przeczytać. Spróbujcie sami - ilustracja \ref{fig:rez_zad}. Rozwiązanie na końcu.
+Nie ma tutaj żadnej filozofii. Musimy po prostu "podstawić" nasz opornik i~przeczytać. Spróbujcie sami -- ilustracja \ref{fig:rez_zad}. Rozwiązanie na końcu (Załącznik \ref{itm:wynik}.).
 
 W systemie znakowania paskowym 2 pierwsze paski oznaczają wartość rezystancji którą czytamy jako jedną liczbę, a 3 pasek mnożnik przez który należy pomnożyć te dwie pierwsze liczby.
-Czwarty pasek to dopuszczalna tolerancja. - tolerancja to zakres błędu. Np dla opornika $10\Omega$ +- 10\% znaczy, że opór będzie nam się wahał od $9-11\Omega $. Użyjcie do tego ilustracji \ref{fig:kod}.
+Czwarty pasek to dopuszczalna tolerancja. Tolerancja to zakres błędu. Np. dla opornika $10\Omega \pm 10\%$ znaczy, że opór będzie nam się wahał od $9-11\Omega $. Użyjcie do tego ilustracji \ref{fig:kod}.
 \begin{figure}[h]
  \centering
   \includegraphics[scale=0.7]{kod_paskowy.jpg}
@@ -482,10 +483,10 @@ Czwarty pasek to dopuszczalna tolerancja. - tolerancja to zakres błędu. Np dla
 \section {Więcej}
 
 \subsection {Gdzie szukać wiedzy}
-Internet jest pełen informacji ale nie zawsze łatwo jest je znaleźć. W tym celu powstały różne fora, poradniki i~blogi, które pomagają nam. Polecam szukać w~języku angielskim (nasze problemy wpisywać po w~Google po angielsku np. "How to include new library to Arduino"). Gdy to zrobimy najlepiej szukać odpowiedzi na forum Stackoverflow. Serwis ma ponad 10 milionów artykułów, dzięki czemu jest duża szansa, że ktoś kiedyś miał taki sam problem jak wy. Stackoverflow można nazwać Wikipedią dla informatyków. 
+Internet jest pełen informacji ale nie zawsze łatwo jest je znaleźć. W tym celu powstały różne fora, poradniki i~blogi, które pomagają nam. Polecam szukać w~języku angielskim (nasze problemy wpisywać po w~Google po angielsku np. "How to include new library to Arduino"). Gdy to zrobimy najlepiej szukać odpowiedzi na forum \textbf{Stackoverflow}. Serwis ma ponad 10 milionów artykułów, dzięki czemu jest duża szansa, że ktoś kiedyś miał taki sam problem jak wy. Stackoverflow można nazwać Wikipedią dla informatyków. 
 \subsection{System kontroli wersji}
 System kontroli wersji to oprogramowanie, które pomaga śledzić zmiany w~kodzie źródłowym.
-Dzięki temu mamy dostęp do kodu który kiedyś napisaliśmy (który został zmieniony/usunięty). Możemy również całkowicie zmieniać kod bez obawy, że przestanie on działać (w każdym momencie możemy przywrócić poprzednią wersję). Jest stosowany w~dużych korporacjach, ponieważ ułatwia wspólną pracę. Jest kilka systemów kontroli wersji na rynku ale najbardziej popularnym (i polecanym przez nas) jest GitHub. Jako przykład możemy dodać, że został on wykorzystany do pisania tej pracy. W załącznikach na końcu będzie link do serwisu i~do naszych repozytoriów (nie ważne, że nie macie pojęcia co to oznacza. Musicie po prostu wejść).
+Dzięki temu mamy dostęp do kodu który kiedyś napisaliśmy (który został zmieniony/usunięty). Możemy również całkowicie zmieniać kod bez obawy, że przestanie on działać (w każdym momencie możemy przywrócić poprzednią wersję). Jest stosowany w~dużych korporacjach, ponieważ ułatwia wspólną pracę. Jest kilka systemów kontroli wersji na rynku ale najbardziej popularnym (i~polecanym przez nas) jest \textbf{GitHub}. Jako przykład możemy dodać, że został on wykorzystany do pisania tej pracy. W załącznikach na końcu będzie link do serwisu (Załącznik \ref{itm:Github}.) i~do naszych repozytoriów (Załącznik \ref{itm:Git_makieta}.) (nie ważne, że nie macie pojęcia co to oznacza. Musicie po prostu wejść).
 \cite{SKW-Wiki, Git-Wiki}
 %jak szukać bibliotek do czujników
 %system kontroli wersji
@@ -499,6 +500,8 @@ Dzięki temu mamy dostęp do kodu który kiedyś napisaliśmy (który został zm
 	\item \label{itm:InterruptPin} https://www.arduino.cc/en/Reference/AttachInterrupt (ang.)
 	\item \label{itm:Serial} https://www.arduino.cc/en/Reference/Serial (ang.)
 	\item \label{itm:Ref} https://www.arduino.cc/en/Reference/HomePage (ang.)
+	\item \label{itm:Github} https://github.com (ang.)
+	\item \label{itm:wynik} $300\Omega \pm 5\%$ -- kolory pasków (po kolei): pomarańczowy, czarny, brązowy, złoty
 \end{enumerate}
 
 %\begin{thebibliography}{3}
