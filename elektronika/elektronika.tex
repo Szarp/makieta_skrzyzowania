@@ -221,7 +221,6 @@ Arduino IDE, o~którym więcej~w  sekcji "\ref{subsec:Srodowisko}. Środowisko".
 		\item - - oznacza operację odejmowania
 		\item * - mnożenie
 		\item / - dzielenie
-		\item \% - modulo (reszta z~dzielenia). Działanie: x \% y - reszta z~dzielenia x przez y
 		\item ++ - powiększ o~1. Przykład kodu zwiększającego zmienną x o~1:
 			\begin{verbatim}
 			x++;
@@ -277,16 +276,7 @@ Arduino IDE, o~którym więcej~w  sekcji "\ref{subsec:Srodowisko}. Środowisko".
 			\item byte oraz unsigned char - przechowuje 8 bitową liczbą od 0 do 255. Zalecane jest używanie "byte" zamiast "unsigned char".
 			\item int - przechowuje wartości liczbowe. Zakres wartości zależy od procesora.
 				Dla Arduino Uno (i innych urządzeniach opartych na procesorze ATMega) jest 16-bitowa i~ma zakres od -32768 do 32767.
-			\item word oraz unsigned int - od zwykłego różni się tym, że przechowuje tylko wartości nieujemne.
-				Jego zakres dla Arduino Uno i~innych Arduino opartych na procesorach ATMega jest od 0 do 65535.
 			\item long - przechowuje wartości liczbowe. Ma rozmiar 32 bitów. Przyjmuje wartości od -2147483648 to 2147483647. Po liczbie należy dać literę "L" (long liczba = 51523487L).
-			\item unsigned long przechowuje 32 bitową liczbę. Ma zakres od 0 do 4294967295.
-			\item short - dla wszystkich Arduino jest taki sam jak int na procesorach ATMega.
-			\item float - typ zmiennej dla liczb zmiennoprzecinkowych. Zajmują 32 bity pamięci. Mogą przechowywać wartości od -34028235E+38 do 3.4028235E+38. Liczby zmiennoprzecinkowe \textbf{nie są dokładne}!
-				Na przykład "6.0 / 3.0" może nie być równe "2.0". Mają dokładność \textbf{tylko 6-7 cyfr znaczących}! Operacje na zmiennych zmiennoprzecinkowych \textbf{trwają dłużej} niż na liczbach całkowitych.
-				Należy również pamiętać, że nie umieszczenie kropki przy podawaniu wartości spowoduje, że zmienna traktowana będzie jako "int".
-			\item double - zmienna zmiennoprzecinkowa o~podwójnej dokładności względem "float". Na procesorach ATMega zajmuje 32 bity pamięci, a na Arduino Due 64 bity.
-				\textbf{W przypadku Arduino NIE jest dokładniejsza od zmiennej typu "float".}
 			\item string - tablica znaków. Najprościej tworzy się ją tak:
 				\begin{verbatim}
 				char nazwa[] = "Zawartość zmiennej nazwa";
@@ -304,7 +294,7 @@ Arduino IDE, o~którym więcej~w  sekcji "\ref{subsec:Srodowisko}. Środowisko".
 	}
 	\end{verbatim}
 	gdzie typ oznacza typ wartości zwracanej przez funkcję (np. void, int, boolean, itd.).
-	W zwykłych nawiasach umieszcza się nazwy parametrów, które mogą zostać funkcji przekazane i~ich typ (np. int, boolean, itd.). Na końcu funkcji zazwyczaj umieszcza się return(wartosc). Nie dotyczy to jednak funkcji typu "void", które nie zwracają żadnych wartości.
+	W zwykłych nawiasach umieszcza się nazwy parametrów, które mogą zostać funkcji przekazane i~ich typ (np. int, boolean, itd.). Na końcu funkcji zazwyczaj umieszcza się return (wartosc). Nie dotyczy to jednak funkcji typu "void", które nie zwracają żadnych wartości.
 	
 	W sekcji "\ref{subsec:struktura}. Struktura" wymieniliśmy już funkcje "setup" i~"loop". Jednak Arduino ma więcej predefiniowanych funkcji, z~których wymienimy kilka podstawowych.
 	\begin{itemize}
@@ -321,24 +311,24 @@ Arduino IDE, o~którym więcej~w  sekcji "\ref{subsec:Srodowisko}. Środowisko".
 			\end{itemize}
 		\item digitalRead(x) -- funkcja zwracająca stan wejściowego pinu cyfrowego "x". Zwraca tylko wartości HIGH i~LOW
 		\item milis() -- podaje czas w~milisekundach
-		\item delay(x) -- zatrzymuje wykonywanie programu na "x" milisekund (1000ms=1s).
+		\item delay(x) -- zatrzymuje wykonywanie programu na "x" milisekund (1000ms = 1s).
 		\item attachInterrupt(digitalPinToInterrupt(x), func, mode) - dodaje przerwanie wykonujące funkcję "func", jeśli z~cyfrowym pinem wejściowym "x" stanie się to co określono jako "mode". Piny obsługujące przerwania są różne w~zależności od Arduino. Przed użyciem attachInterrupt() radzę zobaczyć załącznik \ref{itm:InterruptPin} Funkcja func \textbf{nie może pobierać parametrów, ani zwracać żadnych wartości} (definiowana jako void). "mode" może przyjmować następujące wartości:
 			\begin{itemize}
-				\item LOW -- jeśli stan pinu to "LOW".
-				\item CHANGE -- jeśli zmieni się wartość (LOW\verb|->|HIGH lub odwrotnie).
-				\item RISING -- jeśli wartość zmieni się z~LOW na HIGH.
-				\item FALLING -- jeśli wartość zmieni się z~HIGH na LOW.
+				\item LOW -- jeśli stan pinu to "LOW"
+				\item CHANGE -- jeśli zmieni się wartość (LOW\verb|->|HIGH lub odwrotnie)
+				\item RISING -- jeśli wartość zmieni się z~LOW na HIGH
+				\item FALLING -- jeśli wartość zmieni się z~HIGH na LOW
 			\end{itemize}
-		\item detachInterrupt(digitalPinToInterrupt(x)) - usuwa przerwanie z~pinu "x".
+		\item detachInterrupt(digitalPinToInterrupt(x)) - usuwa przerwanie z~pinu "x"
 		\item Serial - umożliwia komunikację przez port szeregowy. Korzystamy do tego z~"monitora portu szeregowego" w~Arduino IDE. Używa się jako Serial.func(), gdzie funkcji "func()" jest naprawdę wiele. Wymienię jednak kilka podstawowych:
 			\begin{itemize}
-				\item begin(x) -- ustala częstotliwość przesyłania danych w~bitach na sekundę (baud) jako "x". "x" może przyjmować wartości 300, 600, 1200, 2400, 4800, 9600, 14400, 19200, 28800, 38400, 57600 lub 115200.
-				\item print(x) -- przesyła wartość x przez port szeregowy.
-				\item println(x) -- działa jak Serial.print(), ale kolejny komunikat będzie w~nowej linijce.
+				\item begin(x) -- ustala częstotliwość przesyłania danych w~bitach na sekundę (baud) jako "x". "x" może przyjmować wartości 300, 600, 1200, 2400, 4800, 9600, 14400, 19200, 28800, 38400, 57600 lub 115200
+				\item print(x) -- przesyła wartość x przez port szeregowy
+				\item println(x) -- działa jak Serial.print(), ale kolejny komunikat będzie w~nowej linijce
 			\end{itemize}
-			Jeśli chcecie zobaczyć wszystkie funkcje Serial.func() zobaczcie załącznik \ref{itm:Serial}.
+			Jeśli chcecie zobaczyć wszystkie funkcje Serial.func() zobaczcie załącznik \ref{itm:Serial}
 	\end{itemize}
-	Jak wcześniej napisaliśmy istnieje wiele predefiniowanych funkcji, których tu nie wymieniliśmy, ale jeśli chcecie je wszystkie poznać zobaczcie załącznik \ref{itm:Ref} i~kolumnę "Functions".
+	Jak wcześniej napisaliśmy istnieje wiele predefiniowanych funkcji, których tu nie wymieniliśmy, ale jeśli chcecie je wszystkie poznać zobaczcie załącznik \ref{itm:Ref} i~kolumnę "Functions"
 
 %to do bibliografi[https://www.arduino.cc/en/Guide/Introduction, https://www.arduino.cc/en/Reference/HomePage]
 
@@ -404,7 +394,7 @@ Programowanie jest intuicyjne ale musimy pamiętać o~kilku rzeczach. A mianowic
 	I=\frac{U}{R}
 	\]	
 	\end{center}
-Zadanie z~tym związane (pojęcia będą wytłumaczone w~dalszej części): \\* Mamy diodę oraz źródło zasilania 5V. Jaki rezystor musimy podłączyć aby prąd płynący przez diodę był ok 20mA %do sprawdzenia
+Zadanie z~tym związane (pojęcia będą wytłumaczone w~dalszej części): \\* Mamy diodę oraz źródło zasilania 5V. Jaki rezystor musimy podłączyć aby prąd płynący przez diodę był ok. 20mA. %do sprawdzenia
 %pracowało na prąd stały lub zmienny (podłączamy do gniazdka lub zasilanie z~baterii - prosto tłumacząc).
 	\subsection{Elementy elektroniczne i ich symbole}
 	\subsubsection {Symbole}
@@ -502,6 +492,7 @@ Dzięki temu mamy dostęp do kodu który kiedyś napisaliśmy (który został zm
 %%
 
 \section*{Załączniki}
+\addcontentsline{toc}{section}{Załączniki}
 \begin{enumerate}
 	\item \label{itm:Git_makieta} https://github.com/Szarp/makieta\_skrzyzowania
 	\item \label{itm:Download_Arduino} https://www.arduino.cc/en/Main/Software (ang.)
