@@ -1,0 +1,8 @@
+How to connect to arduino and start up the thermomether DS18B20
+
+First u need to check which pin of thermomether is chassis ground(usually black wire), which power(usually red wire) and which communicating pin(usually yellow wire).
+Then you must connect communicating pin to digital pin number 2 on your arduino, chassis ground to GND, power to output 5V and link power and communicating pin with resistor.
+Next u have to add libraries one wire and dallas temperature to your arduino IDE. You can find it here - http://www.hobbytronics.co.uk/ds18b20-arduino
+Now you must only find in example programmes dallas temperature, click it and upload to your arduino.
+
+ 

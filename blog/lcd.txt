@@ -1,0 +1,13 @@
+<blog>
+There are many tutorials how to connect lcd to arduino. If u still can't connect it, I will show you it in easy steps.
+
+In this tutorial I'm connecting RGB matrix pannel. It works on AdafruitGFXLibrary which u can download here and RGBMatrixPanel with download link below.
+
+1.Just connect pins like u can read on this images. Remeber that u must to INPUT not to OUTPUT. Output is used to connect secend matrix pannel.
+2.Some tutorials say something abot power suply(big pins with Vcc and GND in the center) but personally i didn't have to do that. It havent't observed any change with power on or off.
+3. When you connect that just run a example program from that libraries. But first u have to change definitions of pins LAT to 11 and CLK 10. This pins defiene settings for matrix panel.
+4. After that it should just start running corectly.
+
+Now we can walk throu what kind of magic is going there. I thing some of you just copy an paste that code. Understand code is important when you want to comform it to your program or different thing.
+//a to jutro ;)
+</blog>
