@@ -1,8 +1,8 @@
 #Communication between Arduino
 If you want to send data between Arduino boards you can do this following this simple method.
-You'll need:
 
-* Arduino (which send data) with free PWM pin (pin marked with '~' symbol)
+To do this you'll need:
+* Arduino (which send data) with free *PWM* pin (pin marked with '~' symbol)
 * Arduino (which read data) with free analog pin (pin starting with A letter)
 * few wires
 * 1 capacitor
