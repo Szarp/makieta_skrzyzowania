@@ -15,8 +15,8 @@ Then on second Arduino you need to read voltage on analog pin and scale it again
 (if you divide voltage you got by 8 it'll be the same value you sent).
 We also advice you to use moving average when reading data, if you'll send data with small diferences.
 Simple moving average looks like this:
-'''Arduino
+```Arduino
 float newData=lastData*5/10+sensorValue*5/10;
-'''
+```
 Where lastData is data you have recieved earlier and sensorValue is the value you just got.
 **Remember that it isn't very accurate.**
